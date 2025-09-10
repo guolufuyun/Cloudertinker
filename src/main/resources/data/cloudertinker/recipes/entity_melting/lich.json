@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:entity_melting",
+  "damage": 4,
+  "entity": {
+    "type":
+      "twilightforest:lich"
+  },
+  "result": {
+    "amount": 10,
+    "fluid": "cloudertinker:molten_dectird"
+  }
+}

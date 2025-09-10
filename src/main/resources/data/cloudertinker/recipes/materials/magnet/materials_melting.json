@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "cloudertinker:magnet",
+  "temperature": 1000,
+  "result": {
+    "fluid": "cloudertinker:molten_magnet",
+    "amount": 90
+  }
+}

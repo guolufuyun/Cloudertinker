@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#tconstruct:casts/single_use/giant_blade",
+    {
+      "id": "twilightforest:giant_sword",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "modifier_id": "cloudertinker:chillaura",
+  "text": [
+    {
+      "text": "受击时会冰冻你的敌人，如果对方已经冰冻则会每级以霜冻伤害反射5%的伤害。"
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "最高三级",
+    "每级需要1个升级槽"
+  ]
+}

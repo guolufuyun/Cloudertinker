@@ -1,0 +1,39 @@
+{
+  "color": "FFEa1119",
+  "fallbacks": [
+    "crystal",
+    "rock",
+    "stick"
+  ],
+  "generator": {
+    "ignoreMaterialStats": false,
+    "supportedStats": [
+      "tconstruct:binding",
+      "tconstruct:maille",
+      "tconstruct:armor_maille"
+    ],
+    "transformer": {
+
+      "type": "tconstruct:grey_to_sprite",
+      "palette": [
+        {
+          "grey": 0,
+          "color": "FF000000"
+        },
+        {
+          "grey": 63,
+          "path": "cloudertinker:item/hover/rose2"
+        },
+        {
+          "grey": 178,
+          "path": "cloudertinker:item/hover/rose1"
+        },
+        {
+          "grey": 255,
+          "path": "cloudertinker:item/hover/rose3"
+        }
+      ]
+    },
+    "luminosity": 15
+  }
+}

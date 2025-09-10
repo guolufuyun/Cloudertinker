@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:casting_table",
+  "cooling_time": 82,
+  "fluid": {
+    "amount": 250,
+    "name": "cloudertinker:frost_essence"
+  },
+  "result": "twilightforest:ice_bomb"
+}

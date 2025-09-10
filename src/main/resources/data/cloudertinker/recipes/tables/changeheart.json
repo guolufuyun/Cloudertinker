@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EBE",
+    "EAE",
+    "DCD"
+  ],
+  "key": {
+    "A": {
+      "item": "twilightforest:transformation_sapling"
+    },
+    "B": {
+      "item": "minecraft:bone_meal"
+    },
+    "C": {
+      "item": "twilightforest:liveroot"
+    },
+    "D": {
+      "item": "twilightforest:transformation_powder"
+    },
+    "E": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:changeheart",
+    "count": 5
+  }
+}

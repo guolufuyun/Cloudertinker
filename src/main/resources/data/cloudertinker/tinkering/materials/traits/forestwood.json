@@ -1,0 +1,74 @@
+{
+  "perStat": {
+    "tconstruct:head": [
+      {
+        "name": "cloudertinker:frostcraft",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:frostcondense",
+        "level": 1
+      }
+    ],
+    "tconstruct:handle": [
+      {
+        "name": "cloudertinker:frostcraft",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:frostcondense",
+        "level": 1
+      }
+    ],
+    "tconstruct:binding": [
+      {
+        "name": "cloudertinker:frostcraft",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:frostcondense",
+        "level": 1
+      }
+    ],
+    "tconstruct:limb": [
+      {
+        "name": "cloudertinker:frostcraft",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:frostcondense",
+        "level": 1
+      }
+    ],
+    "tconstruct:grip": [
+      {
+        "name": "cloudertinker:frostcraft",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:frostcondense",
+        "level": 1
+      }
+    ],
+    "tconstruct:shield_core": [
+      {
+        "name": "cloudertinker:frostcraft",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:frostcondense",
+        "level": 1
+      }
+    ],
+    "tconstruct:maille": [
+      {
+        "name": "cloudertinker:frostcraft",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:frostcondense",
+        "level": 1
+      }
+    ]
+  }
+}

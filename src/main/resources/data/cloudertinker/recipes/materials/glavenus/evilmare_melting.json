@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "cloudertinker:glavenus_ingot"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_glavenus",
+    "amount": 90
+  },
+  "temperature": 1500,
+  "time": 20
+}

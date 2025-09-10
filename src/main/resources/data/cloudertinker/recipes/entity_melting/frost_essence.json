@@ -1,0 +1,16 @@
+{
+  "type": "tconstruct:entity_melting",
+  "damage": 4,
+  "entity": {
+    "types": [
+      "twilightforest:stable_ice_core",
+      "twilightforest:unstable_ice_core",
+      "twilightforest:ice_crystal",
+      "twilightforest:alpha_yeti"
+    ]
+  },
+  "result": {
+    "amount": 10,
+    "fluid": "cloudertinker:frost_essence"
+  }
+}

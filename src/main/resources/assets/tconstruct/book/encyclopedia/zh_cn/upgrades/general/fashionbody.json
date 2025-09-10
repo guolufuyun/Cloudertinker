@@ -1,0 +1,13 @@
+{
+  "modifier_id": "cloudertinker:fashionbody",
+  "text": [
+    {
+      "text": "你的攻击有10%的概率召唤一只忠于你的僵尸并施加5秒中毒2。每提升一级词条都会提升10%召唤概率和1级中毒；\n一定范围内最多同时存在11只。"
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "最高三级",
+    "每级需要1个升级槽"
+  ]
+}

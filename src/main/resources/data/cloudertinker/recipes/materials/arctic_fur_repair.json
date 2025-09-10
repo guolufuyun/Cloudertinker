@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "twilightforest:arctic_fur"
+  },
+  "value": 1,
+  "needed": 1,
+  "material": "cloudertinker:arctic_fur"
+}

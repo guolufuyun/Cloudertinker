@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "type": "twilightforest:skeleton_druid"
+  },
+
+  "result":{
+    "count": 3,
+    "item":"tconstruct:venombone"
+  }
+}

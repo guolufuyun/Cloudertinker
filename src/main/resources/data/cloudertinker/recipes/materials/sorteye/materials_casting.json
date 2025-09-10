@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "name": "cloudertinker:molten_sorteye",
+    "amount": 100
+  },
+  "temperature": 1200,
+  "output": "cloudertinker:sorteye"
+}

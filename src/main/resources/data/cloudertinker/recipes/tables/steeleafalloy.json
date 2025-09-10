@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DBD",
+    "CAC",
+    "DBD"
+  ],
+  "key": {
+    "A": {
+      "item": "twilightforest:armor_shard_cluster"
+    },
+    "B": {
+      "item": "twilightforest:steeleaf_ingot"
+    },
+    "C": {
+      "item": "twilightforest:borer_essence"
+    },
+    "D": {
+      "item": "minecraft:flint"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:steeleafalloy",
+    "count": 1
+  }
+}

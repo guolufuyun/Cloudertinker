@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CDC",
+    "BAE",
+    "DCD"
+  ],
+  "key": {
+    "A": {
+      "item": "twilightforest:ironwood_ingot"
+    },
+    "B": {
+      "item": "cloudertinker:zombie_scepter_core"
+    },
+    "C": {
+      "item": "minecraft:poisonous_potato"
+    },
+    "D": {
+      "item": "twilightforest:liveroot"
+    },
+    "E": {
+      "item": "minecraft:rotten_flesh"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:dectird_ingot",
+    "count": 1
+  }
+}

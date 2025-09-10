@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "cloudertinker:questiron_block",
+    {
+      "id": "twilightforest:fiery_block",
+      "required": false
+    },
+    {
+      "id": "twilightforest:knightmetal_block",
+      "required": false
+    },
+    {
+      "id": "twilightforest:castle_brick",
+      "required": false
+    },
+    {
+      "id": "twilightforest:steeleaf_block",
+      "required": false
+    },
+    {
+      "id": "twilightforest:mazestone_brick",
+      "required": false
+    },
+    {
+      "id": "twilightforest:ironwood_block",
+      "required": false
+    }
+  ]
+}

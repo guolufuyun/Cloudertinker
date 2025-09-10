@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    {
+      "name": "cloudertinker:frost_essence",
+      "amount": 250
+    },
+    {
+      "name": "tconstruct:molten_iron",
+      "amount": 90
+    }
+  ],
+  "result": {
+    "fluid": "cloudertinker:molten_frostiron",
+    "amount": 90
+  },
+  "temperature": 800
+}

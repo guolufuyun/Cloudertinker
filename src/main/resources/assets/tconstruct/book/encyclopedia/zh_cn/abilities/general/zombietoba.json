@@ -1,0 +1,15 @@
+{
+  "modifier_id": "cloudertinker:zombietuba",
+  "text": [
+    {
+      "text": "你召唤的僵尸更强并携带装备；近战全力攻击额外召唤一只僵尸。"
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "最高一级",
+    "每级需要1个能力槽",
+    "有塑尸作为前置才行哦",
+    "乐队，一休尼！"
+  ]
+}

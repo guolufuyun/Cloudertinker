@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "cloudertinker:mazeslime",
+  "temperature": 900,
+  "result": {
+    "fluid": "cloudertinker:molten_mazeslime",
+    "amount": 90
+  }
+}

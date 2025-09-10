@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "twilightforest:ironwood_block"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "cloudertinker:ironwood",
+  "leftover": {
+    "count": 1,
+    "item": "twilightforest:ironwood_ingot"
+  }
+}

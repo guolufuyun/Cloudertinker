@@ -1,0 +1,7 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "type": "twilightforest:knight_phantom"
+  },
+  "result": "cloudertinker:phantom_ingot"
+}

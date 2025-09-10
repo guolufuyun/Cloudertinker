@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "EAB",
+    "DDD"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:gold_ingot"
+    },
+    "B": {
+      "item": "cloudertinker:fortification_scepter_core"
+    },
+    "C": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "D": {
+      "item": "twilightforest:torchberries"
+    },
+    "E": {
+      "item": "minecraft:golden_apple"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:prublaze_ingot",
+    "count": 1
+  }
+}

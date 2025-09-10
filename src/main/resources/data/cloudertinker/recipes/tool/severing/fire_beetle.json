@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "type": "twilightforest:fire_beetle"
+  },
+  "result":{
+    "count": 3,
+    "item": "minecraft:magma_cream"
+}}

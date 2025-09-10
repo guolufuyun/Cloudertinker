@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BEF",
+    "EAD",
+    "FDC"
+  ],
+  "key": {
+    "A": {
+      "item": "twilightforest:carminite"
+    },
+    "B": {
+      "item": "twilightforest:fiery_tears"
+    },
+    "C": {
+      "item": "tconstruct:hepatizon_nugget"
+    },
+    "D": {
+      "item": "minecraft:ghast_tear"
+    },
+    "E": {
+      "item": "minecraft:blaze_powder"
+    },
+    "F": {
+      "item": "tconstruct:soul_glass"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:fierdistear",
+    "count": 1
+  }
+}

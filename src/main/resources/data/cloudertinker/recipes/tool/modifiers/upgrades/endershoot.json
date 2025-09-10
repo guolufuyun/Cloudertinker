@@ -1,0 +1,32 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "check_trait_level": true,
+  "inputs": [
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "twilightforest:ender_bow"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:crying_obsidian"
+    },
+    {
+      "item": "minecraft:crying_obsidian"
+    }
+  ],
+  "level": {
+    "max": 1
+  },
+  "slots": {
+    "upgrades": 1
+  },
+  "result": "tconstruct:enderporting",
+  "tools": {
+    "tag": "tconstruct:modifiable/ranged"
+  }
+}

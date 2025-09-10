@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "type": "twilightforest:minoshroom"
+  },
+  "result":{
+    "count": 5,
+    "item": "cloudertinker:minodiamond_gem"
+}}

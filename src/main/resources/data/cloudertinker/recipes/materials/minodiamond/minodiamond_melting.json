@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "cloudertinker:minodiamond_gem"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_minodiamond",
+    "amount": 100
+  },
+  "temperature": 1000,
+  "time": 20
+}

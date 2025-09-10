@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:melting_fuel",
+  "duration": 500,
+  "fluid": {
+    "amount": 10,
+    "fluid": "cloudertinker:fire_tear"
+  },
+  "temperature": 2000
+}

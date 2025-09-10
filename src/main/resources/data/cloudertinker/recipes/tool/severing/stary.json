@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "type": "minecraft:stary"
+  },
+
+  "result":{
+    "count": 3,
+    "item":"cloudertinkr:forestbone"
+  }
+}

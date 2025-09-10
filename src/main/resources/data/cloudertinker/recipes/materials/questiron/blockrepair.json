@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "cloudertinker:questiron_block"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "cloudertinker:questiron",
+  "leftover": {
+    "count": 1,
+    "item": "cloudertinker:questiron_ingot"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "BAB",
+    " B "
+  ],
+  "key": {
+    "A": {
+      "item": "tconstruct:manyullyn_ingot"
+    },
+    "B": {
+      "item": "cloudertinker:bloodlust_power"
+    },
+    "C": {
+      "item": "minecraft:echo_shard"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:magala_ingot",
+    "count": 1
+  }
+}

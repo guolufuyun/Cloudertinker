@@ -1,0 +1,13 @@
+{
+  "modifier_id": "cloudertinker:coalescence",
+  "text": [
+    {
+      "text": "中毒时获得中毒等级+2的力量效果。"
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "最高一级",
+    "每级需要1个升级槽"
+  ]
+}

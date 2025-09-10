@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "twilightforest:fiery_tears"
+  },
+  "result": {
+    "fluid": "cloudertinker:fire_tear",
+    "amount": 100
+  },
+  "temperature": 800,
+  "time": 20
+}

@@ -1,0 +1,6 @@
+{
+  "type": "twilightforest:transformation_powder",
+  "from": "twilightforest:death_tome",
+  "reversible": true,
+  "to": "minecraft:skeleton"
+}

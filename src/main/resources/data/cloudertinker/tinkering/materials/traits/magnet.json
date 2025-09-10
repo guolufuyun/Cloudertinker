@@ -1,0 +1,45 @@
+{"perStat": {
+  "tconstruct:head": [
+    {
+      "name": "cloudertinker:twilight",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:magent",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:magnetic",
+      "level": 1
+    }
+  ],
+  "tconstruct:handle": [
+    {
+      "name": "cloudertinker:twilight",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:magent",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:magnetic",
+      "level": 1
+    }
+  ],
+  "tconstruct:binding": [
+    {
+      "name": "cloudertinker:twilight",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:magent",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:magnetic",
+      "level": 1
+    }
+  ]
+}
+}

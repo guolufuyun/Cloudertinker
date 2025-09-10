@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "cloudertinker:fierdistear",
+  "temperature": 1500,
+  "result": {
+    "fluid": "cloudertinker:molten_fierdistear",
+    "amount": 100
+  }
+}

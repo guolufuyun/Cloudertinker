@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "cloudertinker:iron_cookie"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "tconstruct:molten_obsidian",
+    "amount": 1000
+  },
+  "result": "cloudertinker:obsidian_cookie",
+  "cooling_time": 200
+}

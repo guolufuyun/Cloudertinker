@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "cloudertinker:phantom_ingot"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_phantom",
+    "amount": 90
+  },
+  "temperature": 1000,
+  "time": 20
+}

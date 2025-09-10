@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "twilightforest:phantom_helmet"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_phantom",
+    "amount": 450
+  },
+  "temperature": 1000,
+  "time": 100
+}

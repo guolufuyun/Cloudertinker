@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "twilightforest:giant_sword",
+      "required": false
+    },
+    {
+      "id": "twilightforest:knightmetal_ring",
+      "required": false
+    }
+  ]
+}

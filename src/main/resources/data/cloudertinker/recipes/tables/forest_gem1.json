@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    "DAD",
+    "CBC"
+  ],
+  "key": {
+    "A": {
+      "item": "twilightforest:ice_bomb"
+    },
+    "B": {
+      "item": "twilightforest:triple_bow"
+    },
+    "C": {
+      "item": "minecraft:blue_ice"
+    },
+    "D": {
+      "item": "tconstruct:queens_slime_nugget"
+    },
+    "E": {
+      "item": "twilightforest:aurora_block"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:forest_gem",
+    "count": 5
+  }
+}

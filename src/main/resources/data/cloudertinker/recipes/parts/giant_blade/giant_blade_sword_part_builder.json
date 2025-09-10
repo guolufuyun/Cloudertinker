@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:part_builder",
+  "pattern": "cloudertinker:giant_blade",
+  "pattern_item": [
+    {
+      "item": "twilightforest:giant_sword"
+    }
+  ],
+  "cost": 8,
+  "result": {
+    "item": "cloudertinker:giant_blade"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "twilightforest:steeleaf_block"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "cloudertinker:steeleaf",
+  "leftover": {
+    "count": 1,
+    "item": "twilightforest:steeleaf_ingot"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "tconstruct:entity_melting",
+  "damage": 4,
+  "entity": {
+    "types": [
+      "twilightforest:upper_goblin_knight",
+      "twilightforest:lower_goblin_knight",
+      "twilightforest:blockchain_goblin",
+      "twilightforest:helmet_crab"
+    ]
+  },
+  "result": {
+    "amount": 10,
+    "fluid": "cloudertinker:molten_knightmetal"
+  }
+}

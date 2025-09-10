@@ -1,0 +1,73 @@
+{"perStat": {
+  "tconstruct:head": [
+    {
+      "name": "cloudertinker:twilight",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:precipitate",
+      "level": 1
+    }
+  ],
+  "tconstruct:handle": [
+    {
+      "name": "cloudertinker:twilight",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:precipitate",
+      "level": 1
+    }
+  ],
+  "tconstruct:binding": [
+    {
+      "name": "cloudertinker:twilight",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:precipitate",
+      "level": 1
+    }
+  ],
+  "tconstruct:maille": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:precipitatearmor",
+      "level": 1
+    }
+  ],
+  "tconstruct:plating_chestplate": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:precipitatearmor",
+      "level": 1
+    }
+  ],
+  "tconstruct:plating_leggings": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:precipitatearmor",
+      "level": 1
+    }
+  ],
+  "tconstruct:shield_core": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:precipitatearmor",
+      "level": 1
+    }
+  ]
+}
+}

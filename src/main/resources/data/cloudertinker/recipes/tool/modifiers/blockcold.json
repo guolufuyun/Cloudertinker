@@ -1,0 +1,29 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "check_trait_level": true,
+  "inputs": [
+    {
+      "item": "twilightforest:arctic_fur_block"
+    },
+    {
+      "item": "minecraft:blue_ice"
+    },
+    {
+      "item": "twilightforest:arctic_fur_block"
+    },
+    {
+      "item": "twilightforest:alpha_yeti_fur"
+    },
+    {
+      "item": "twilightforest:alpha_yeti_fur"
+    }
+  ],
+  "level": {
+    "max": 1
+  },
+  "result": "cloudertinker:blockcold",
+  "tools": {
+    "tag": "tconstruct:modifiable"
+  }
+}

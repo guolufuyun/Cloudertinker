@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 200,
+    "name":"tconstruct:molten_emerald"
+  },
+  "input": "cloudertinker:steeleaf",
+  "output": "cloudertinker:compositesteeleaf",
+  "temperature": 1000
+}

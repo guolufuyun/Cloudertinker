@@ -1,0 +1,22 @@
+
+{
+  "result": {
+    "item": "tconstruct:chestplate_plating",
+    "count": 1,
+    "nbt": "{Material:\"cloudertinker:nagascale\"}"
+  },
+  "pattern": [
+    "#X#",
+    "###",
+    "###"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "twilightforest:naga_scale"
+    },
+    "X": {
+      "item": "tconstruct:pattern"
+    }
+  }
+}

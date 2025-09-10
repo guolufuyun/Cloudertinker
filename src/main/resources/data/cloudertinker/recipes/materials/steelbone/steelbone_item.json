@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "minecraft:bone"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "tconstruct:molten_netherite",
+    "amount": 10
+  },
+  "result": "cloudertinker:steelbone",
+  "cooling_time": 60
+}

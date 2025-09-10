@@ -1,0 +1,14 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "types": [
+      "twilightforest:upper_goblin_knight",
+      "twilightforest:lower_goblin_knight",
+      "twilightforest:blockchain_goblin",
+      "twilightforest:helmet_crab"
+    ]
+  },
+  "result": {"count": 3,
+    "item":"twilightforest:armor_shard"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "types": [
+      "twilightforest:yeti",
+      "twilightforest:winter_wolf"
+    ]
+  },
+  "result": {"count": 3,
+    "item":"twilightforest:arctic_fur"
+  }
+}

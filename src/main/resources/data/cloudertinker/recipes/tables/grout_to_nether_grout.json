@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BAB",
+    "BBB"
+  ],
+  "key": {
+    "A": {
+      "item": "twilightforest:transformation_powder"
+    },
+    "B": {
+      "item": "tconstruct:grout"
+    }
+  },
+  "result": {
+    "item": "tconstruct:nether_grout",
+    "count": 8
+  }
+}

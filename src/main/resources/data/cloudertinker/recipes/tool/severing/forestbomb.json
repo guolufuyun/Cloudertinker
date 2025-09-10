@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "types": [
+      "twilightforest:stable_ice_core",
+      "twilightforest:unstable_ice_core",
+      "twilightforest:ice_crystal"
+    ]
+  },
+  "result": "twilightforest:frost_bomb"
+}

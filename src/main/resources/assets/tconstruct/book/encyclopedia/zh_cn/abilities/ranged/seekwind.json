@@ -1,0 +1,13 @@
+{
+  "modifier_id": "cloudertinker:seekwind",
+  "text": [
+    {
+      "text": "你发射的箭矢被替换为追踪箭。"
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "最高一级",
+    "每级需要1个能力槽"
+  ]
+}

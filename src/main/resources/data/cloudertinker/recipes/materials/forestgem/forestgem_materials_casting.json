@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "name": "cloudertinker:molten_forestgem",
+    "amount": 100
+  },
+  "temperature": 1500,
+  "output": "cloudertinker:forestgem"
+}

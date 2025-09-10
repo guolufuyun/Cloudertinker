@@ -1,0 +1,74 @@
+{
+  "perStat": {
+    "tconstruct:head": [
+      {
+        "name": "cloudertinker:twilight",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:absorb",
+        "level": 1
+      }
+    ],
+    "tconstruct:handle": [
+      {
+        "name": "cloudertinker:twilight",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:absorb",
+        "level": 1
+      }
+    ],
+    "tconstruct:binding": [
+      {
+        "name": "cloudertinker:twilight",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:absorb",
+        "level": 1
+      }
+    ],
+    "tconstruct:limb": [
+      {
+        "name": "cloudertinker:twilight",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:takeroot",
+        "level": 1
+      }
+    ],
+    "tconstruct:grip": [
+      {
+        "name": "cloudertinker:twilight",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:takeroot",
+        "level": 1
+      }
+    ],
+    "tconstruct:maille": [
+      {
+        "name": "cloudertinker:twilightarmor",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:takerootarmor",
+        "level": 1
+      }
+    ],
+    "tconstruct:shield_core": [
+      {
+        "name": "cloudertinker:twilightarmor",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:takerootarmor",
+        "level": 1
+      }
+    ]
+  }
+}

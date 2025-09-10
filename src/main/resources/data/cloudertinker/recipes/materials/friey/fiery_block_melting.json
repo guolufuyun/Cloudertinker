@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "twilightforest:fiery_block"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_fiery",
+    "amount": 810
+  },
+  "temperature": 1000,
+  "time": 180
+}

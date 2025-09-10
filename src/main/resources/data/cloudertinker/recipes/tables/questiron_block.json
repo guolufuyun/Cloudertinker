@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cloudertinker:questiron_block"
+    }
+  ],
+  "result": {
+    "item": "cloudertinker:questiron_ingot",
+    "count": 9
+  }
+}

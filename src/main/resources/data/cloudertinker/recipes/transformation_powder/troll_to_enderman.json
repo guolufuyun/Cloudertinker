@@ -1,0 +1,6 @@
+{
+  "type": "twilightforest:transformation_powder",
+  "from": "twilightforest:troll",
+  "reversible": true,
+  "to": "minecraft:enderman"
+}

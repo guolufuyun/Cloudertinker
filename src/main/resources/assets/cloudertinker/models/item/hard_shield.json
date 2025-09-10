@@ -1,0 +1,59 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "bladetop": "cloudertinker:item/tool/hard_shield/hard_shield1/hard_shield1",
+    "plating": "cloudertinker:item/tool/hard_shield/hard_shield2/hard_shield2",
+    "ring": "cloudertinker:item/tool/hard_shield/hard_shield3/hard_shield3",
+    "core": "cloudertinker:item/tool/hard_shield/hard_shield4/hard_shield4",
+    "bladebotton": "cloudertinker:item/tool/hard_shield/hard_shield5/hard_shield5"
+  },
+  "modifier_roots": [
+    "cloudertinker:item/tool/tool/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "bladetop",
+      "index": 0
+    },
+    {
+      "name": "plating",
+      "index": 1
+    },
+    {
+      "name": "ring",
+      "index": 2
+    },
+    {
+      "name": "core",
+      "index": 3
+    },
+    {
+      "name": "bladebotton",
+      "index": 4
+    }
+  ],
+  "gui_light": "front",
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [ 0, 90, 0 ],
+      "translation": [ 2.6, -2, 1 ],
+      "scale": [ 1, 1, 1 ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [ 0, -90, 0 ],
+      "translation": [ 2.6, -2, 1 ],
+      "scale": [ 1, 1, 1 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 0, 0, -5 ],
+      "translation": [ 0, -2, -0.8 ],
+      "scale": [ 1, 1, 1 ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [ 0, 0, -5 ],
+      "translation": [ 0, -2, -0.8 ],
+      "scale": [ 1, 1, 1 ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "minecraft:chain"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "cloudertinker:molten_evilmare",
+    "amount": 90
+  },
+  "result": "cloudertinker:devil_chain",
+  "cooling_time": 100
+}

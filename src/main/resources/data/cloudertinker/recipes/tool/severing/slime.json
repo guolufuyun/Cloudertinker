@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "types": [
+      "twilightforest:maze_slime",
+      "twilightforest:slime_beetle"
+    ]
+  },
+  "result": {"count": 2,
+    "item":"minecraft:slime_ball"
+  }
+}

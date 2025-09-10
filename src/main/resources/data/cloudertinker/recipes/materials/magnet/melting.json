@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "cloudertinker:magnet_ingot"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_magnet",
+    "amount": 90
+  },
+  "temperature": 1000,
+  "time": 180
+}

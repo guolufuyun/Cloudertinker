@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "cloudertinker:orescore"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_orescore",
+    "amount": 100
+  },
+  "temperature": 1200,
+  "time": 20
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "types": [
+      "twilightforest:tiny_bird",
+      "twilightforest:penguin"
+    ]
+  },
+  "result": {"count": 2,
+    "item":"minecraft:feather"
+  }
+}

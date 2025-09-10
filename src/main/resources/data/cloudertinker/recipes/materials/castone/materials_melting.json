@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "cloudertinker:castone",
+  "temperature": 1500,
+  "result": {
+    "fluid": "cloudertinker:molten_castone",
+    "amount": 250
+  }
+}

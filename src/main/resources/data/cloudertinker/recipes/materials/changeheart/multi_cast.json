@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/gem"
+  },
+  "cast_consumed": false,
+  "fluid": {
+    "name": "cloudertinker:molten_changeheart",
+    "amount": 100
+  },
+  "result": "cloudertinker:changeheart",
+  "cooling_time": 100
+}

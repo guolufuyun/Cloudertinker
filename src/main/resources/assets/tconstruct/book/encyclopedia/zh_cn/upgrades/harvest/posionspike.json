@@ -1,0 +1,13 @@
+{
+  "modifier_id": "cloudertinker:posionspike",
+  "text": [
+    {
+      "text": "攻击伤害+1并施加中毒/虚弱/缓慢，但有时也会给自己施加中毒。"
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "最高一级",
+    "每级需要1个升级槽"
+  ]
+}

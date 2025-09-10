@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "cloudertinker:item/otheritem/twilight_scepter_core"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "cloudertinker:timering"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_timering",
+    "amount": 100
+  },
+  "temperature": 1200,
+  "time": 20
+}

@@ -1,0 +1,29 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "check_trait_level": true,
+  "inputs": [
+    {
+      "item": "cloudertinker:evilmare_ingot"
+    },
+    {
+      "item": "twilightforest:magic_map_focus"
+    },
+    {
+      "item": "cloudertinker:bloodshed_ingot"
+    },
+    {
+      "item": "cloudertinker:prublaze_ingot"
+    },
+    {
+      "item": "cloudertinker:dectird_ingot"
+    }
+  ],
+  "level": {
+    "max": 1
+  },
+  "result": "cloudertinker:allscepters",
+  "tools": {
+    "tag": "tconstruct:modifiable"
+  }
+}

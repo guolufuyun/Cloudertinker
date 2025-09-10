@@ -1,0 +1,57 @@
+{
+  "parts": [
+    {
+      "path": "cloudertinker:item/tool/part/giant_blade",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "cloudertinker:item/tool/ringpart/knightmetal_ring_part",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "cloudertinker:item/tool/hardplating/hard_plating",
+      "stat_type": "tconstruct:plating_shield"
+    },
+    {
+      "path": "cloudertinker:item/tool/tool/blade",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "cloudertinker:item/tool/tool/guard2",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "cloudertinker:item/tool/tool/guard3",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "cloudertinker:item/tool/tool/guard1",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "cloudertinker:item/tool/tool/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "cloudertinker:item/tool/hard_shield/hard_shield1/hard_shield1",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "cloudertinker:item/tool/hard_shield/hard_shield2/hard_shield2",
+      "stat_type": "tconstruct:plating_shield"
+    },
+    {
+      "path": "cloudertinker:item/tool/hard_shield/hard_shield3/hard_shield3",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "cloudertinker:item/tool/hard_shield/hard_shield4/hard_shield4",
+      "stat_type": "tconstruct:shield_core"
+    },
+    {
+      "path": "cloudertinker:item/tool/hard_shield/hard_shield5/hard_shield5",
+      "stat_type": "tconstruct:head"
+    }
+  ],
+  "replace": false
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:casting_basin",
+  "fluid": {
+    "fluid": "cloudertinker:molten_fiery",
+    "amount": 810
+  },
+  "result": "twilightforest:fiery_block",
+  "cooling_time": 165
+}

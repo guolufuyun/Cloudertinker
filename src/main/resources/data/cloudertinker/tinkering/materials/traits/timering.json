@@ -1,0 +1,52 @@
+{"perStat": {
+  "tconstruct:plating_helmet": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:timeflies",
+      "level": 1
+    }
+  ],
+  "tconstruct:plating_chestplate": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:timeflies",
+      "level": 1
+    }
+  ],
+  "tconstruct:plating_leggings": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:timeflies",
+      "level": 1
+    }
+  ],
+  "tconstruct:plating_boots": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:timeflies",
+      "level": 1
+    }
+  ],
+  "tconstruct:plating_shield": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:timeflies",
+      "level": 1
+    }
+  ]
+}}

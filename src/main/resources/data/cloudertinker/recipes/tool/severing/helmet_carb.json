@@ -1,0 +1,7 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "type": "twilightforest:helmet_carb"
+  },
+  "result":"twilightforest:knightmetal_helmet"
+}

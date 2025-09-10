@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/ingot"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "cloudertinker:molten_magala",
+    "amount": 90
+  },
+  "result": "cloudertinker:magala_ingot",
+  "cooling_time": 100
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "types": [
+      "twilightforest:wraith",
+      "twilightforest:mist_wolf"
+    ]
+  },
+  "result": {"count": 2,
+    "item":"minecraft:phantom_membrane"
+  }
+}

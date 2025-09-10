@@ -1,0 +1,29 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "check_trait_level": true,
+  "inputs": [
+    {
+      "item": "twilightforest:trollsteinn"
+    },
+    {
+      "item": "cloudertinker:forest_gem"
+    },
+    {
+      "item": "twilightforest:maze_map_focus"
+    },
+    {
+      "item": "twilightforest:fiery_tears"
+    },
+    {
+      "item": "twilightforest:fiery_blood"
+    }
+  ],
+  "level": {
+    "max": 1
+  },
+  "result": "cloudertinker:mysteriousveil",
+  "tools": {
+    "tag": "tconstruct:modifiable"
+  }
+}

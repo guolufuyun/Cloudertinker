@@ -1,0 +1,90 @@
+{
+  "stats": {
+    "tconstruct:binding": {},近战附件
+    "tconstruct:handle": {
+      "durability": 1.7,
+      "mining_speed": 1.7,
+      "melee_speed": 1.2,
+      "melee_damage": 1.2
+    },
+    "tconstruct:head": {近战头部
+      "durability": 2024,
+      "mining_speed": 3,
+      "mining_tier": "minecraft:netherite",
+      "melee_attack": 6
+    },
+    "tconstruct:limb": {弓臂
+      "durability": 2024,
+      "draw_speed": 0.3,
+      "velocity": 8,
+      "accuracy": 1.2
+    },
+    "tconstruct:grip": {弓把
+      "durability": 1.7,
+      "accuracy": 2.0,
+      "melee_damage": 5.0
+    },
+    "tconstruct:maille": {},盔甲夹层
+    "tconstruct:plating_helmet": {头部镶板
+      "armor": 5.0,
+      "durability": 1024,
+      "knockback_resistance": 0.2,
+      "toughness": 4.0
+    },
+    "tconstruct:plating_chestplate": {胸甲镶板
+      "armor": 10.0,
+      "durability": 1948,
+      "knockback_resistance": 0.2,
+      "toughness": 7.0
+    },
+    "tconstruct:plating_leggings": {护腿镶板
+      "armor": 7.0,
+      "durability": 1560,
+      "knockback_resistance": 0.2,
+      "toughness": 5.0
+    },
+    "tconstruct:plating_boots": {靴子镶板
+      "armor": 5.0,
+      "durability": 1135,
+      "knockback_resistance": 0.2,
+      "toughness": 5.0
+    },
+    "tconstruct:plating_shield": {护盾镶板
+      "durability": 1200,
+      "knockback_resistance": 0.4,
+      "toughness": 5
+    },
+    "tinkersinnovation:shield_plate": {
+      "durability": 1780,
+      "armor": 6.0,
+      "toughness": 4,
+      "knockback_resistance": 0.4,
+      "block_amount": 2.0,
+      "shield_amount": 15
+    },
+    "etshtinker:fluid_chamber": {
+      "fluid_capacity": 72000
+    },
+    "etshtinker:ionizer": {
+      "cooldown": 40,
+      "plasmarange": 35,
+      "damagemultiplier": 6.5
+    },
+    "tinkers_ingenuity:battery": {
+      "energy_capacity": 64000,
+      "durability": 0.2
+    },
+    "tinkers_ingenuity:laser_medium": {
+      "laser_range": 35,
+      "cooldown": 1.1
+    },
+    "tinkers_ingenuity:curio_extra": {},
+    "tinkers_ingenuity:curio_main": {
+      "movement_speed": 0.2,
+      "armor": 2.5,
+      "toughness": 2.5,
+      "attack": 1.5,
+      "arrow_damage": 1.5
+    }
+  }
+}

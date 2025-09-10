@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "name": "cloudertinker:molten_minodiamond",
+    "amount": 100
+  },
+  "temperature": 1000,
+  "output": "cloudertinker:minodiamond"
+}
