@@ -158,6 +158,7 @@ dependencies {
     implementation fg.deobf("slimeknights.mantle:Mantle:1.20.1-${mantle_version}")
     implementation fg.deobf("curse.maven:moonlight-499980:6209716")
     implementation fg.deobf("curse.maven:dummmmmmy-225738:5737040")
+    implementation fg.deobf("curse.maven:twilightforest-227639:5468648")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
