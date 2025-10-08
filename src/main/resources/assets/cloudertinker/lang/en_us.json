@@ -20,6 +20,7 @@
   "item.minecraft.tipped_arrow.effect.bloodlust_potion": "Arrow of Frenzy",
   "effect.cloudertinker.evilmarecurse": "Curse of the Evil Mare",
   "effect.cloudertinker.shildcooldown": "Shield Cooldown",
+  "modifier.cloudertinker.shieldcccldown.tooltip": "Shield Cooldown",
   "effect.cloudertinker.armorbroken": "Shattered Armor",
   "effect.cloudertinker.resentmentbrand": "Brand of Resentment",
   "effect.cloudertinker.bloodlust": "Frenzy Virus",

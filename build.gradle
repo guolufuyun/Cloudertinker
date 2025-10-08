@@ -159,6 +159,29 @@ dependencies {
     implementation fg.deobf("curse.maven:moonlight-499980:6209716")
     implementation fg.deobf("curse.maven:dummmmmmy-225738:5737040")
     implementation fg.deobf("curse.maven:twilightforest-227639:5468648")
+
+    implementation fg.deobf("curse.maven:l2library-620203:6806000")
+    implementation fg.deobf("curse.maven:l2hostility-909207:6985550")
+    implementation fg.deobf("curse.maven:l2-complements-758349:6939786")
+    implementation fg.deobf("curse.maven:curios-309927:6418456")
+    implementation fg.deobf("curse.maven:enigmatic-legacy-336184:5600004")
+
+    compileOnly fg.deobf(jarJar("com.tterrag.registrate:Registrate:MC1.20-1.3.11")) {
+        transitive = false
+        jarJar.ranged(it, "[MC1.20-1.3.11,)")
+    }
+    implementation fg.deobf(jarJar("dev.xkmc.l2library:l2library:2.4.25-slim")) {
+        transitive = false
+        jarJar.ranged(it, "[2.4.25,)")
+    }
+    implementation fg.deobf(jarJar("dev.xkmc.l2serial:l2serial:1.2.4")) {
+        transitive = false
+        jarJar.ranged(it, "[1.2.4,)")
+    }
+    implementation fg.deobf(jarJar("dev.xkmc.l2damagetracker:l2damagetracker:0.4.3")) {
+        transitive = false
+        jarJar.ranged(it, "[0.4.3,)")
+    }
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
