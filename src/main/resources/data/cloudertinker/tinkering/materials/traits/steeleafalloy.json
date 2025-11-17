@@ -64,6 +64,24 @@
       "name": "tconstruct:pierce",
       "level": 2
     }
+  ],
+  "tconstruct:ammo": [
+    {
+      "name": "cloudertinker:hyperplasia",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:looting",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:smashing_ammo",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:tipped",
+      "level": 1
+    }
   ]
 }
 }

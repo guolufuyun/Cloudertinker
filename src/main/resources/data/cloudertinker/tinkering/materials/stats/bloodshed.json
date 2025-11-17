@@ -48,5 +48,6 @@
       "exert_times": 30,
       "attack_frequency": 10,
       "kill_threshold": 0.3
-    }
+    },
+    "tconstruct:arrow_head": {}
   }}

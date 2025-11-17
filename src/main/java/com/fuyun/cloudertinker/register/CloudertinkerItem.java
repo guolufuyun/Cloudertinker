@@ -52,6 +52,7 @@ public class CloudertinkerItem {
     public static final RegistryObject<Item> frostiron_ingot = ITEMS.register("frostiron_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> magala_ingot = ITEMS.register("magala_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> glavenus_ingot = ITEMS.register("glavenus_ingot", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> frostspikeslime_ingot = ITEMS.register("frostspikeslime_ingot", () -> new Item(new Item.Properties()));
 
 
     public static final RegistryObject<Item> questiron_ingot = ITEMS.register("questiron_ingot", () -> new Item(new Item.Properties()));

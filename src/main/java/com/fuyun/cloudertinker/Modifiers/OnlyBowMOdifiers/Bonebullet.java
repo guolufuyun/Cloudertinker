@@ -6,6 +6,9 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.phys.EntityHitResult;
+import org.jetbrains.annotations.Nullable;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 import slimeknights.tconstruct.shared.TinkerEffects;
@@ -20,7 +23,14 @@ public class Bonebullet extends BattleModifier {
         if (target != null) {
             target.addEffect(new MobEffectInstance(TinkerEffects.bleeding.get(),600, arrow.getPierceLevel()));
             arrow.setBaseDamage(arrow.getBaseDamage()*1.3);
-            arrow.setPierceLevel((byte)(arrow.getPierceLevel()+level));
+//            arrow.setPierceLevel((byte)(arrow.getPierceLevel()+level));
+        }
+    }
+
+    @Override
+    public void onProjectileLaunch(IToolStackView tool, ModifierEntry modifier, LivingEntity shooter, Projectile projectile, @Nullable AbstractArrow arrow, ModDataNBT namespacedNBT, boolean primary) {
+        if (arrow != null) {
+            arrow.setBaseDamage(arrow.getBaseDamage()*1.3);
         }
     }
 }

@@ -36,7 +36,7 @@ public class Infect extends Modifier implements MeleeHitModifierHook, Projectile
     }
 
     @Override
-    public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @javax.annotation.Nullable LivingEntity attacker, @javax.annotation.Nullable LivingEntity target, boolean notBlocked) {
         if (target!=null&&target!=attacker) {
             ModifierEffect.direaddMobEffect(target, MobEffects.WITHER, 100*modifier.getLevel(), modifier.getLevel()-1);
         }

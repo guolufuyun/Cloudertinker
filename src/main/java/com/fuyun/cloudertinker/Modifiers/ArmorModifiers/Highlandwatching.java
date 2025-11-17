@@ -32,7 +32,7 @@ public class Highlandwatching extends BattleModifier {
     }
     @Override
     public void onInventoryTick(IToolStackView tool, ModifierEntry modifier, Level world, LivingEntity holder, int itemSlot, boolean isSelected, boolean isCorrectSlot, ItemStack stack) {
-        if (!world.isClientSide && isSelected) {
+        if (!world.isClientSide && (isSelected||isCorrectSlot)) {
             ModDataNBT tooldata = tool.getPersistentData();
             if (holder instanceof LivingPositionRecord record) {
                 if (!record.moveinLastTick(0.01d)) {

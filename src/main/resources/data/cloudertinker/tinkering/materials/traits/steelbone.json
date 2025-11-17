@@ -59,6 +59,16 @@
         "name": "cloudertinker:steelbody",
         "level": 1
       }
+    ],
+    "tconstruct:ammo": [
+      {
+        "name": "cloudertinker:bonebuullet",
+        "level": 1
+      },
+      {
+        "name": "tconstruct:spike",
+        "level": 1
+      }
     ]
   }
 }

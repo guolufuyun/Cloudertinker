@@ -43,12 +43,17 @@ public class Frostsword extends BattleModifier {
             int level = iToolStackView.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
             ModDataNBT tooldata = iToolStackView.getPersistentData();
             if (tooldata.getInt(frostcraft) > 0){
-                tooldata.putInt(frostcraft,tooldata.getInt(frostcraft)-3 *level-3);
                 LivingEntity entity = toolAttackContext.getLivingTarget();
                 entity.addEffect(new MobEffectInstance(TFMobEffects.FROSTY.get(),  (20 * (int)(tooldata.getInt(frostcraft)*0.02)),  (int)(tooldata.getInt(frostcraft)*0.02 -1)));
-                return (float) (v1 + (v1 * ( (tooldata.getInt(frostcraft)+10) * 0.015) ));
-            } else {
-                tooldata.putInt(frostcraft,0);
+                if (level < 3){
+                    return (float) (v1 + (v1 * 0.5 ));
+                } else if (level <6) {
+                    return (float) (v1 + (v1*1));
+                }else if(level<9){
+                    return (float) (v1 + (v1*2  ));
+                }else {
+                    return (float) (v1 + (v1 * 3 ));
+                }
             }
         }
         return v1;
@@ -67,8 +72,17 @@ public class Frostsword extends BattleModifier {
         if (player != null) {
             ModDataNBT tooldata = tool.getPersistentData();
             int level = tool.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
-            list.add(Component.translatable("modifier.cloudertinker.frostsword.tooltip1").append((int)(tooldata.getInt(frostcraft) * 1.5)+"%").withStyle(ChatFormatting.AQUA));
-            list.add(Component.translatable("modifier.cloudertinker.frostsword.tooltip2",(3 * level+3)  ).withStyle(ChatFormatting.AQUA));
+            int damage;
+            if (level < 3){
+                damage=50;
+            } else if (level <6) {
+                damage=100;
+            }else if(level<9){
+                damage=200;
+            }else {
+                damage=300;
+            }
+            list.add(Component.translatable("modifier.cloudertinker.frostsword.tooltip1").append((int)(damage)+"%").withStyle(ChatFormatting.AQUA));
         }
     }
 }

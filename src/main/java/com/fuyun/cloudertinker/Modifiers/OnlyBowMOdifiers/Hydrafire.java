@@ -15,6 +15,9 @@ import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.EntityHitResult;
+import org.jetbrains.annotations.Nullable;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 import twilightforest.init.TFMobEffects;
@@ -52,7 +55,7 @@ public class Hydrafire extends BattleModifier {
                 }
                    else if (hunger<=20){
 //                    target.getCommandSenderWorld().explode(target,  target.getX(), target.getY(), target.getZ(), ((float) hunger /10) +level, true, Explosion.BlockInteraction.NONE);
-                    arrow.setBaseDamage(arrow.getBaseDamage() * (hunger * 0.1));
+
                     List<Mob> mobList = target.getCommandSenderWorld().getEntitiesOfClass(Mob.class, new AABB(x + (hunger * 0.1)*level, y + (hunger * 0.1)*level, z +(hunger * 0.1)*level, x - (hunger * 0.1)*level, y - (hunger * 0.1)*level, z - (hunger * 0.1)*level));
                     for (Mob mob : mobList) {
                         if (mob != null) {
@@ -70,7 +73,7 @@ public class Hydrafire extends BattleModifier {
                    }
                          else  if ( full >0){
 //                             target.getCommandSenderWorld().explode(target,  target.getX(), target.getY(), target.getZ(), 2 +level, true, Explosion.BlockInteraction.NONE);
-                             arrow.setBaseDamage(arrow.getBaseDamage() * 2);
+
                     List<Mob> mobList = target.getCommandSenderWorld().getEntitiesOfClass(Mob.class, new AABB(x + 2*level, y + 2*level, z +2*level, x - 2*level, y - 2*level, z - 2*level));
                     for (Mob mob : mobList) {
                         if (mob != null) {
@@ -89,5 +92,20 @@ public class Hydrafire extends BattleModifier {
             target.setLastHurtByMob(attacker);
         }
     }
-   }
+
+    @Override
+    public void onProjectileLaunch(IToolStackView tool, ModifierEntry modifier, LivingEntity shooter, Projectile projectile, @Nullable AbstractArrow arrow, ModDataNBT namespacedNBT, boolean primary) {
+        if (arrow != null && shooter instanceof ServerPlayer player) {
+            int hunger = player.getFoodData().getFoodLevel();
+            float full = player.getFoodData().getSaturationLevel();
+            if (hunger < 10) {
+                arrow.setBaseDamage(arrow.getBaseDamage());
+            } else if (hunger <= 20) {
+                arrow.setBaseDamage(arrow.getBaseDamage() * (hunger * 0.1));
+            } else if (full > 0) {
+                arrow.setBaseDamage(arrow.getBaseDamage() * 2);
+            }
+        }
+    }
+}
 

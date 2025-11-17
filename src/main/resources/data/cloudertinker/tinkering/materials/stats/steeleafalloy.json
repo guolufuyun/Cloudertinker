@@ -12,6 +12,6 @@
       "mining_speed": 6,
       "mining_tier": "minecraft:diamond",
       "melee_attack": 4.5
-    }
-
+    },
+    "tconstruct:arrow_head": {}
   }}

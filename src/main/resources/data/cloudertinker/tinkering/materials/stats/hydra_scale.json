@@ -13,6 +13,7 @@
       "melee_attack": 5
     },
     "tconstruct:shield_core": {},
-    "tconstruct:maille": {}
+    "tconstruct:maille": {},
+    "tconstruct:fletching": {}
   }
 }

@@ -53,5 +53,6 @@ public class CloudertinkerMaterials extends CloudertinkerTab{
             output.accept(CloudertinkerItem.frostiron_ingot.get());
             output.accept(CloudertinkerItem.magala_ingot.get());
             output.accept(CloudertinkerItem.glavenus_ingot.get());
+            output.accept(CloudertinkerItem.frostspikeslime_ingot.get());
         }
     }

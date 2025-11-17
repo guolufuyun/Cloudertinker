@@ -37,6 +37,12 @@
     {
       "name": "cloudertinker:chillaura",
       "level": 1
-    }]
+    }],
+  "tconstruct:ammo": [
+    {
+      "name": "cloudertinker:frosttought",
+      "level": 3
+    }
+  ]
 }
 }

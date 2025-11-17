@@ -1,12 +1,12 @@
 {
   "type": "tconstruct:casting_table",
   "cast": {
-    "item": "minecraft:glass_bottle"
+    "item": "tconstruct:splash_bottle"
   },
   "cast_consumed": true,
   "fluid": {
-    "name": "cloudertinker:fire_tear",
-    "amount": 100
+    "name": "tconstruct:fiery_liquid",
+    "amount": 250
   },
   "result": "twilightforest:fiery_tears",
   "cooling_time": 20

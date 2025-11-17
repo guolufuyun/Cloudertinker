@@ -37,12 +37,7 @@ public boolean havenolevel() {
     public float getMeleeDamage(IToolStackView iToolStackView, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {
         return !toolAttackContext.getAttacker().getCommandSenderWorld().dimension().equals(Twilight_KEY) ? v1 + 2.0F : v1;
     }
-    @Override
-    public void arrowhurt(ModifierNBT modifiers, ModDataNBT persistentData, int level, Projectile projectile, EntityHitResult hit, AbstractArrow arrow, LivingEntity attacker, LivingEntity target) {
-        if (target != null) {
-            arrow.setBaseDamage(!attacker.getCommandSenderWorld().dimension().equals(Twilight_KEY) ? arrow.getBaseDamage() * 1.1F : arrow.getBaseDamage());
-             }
-    }
+
 
     @Override
     public void onBreakSpeed(IToolStackView tool, ModifierEntry modifier, PlayerEvent.BreakSpeed event, Direction sideHit, boolean isEffective, float miningSpeedModifier) {
@@ -52,7 +47,9 @@ public boolean havenolevel() {
     }
 
     @Override
-    public void onProjectileLaunch(IToolStackView iToolStackView, ModifierEntry modifierEntry, LivingEntity livingEntity, Projectile projectile, @Nullable AbstractArrow abstractArrow, ModDataNBT modDataNBT, boolean b) {
-
+    public void onProjectileLaunch(IToolStackView tool, ModifierEntry modifier, LivingEntity shooter, Projectile projectile, @Nullable AbstractArrow arrow, ModDataNBT namespacedNBT, boolean primary) {
+        if (arrow != null) {
+            arrow.setBaseDamage(!shooter.getCommandSenderWorld().dimension().equals(Twilight_KEY) ? arrow.getBaseDamage() * 1.1F : arrow.getBaseDamage());
+        }
     }
 }

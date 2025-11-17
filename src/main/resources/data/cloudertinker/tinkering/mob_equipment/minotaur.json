@@ -1,0 +1,29 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "twilightforest"
+    }
+  ],
+  "entity": "twilightforest:minotaur",
+  "equip": {
+    "chance": 0.05,
+    "materials": [
+      {
+        "type": "tconstruct:fixed",
+        "material": "cloudertinker:minodiamond"
+      },
+      {
+        "type": "tconstruct:fixed",
+        "material": "cloudertinker:minogold"
+      },
+      {
+        "type": "tconstruct:fixed",
+        "material": "cloudertinker:minogold"
+      }
+    ],
+    "priority": 100,
+    "slot": "mainhand",
+    "tool": "tconstruct:minotaur_axe"
+  }
+}

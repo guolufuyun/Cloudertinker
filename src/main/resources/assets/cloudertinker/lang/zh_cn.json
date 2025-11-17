@@ -25,7 +25,7 @@
 
   "effect.cloudertinker.evilmarecurse": "恶魇之咒",
   "effect.cloudertinker.shildcooldown": "护盾冷却",
-  "modifier.cloudertinker.shieldcccldown.tooltip": "护盾冷却",
+  "modifier.cloudertinker.shieldcccldown.tooltip": "护盾冷却 %s",
   "effect.cloudertinker.armorbroken": "碎裂铠甲",
   "effect.cloudertinker.resentmentbrand": "愤怨烙印",
   "effect.cloudertinker.bloodlust": "狂龙症",
@@ -62,6 +62,7 @@
   "fluid.cloudertinker.molten_magala": "熔融黑蚀",
   "fluid.cloudertinker.molten_glavenus": "熔融灼炎",
   "fluid.cloudertinker.molten_carminite": "熔融砷铅铁",
+  "fluid.cloudertinker.molten_frostspikeslime": "熔融冰刺史莱姆",
 
   "item.cloudertinker.giantsword": "巨人剑",
   "item.cloudertinker.giantsword.description": "挥动的时候可得悠着点！\n巨人剑挥起来很费劲，但是它的范围与威力都是无与伦比的。",
@@ -109,6 +110,8 @@
   "item.cloudertinker.magala_ingot": "黑蚀锭",
   "item.cloudertinker.glavenus_ingot": "灼炎锭",
 
+  "item.cloudertinker.frostspikeslime_ingot": "冰刺史莱姆锭",
+
   "item.cloudertinker.iron_cookie": "铁粒曲奇饼",
   "item.cloudertinker.obsidian_cookie": "黑曜石铁饼",
   "item.cloudertinker.cola_bottle": "可乐瓶",
@@ -150,12 +153,17 @@
   "item.cloudertinker.molten_magala_bucket": "熔融黑蚀桶",
   "item.cloudertinker.molten_glavenus_bucket": "熔融灼炎桶",
   "item.cloudertinker.molten_carminite_bucket": "熔融砷铅铁桶",
+  "item.cloudertinker.molten_frostspikeslime_bucket": "熔融冰刺史莱姆桶",
 
   "itemGroup.cloudertinker.materials": "浮云工坊-材料",
   "itemGroup.cloudertinker.others": "浮云工坊-杂项",
   "itemGroup.cloudertinker.toolandpart": "浮云工坊-工具和部件",
 
   "material.cloudertinker.text": "测试工具",
+
+  "material.cloudertinker.frostspikeslime": "冰刺史莱姆",
+  "material.cloudertinker.frostspikeslime.flavor": "又冷又扎手",
+  "material.cloudertinker.frostspikeslime.encyclopedia": "在极寒中产生的史莱姆变种，但在这里不具有活性",
 
   "material.cloudertinker.ironwood": "铁木",
   "material.cloudertinker.ironwood.flavor": "铁树开花！",
@@ -462,26 +470,26 @@
   "modifier.cloudertinker.frostcraft.description": "不在主手时积攒寒气",
   "modifier.cloudertinker.frostcraft.flavor": "“冰冻三尺非一日之寒”",
   "modifier.cloudertinker.frostcraft.tooltip": "当前积攒寒气层数%s/%s",
+  "modifier.cloudertinker.frostcraftmelee.tooltip": "近战消耗寒气：%s",
+  "modifier.cloudertinker.frostcraftrange.tooltip": "远程消耗寒气：%s",
+  "modifier.cloudertinker.frostcraftarmor.tooltip": "护甲消耗寒气：%s",
 
   "modifier.cloudertinker.frostsword": "覆霜之刃",
   "modifier.cloudertinker.frostsword.description": "攻击消耗寒气并根据寒气层数提高伤害和施加的霜冻效果,寒气满时攻速大幅提高",
   "modifier.cloudertinker.frostsword.flavor": "冰刃刺骨",
   "modifier.cloudertinker.frostsword.tooltip1": "近战伤害提升",
-  "modifier.cloudertinker.frostsword.tooltip2": "攻击消耗%s层寒气",
 
   "modifier.cloudertinker.frostbomb": "冰结爆破",
   "modifier.cloudertinker.frostbomb.description": "箭矢消耗寒气并根据寒气层数和箭矢基础伤害造成寒冰爆炸和施加的霜冻效果",
   "modifier.cloudertinker.frostbomb.flavor": "一天不止能用三次",
   "modifier.cloudertinker.frostbomb.tooltip1": "爆炸半径%s",
   "modifier.cloudertinker.frostbomb.tooltip2": "爆炸伤害倍率",
-  "modifier.cloudertinker.frostbomb.tooltip3": "射击消耗%s层寒气",
 
   "modifier.cloudertinker.frostaround": "寒气释放",
   "modifier.cloudertinker.frostaround.description": "随机冻结周围生物，受击时消耗寒气冻结周围所有生物并减少受到伤害",
   "modifier.cloudertinker.frostaround.flavor": "通俗来讲就是漏气了",
   "modifier.cloudertinker.frostaround.tooltip1": "影响半径%s",
   "modifier.cloudertinker.frostaround.tooltip2": "减少受到伤害",
-  "modifier.cloudertinker.frostaround.tooltip3": "受击消耗%s层寒气",
 
   "modifier.cloudertinker.seektraces": "寻迹",
   "modifier.cloudertinker.seektraces.description": "被击中的生物将会发光",
@@ -508,7 +516,7 @@
   "modifier.cloudertinker.overlost.flavor": "兜兜转转回到原点",
 
   "modifier.cloudertinker.overmygo": "迷途之子",
-  "modifier.cloudertinker.overmygo.description": "受伤减少10%*对方缓慢等级，自身缓慢时获得等于词条等级的抗性提升",
+  "modifier.cloudertinker.overmygo.description": "提供10%*对方缓慢等级的保护z，自身缓慢时获得等于词条等级的抗性提升",
   "modifier.cloudertinker.overmygo.flavor": "即使迷茫也要一同前进",
 
   "modifier.cloudertinker.variablood": "异生恶血",
@@ -663,6 +671,22 @@
   "modifier.cloudertinker.react.description": "受击时进行反击，视为该工具进行攻击\n双手均有该词条时副手的无效",
   "modifier.cloudertinker.react.flavor": "“犯大吴疆土者，盛必击而破之”",
 
+  "modifier.cloudertinker.hyperplasia": "增生",
+  "modifier.cloudertinker.hyperplasia.description": "在快捷栏时会根据快捷栏数量自我复制",
+  "modifier.cloudertinker.hyperplasia.flavor": "调整星级，同调召唤！",
+
+  "modifier.cloudertinker.overfreeze": "黏液冻结",
+  "modifier.cloudertinker.overfreeze.description": "根据黏液覆层提供护甲值和盔甲韧性\n拥有寒气时会恢复覆层并将寒气消耗按比例变为覆层消耗",
+  "modifier.cloudertinker.overfreeze.flavor": "这就是[白色相蒲]的季节",
+
+  "modifier.cloudertinker.frostspikearrow": "穿刺冰箭",
+  "modifier.cloudertinker.frostspikearrow.description": "消耗覆层提升穿透并施加碎甲霜冻穿刺\n拥有寒气时改为消耗寒气并无限穿透，每次穿透提升伤害和施加效果等级",
+  "modifier.cloudertinker.frostspikearrow.flavor": "并不能用来对付神明吞噬者",
+
+  "modifier.cloudertinker.frostspikearound": "冰刺环绕",
+  "modifier.cloudertinker.frostspikearound.description": "收击消耗覆层对目标造成与覆层数量相关的伤害并施加霜冻\n拥有寒气时改为消耗寒气并提升伤害并额外对周围造成伤害",
+  "modifier.cloudertinker.frostspikearound.flavor": "并不能用来对付神明吞噬者",
+
   "modifier.cloudertinker.qianghua": "强化分区",
 
   "modifier.cloudertinker.growhedge": "蔓生树篱",
@@ -671,7 +695,7 @@
   "recipes.modifier.cloudertinker.growhedge": "需要三级荆棘作为前置哦",
 
   "modifier.cloudertinker.seekwind": "捕风捉影",
-  "modifier.cloudertinker.seekwind.description": "你发射的箭矢被替换为追踪箭",
+  "modifier.cloudertinker.seekwind.description": "你发射的箭矢被替换为追踪箭,但捡起时会变为普通箭",
   "modifier.cloudertinker.seekwind.flavor": "他逃~他追~他插翅难飞~",
 
   "modifier.cloudertinker.druidseed": "德鲁伊之种",

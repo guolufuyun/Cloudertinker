@@ -6,7 +6,7 @@
       "twilightforest:ur_ghast"
   },
   "result": {
-    "amount": 10,
-    "fluid": "cloudertinker:fire_tear"
+    "amount": 20,
+    "fluid": "tconstruct:fiery_liquid"
   }
 }

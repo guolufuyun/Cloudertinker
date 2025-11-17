@@ -53,6 +53,16 @@
     {
       "name": "tconstruct:kinetic",
       "level": 1
-    }]
+    }],
+  "tconstruct:ammo": [
+    {
+      "name": "cloudertinker:superheat",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:reclaim",
+      "level": 1
+    }
+  ]
 }
 }

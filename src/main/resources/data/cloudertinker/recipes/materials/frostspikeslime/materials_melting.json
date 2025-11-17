@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 250,
+    "name": "cloudertinker:frost_essence"
+  },
+  "input": "tconstruct:slimesteel",
+  "output": "cloudertinker:frostspikeslime",
+  "temperature": 60
+}

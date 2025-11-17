@@ -50,6 +50,9 @@
       "toughness": 2
     },
     "tconstruct:shield_core": {},
-    "tconstruct:maille": {}
+    "tconstruct:maille": {},
+    "tconstruct:arrow_head": {},
+    "tconstruct:arrow_shaft": {},
+    "tconstruct:fletching": {}
   }
 }

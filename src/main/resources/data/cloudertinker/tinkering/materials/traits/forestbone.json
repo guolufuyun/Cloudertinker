@@ -49,6 +49,16 @@
         "name": "cloudertinker:frostbone",
         "level": 1
       }
+    ],
+    "tconstruct:ammo": [
+      {
+        "name": "cloudertinker:frosttought",
+        "level": 1
+      },
+      {
+        "name": "tconstruct:spike",
+        "level": 1
+      }
     ]
   }
 }

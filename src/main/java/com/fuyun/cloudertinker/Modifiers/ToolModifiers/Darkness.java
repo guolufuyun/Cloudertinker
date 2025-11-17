@@ -57,7 +57,7 @@ public class Darkness extends Modifier implements TooltipModifierHook, BreakSpee
             BlockPos pos = player.getOnPos().above();
             int light = getLight(world, pos) + 1;
             if (light < 10) {
-                return (float) (damage * (1 + 0.25 * modifier.getLevel() / light));
+                return (float) (damage * (1 + 0.5 * modifier.getLevel() / light));
             }
         }
         return damage;
@@ -71,7 +71,7 @@ public class Darkness extends Modifier implements TooltipModifierHook, BreakSpee
         int light = getLight(world, pos) + 1;
         if (light < 10) {
             if (stat == ToolStats.DRAW_SPEED) {
-                return (float) (baseValue * (1 + 0.25 * level / light));
+                return (float) (baseValue * (1 + 0.5 * level / light));
             }else if (stat == ToolStats.VELOCITY) {
                 return (float)(baseValue * (1 + 0.25 * level / light));
             }
@@ -86,10 +86,10 @@ public class Darkness extends Modifier implements TooltipModifierHook, BreakSpee
             if (harvest || tool.hasTag(TinkerTags.Items.RANGED)) {
                 if (tooltipKey == TooltipKey.SHIFT) {
                     if (harvest) {
-                        TooltipModifierHook.addPercentBoost(modifier.getModifier(), Component.translatable("modifier.cloudertinker.darkness.attack_damage"), 0.25 * modifier.getLevel(), tooltip);
+                        TooltipModifierHook.addPercentBoost(modifier.getModifier(), Component.translatable("modifier.cloudertinker.darkness.attack_damage"), 0.5 * modifier.getLevel(), tooltip);
                         TooltipModifierHook.addPercentBoost(modifier.getModifier(), Component.translatable("modifier.cloudertinker.darkness.mining_speed"), 0.5 * modifier.getLevel(), tooltip);
                     } else {
-                        TooltipModifierHook.addPercentBoost(modifier.getModifier(), Component.translatable("modifier.cloudertinker.darkness.draw_speed"), 0.25 * modifier.getLevel(), tooltip);
+                        TooltipModifierHook.addPercentBoost(modifier.getModifier(), Component.translatable("modifier.cloudertinker.darkness.draw_speed"), 0.5 * modifier.getLevel(), tooltip);
                         TooltipModifierHook.addPercentBoost(modifier.getModifier(), Component.translatable("modifier.cloudertinker.darkness.velocity"), 0.25 * modifier.getLevel(), tooltip);
                     }
                 }

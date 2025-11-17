@@ -154,6 +154,16 @@
         "name": "cloudertinker:harmonizearmor",
         "level": 1
       }
+    ],
+    "tconstruct:ammo": [
+      {
+        "name": "cloudertinker:hyperplasia",
+        "level": 1
+      },
+      {
+        "name": "tconstruct:bounce",
+        "level": 1
+      }
     ]
   }
 }

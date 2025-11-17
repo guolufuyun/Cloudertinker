@@ -2,12 +2,8 @@
   "type": "tconstruct:alloy",
   "inputs": [
     {
-      "name": "cloudertinker:fire_blood",
-      "amount": 100
-    },
-    {
-      "name": "cloudertinker:fire_tear",
-      "amount": 100
+      "name": "tconstruct:fiery_liquid",
+      "amount": 250
     },
     {
       "name": "tconstruct:molten_glass",
