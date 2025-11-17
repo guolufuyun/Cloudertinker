@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "type":
+      "twilightforest:alpha_yeti"
+  },
+  "result":{
+    "count": 5,
+    "item": "twilightforest:alpha_yeti_fur"
+}}

@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 250,
+    "name":"tconstruct:powdered_snow"
+  },
+  "input": "tconstruct:bone",
+  "output": "cloudertinker:forestbone",
+  "temperature": 50
+}

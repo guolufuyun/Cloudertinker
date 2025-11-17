@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "types": [
+      "twilightforest:swarm_spider",
+      "twilightforest:carminite_broodling"
+    ]
+  },
+  "result": "tconstruct:cave_spider_head"
+}

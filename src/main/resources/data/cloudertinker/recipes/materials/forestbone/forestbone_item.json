@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "minecraft:bone"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "tconstruct:powdered_snow",
+    "amount": 250
+  },
+  "result": "cloudertinker:forestbone",
+  "cooling_time": 60
+}

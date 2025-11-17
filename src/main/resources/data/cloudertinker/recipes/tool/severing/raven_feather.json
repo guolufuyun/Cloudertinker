@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "type": "twilightforest:raven"
+  },
+  "result":{
+    "count": 2,
+    "item": "twilightforest:reven_feather"
+}}

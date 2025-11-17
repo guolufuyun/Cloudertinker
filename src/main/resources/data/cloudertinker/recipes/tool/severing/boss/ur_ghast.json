@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "type":
+      "twilightforest:ur_ghast"
+  },
+  "result":{
+    "count": 5,
+    "item":"twilightforest:fiery_tears"
+}}

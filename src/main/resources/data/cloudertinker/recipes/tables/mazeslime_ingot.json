@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CBC",
+    "BAB",
+    "CBC"
+  ],
+  "key": {
+    "A": {
+      "item": "tconstruct:slimesteel_ingot"
+    },
+    "B": {
+      "item": "twilightforest:mazestone_brick"
+    },
+    "C": {
+      "item": "minecraft:slime_ball"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:mazeslime_ingot",
+    "count": 1
+  }
+}

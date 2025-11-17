@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:casting_basin",
+  "fluid": {
+    "fluid": "cloudertinker:molten_knightmetal",
+    "amount": 810
+  },
+  "result": "twilightforest:knightmetal_block",
+  "cooling_time": 165
+}

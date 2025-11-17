@@ -1,0 +1,21 @@
+
+{
+  "result": {
+    "item": "tconstruct:helmet_plating",
+    "count": 1,
+    "nbt": "{Material:\"cloudertinker:steeleaf\"}"
+  },
+  "pattern": [
+    "###",
+    "#X#"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "twilightforest:steeleaf_ingot"
+    },
+    "X": {
+      "item": "tconstruct:pattern"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "twilightforest:fiery_sword"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_fiery",
+    "amount": 180
+  },
+  "temperature": 1000,
+  "time": 40
+}

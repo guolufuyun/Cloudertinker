@@ -1,0 +1,7 @@
+{
+  "type": "twilightforest:transformation_powder",
+  "from": "minecraft:wither_skeleton",
+  "reversible": true,
+  "to": "minecraft:stray"
+}
+

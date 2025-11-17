@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "twilightforest:ice_bomb"
+    },
+    {
+      "item": "tconstruct:sky_congealed_slime"
+    },
+    {
+      "item": "tconstruct:cheese_block"
+    }
+  ],
+  "result": {
+    "item": "cloudertinker:clean_pastry",
+    "count": 4
+  }
+}

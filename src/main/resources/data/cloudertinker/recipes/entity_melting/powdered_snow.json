@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:entity_melting",
+  "damage": 2,
+  "entity": {
+    "types": [
+      "twilightforest:yeti",
+      "twilightforest:snow_guardian",
+      "twilightforest:winter_wolf"
+    ]
+  },
+  "result": {
+    "amount": 50,
+    "fluid": "tconstruct:powdered_snow"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "BCB",
+    "ADA"
+  ],
+  "key": {
+    "A": {
+      "item": "tconstruct:manyullyn_nugget"
+    },
+    "B": {
+      "item": "twilightforest:hydra_chop"
+    },
+    "C": {
+      "item": "tconstruct:dragon_scale"
+    },
+    "D": {
+      "item": "twilightforest:fiery_blood"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:hydra_scale",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA ",
+    "AB ",
+    " B "
+  ],
+  "key": {
+    "A": {
+      "item": "cloudertinker:minogold_ingot"
+    },
+    "B": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "twilightforest:gold_minotaur_axe",
+    "count": 1
+  }
+}

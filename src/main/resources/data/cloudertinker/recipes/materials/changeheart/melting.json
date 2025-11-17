@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "cloudertinker:changeheart"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_changeheart",
+    "amount": 100
+  },
+  "temperature": 1200,
+  "time": 20
+}

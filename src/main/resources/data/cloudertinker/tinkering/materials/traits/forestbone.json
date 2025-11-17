@@ -1,0 +1,54 @@
+{
+  "perStat": {
+    "tconstruct:head": [
+      {
+        "name": "cloudertinker:frostcraft",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:frostbone",
+        "level": 1
+      }
+    ],
+    "tconstruct:handle": [
+      {
+        "name": "cloudertinker:frostcraft",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:frostbone",
+        "level": 1
+      }
+    ],
+    "tconstruct:binding": [
+      {
+        "name": "cloudertinker:frostcraft",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:frostbone",
+        "level": 1
+      }
+    ],
+    "tconstruct:limb": [
+      {
+        "name": "cloudertinker:frostcraft",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:frostbone",
+        "level": 1
+      }
+    ],
+    "tconstruct:grip": [
+      {
+        "name": "cloudertinker:frostcraft",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:frostbone",
+        "level": 1
+      }
+    ]
+  }
+}

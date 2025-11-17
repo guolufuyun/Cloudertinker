@@ -1,0 +1,35 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "check_trait_level": false,
+  "inputs": [
+    {
+      "amount_needed": 3,
+      "item": "twilightforest:arctic_fur"
+    },
+    {
+      "item": "twilightforest:alpha_yeti_fur"
+    },
+    {
+      "amount_needed": 3,
+      "item": "twilightforest:arctic_fur"
+    },
+    {
+      "item": "cloudertinker:forestbone"
+    },
+    {
+      "item": "cloudertinker:forestbone"
+    }
+  ],
+  "level": {
+    "max": 3
+  },
+  "result": "cloudertinker:chillaura",
+  "slots": {
+    "upgrades": 1
+  },
+  "tools": [
+   {
+    "tag": "tconstruct:modifiable/armor"
+  }]
+}

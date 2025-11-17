@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "twilightforest:gold_minotaur_axe"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_minogold",
+    "amount": 270
+  },
+  "temperature": 800,
+  "time": 60
+}

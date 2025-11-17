@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "types": [
+      "twilightforest:carminite_ghastguard",
+      "twilightforest:carminite_ghastling",
+      "twilightforest:carminite_broodling",
+      "twilightforest:carminite_golem"
+    ]
+  },
+  "result":"twilightforest:carminite"
+}

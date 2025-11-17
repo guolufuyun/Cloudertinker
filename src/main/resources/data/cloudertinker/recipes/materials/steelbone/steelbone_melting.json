@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "cloudertinker:steelbone"
+  },
+  "result": {
+    "fluid": "tconstruct:molten_netherite",
+    "amount": 10
+  },
+  "temperature": 1500,
+  "time": 180
+}

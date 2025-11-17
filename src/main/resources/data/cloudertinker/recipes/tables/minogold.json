@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cloudertinker:minogold_ingot"
+    }
+  ],
+  "result": {
+    "item": "minecraft:gold_ingot",
+    "count": 1
+  }
+}

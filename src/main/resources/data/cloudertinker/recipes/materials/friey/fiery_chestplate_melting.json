@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "twilightforest:fiery_chestplate"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_fiery",
+    "amount": 720
+  },
+  "temperature": 1000,
+  "time": 160
+}

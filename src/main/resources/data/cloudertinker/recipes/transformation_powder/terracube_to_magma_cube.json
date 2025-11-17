@@ -1,0 +1,6 @@
+{
+  "type": "twilightforest:transformation_powder",
+  "from": "tconstruct:terracube",
+  "reversible": true,
+  "to": "minecraft:magma_cube"
+}

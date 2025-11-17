@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "twilightforest:steeleaf_ingot"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "tconstruct:molten_emerald",
+    "amount": 200
+  },
+  "result": "cloudertinker:compositesteeleaf_ingot",
+  "cooling_time": 60
+}

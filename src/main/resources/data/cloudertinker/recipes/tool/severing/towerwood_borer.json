@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "types": ["twilightforest:towerwood_borer",
+      "twilightforest:carminite_broodling"
+    ]
+  },
+  "result":{
+    "count": 2,
+    "item": "twilightforest:borer_essence"
+}}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ECE",
+    "DAD",
+    "DBD"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:copper_ingot"
+    },
+    "B": {
+      "item": "cloudertinker:lifedrain_scepter_core"
+    },
+    "C": {
+      "item": "minecraft:fermented_spider_eye"
+    },
+    "D": {
+      "item": "minecraft:redstone"
+    },
+    "E": {
+      "item": "minecraft:glistering_melon_slice"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:bloodshed_ingot",
+    "count": 1
+  }
+}

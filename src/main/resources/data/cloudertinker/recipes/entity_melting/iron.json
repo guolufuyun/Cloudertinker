@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:entity_melting",
+  "damage": 4,
+  "entity": {
+    "types": [
+      "twilightforest:carminite_golem",
+      "twilightforest:armored_giant"
+
+    ]
+  },
+  "result": {
+    "amount": 10,
+    "fluid": "tconstruct:molten_iron"
+  }
+}

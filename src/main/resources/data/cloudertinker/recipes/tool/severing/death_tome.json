@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "type": "twilightforest:death_tome"
+  },
+  "result":{
+    "count": 3,
+    "item": "minecraft:paper"
+}}

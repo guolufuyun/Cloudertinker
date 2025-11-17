@@ -1,0 +1,14 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "types": [
+      "twilightforest:swarm_spider",
+      "twilightforest:king_spider",
+      "twilightforest:hedge_spider",
+      "twilightforest:carminite_broodling"
+    ]
+  },
+  "result": {"count": 2,
+    "item":"minecraft:spider_eye"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "twilightforest:castle_brick"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_castone",
+    "amount": 1000
+  },
+  "temperature": 1500,
+  "time": 180
+}

@@ -1,0 +1,19 @@
+{
+  "type": "tconstruct:entity_melting",
+  "damage": 4,
+  "entity": {
+    "types": [
+      "twilightforest:naga",
+      "twilightforest:kobold",
+      "twilightforest:redcap",
+      "twilightforest:redcap_sapper"
+    ]
+  },
+  "result": {
+    "amount": 50,
+    "fluid": "tconstruct:potion",
+    "nbt": {
+      "Potion": "minecraft:swiftness"
+    }
+  }
+}

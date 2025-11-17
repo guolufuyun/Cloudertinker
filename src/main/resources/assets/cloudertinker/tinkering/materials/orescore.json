@@ -1,0 +1,38 @@
+{
+  "color": "FF826B4C",
+  "fallbacks": [
+    "metal"
+  ],
+  "generator": {
+    "ignoreMaterialStats": false,
+    "supportedStats": [
+      "tconstruct:head",
+      "tconstruct:handle",
+      "tconstruct:binding",
+      "tconstruct:repair_kit"
+    ],
+    "transformer": {
+
+      "type": "tconstruct:grey_to_sprite",
+      "palette": [
+        {
+          "grey": 0,
+          "color": "FF000000"
+        },
+        {
+          "grey": 63,
+          "path": "cloudertinker:item/hover/orescore2"
+        },
+        {
+          "grey": 178,
+          "path": "cloudertinker:item/hover/orescore1"
+        },
+        {
+          "grey": 255,
+          "path": "cloudertinker:item/hover/orescore3"
+        }
+      ]
+    },
+    "luminosity": 15
+  }
+}

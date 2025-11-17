@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "cloudertinker:magnet_ingot"
+  },
+  "value": 1,
+  "needed": 1,
+  "material": "cloudertinker:magnet"
+}

@@ -1,0 +1,58 @@
+{"perStat": {
+  "tconstruct:head": [
+    {
+      "name": "cloudertinker:twilight",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:hydrabitten",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:insatiable",
+      "level": 1
+    }
+  ],
+  "tconstruct:limb": [
+    {
+      "name": "cloudertinker:twilight",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:hydrafire",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:insatiable",
+      "level": 1
+    }
+  ],
+  "tconstruct:shield_core": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:hydralife",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:kinetic",
+      "level": 1
+    }
+  ],
+  "tconstruct:maille": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:hydralife",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:kinetic",
+      "level": 1
+    }]
+}
+}

@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "type":
+      "twilightforest:lich"
+  },
+  "result":{
+    "count": 10,
+    "item":"twilightforest:transformation_powder"
+}}

@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting_fuel",
+  "duration": 50,
+  "fluid": {
+    "amount": 90,
+    "fluid": "cloudertinker:molten_fiery"
+  },
+  "rate": 100,
+  "temperature": 2000
+}

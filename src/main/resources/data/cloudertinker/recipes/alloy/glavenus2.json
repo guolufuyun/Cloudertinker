@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    {
+      "name": "cloudertinker:molten_fiery",
+      "amount": 90
+    },
+    {
+      "tag": "forge:molten_cobalt",
+      "amount": 90
+    },
+    {
+      "tag": "tconstruct:scorched_stone",
+      "amount": 250
+    }
+  ],
+  "result": {
+    "fluid": "cloudertinker:molten_glavenus",
+    "amount": 180
+  },
+  "temperature": 1500
+}

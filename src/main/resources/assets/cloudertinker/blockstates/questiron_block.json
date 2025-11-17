@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "cloudertinker:block/questiron_block"
+    }
+  }
+}

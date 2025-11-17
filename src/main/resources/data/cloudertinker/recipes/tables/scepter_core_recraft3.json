@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cloudertinker:lifedrain_scepter_core"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "tconstruct:necrotic_bone"
+    },
+    {
+      "item": "minecraft:fermented_spider_eye"
+    }
+  ],
+  "result": {
+    "item": "cloudertinker:lifedrain_scepter_core",
+    "count": 16
+  }
+}

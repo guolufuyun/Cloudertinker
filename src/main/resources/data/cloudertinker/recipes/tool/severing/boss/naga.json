@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "type":
+      "twilightforest:naga"
+  },
+  "result":{
+    "count": 7,
+    "item":"twilightforest:naga_scale"
+}}

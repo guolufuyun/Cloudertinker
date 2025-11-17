@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EBG",
+    "BAB",
+    "DCF"
+  ],
+  "key": {
+    "A": {
+      "item": "twilightforest:time_sapling"
+    },
+    "B": {
+      "item": "minecraft:bone_meal"
+    },
+    "C": {
+      "item": "twilightforest:liveroot"
+    },
+    "D": {
+      "item": "minecraft:scute"
+    },
+    "E": {
+      "item": "minecraft:oxidized_copper"
+    },
+    "F": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "G": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:timering",
+    "count": 5
+  }
+}

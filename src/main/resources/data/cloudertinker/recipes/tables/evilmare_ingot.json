@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CBC",
+    "DAD",
+    "CDC"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "item": "cloudertinker:twilight_scepter_core"
+    },
+    "C": {
+      "item": "tconstruct:obsidian_pane"
+    },
+    "D": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:evilmare_ingot",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "twilightforest:ice_bomb"
+  },
+  "result": {
+    "fluid": "cloudertinker:frost_essence",
+    "amount": 250
+  },
+  "temperature": 800,
+  "time": 20
+}

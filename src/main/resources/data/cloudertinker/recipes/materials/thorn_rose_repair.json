@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "twilightforest:thorn_rose"
+  },
+  "value": 1,
+  "needed": 2,
+  "material": "cloudertinker:thorn_rose"
+}

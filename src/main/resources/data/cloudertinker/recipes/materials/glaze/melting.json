@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "cloudertinker:glaze_ingot"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_glaze",
+    "amount": 90
+  },
+  "temperature": 1500,
+  "time": 180
+}

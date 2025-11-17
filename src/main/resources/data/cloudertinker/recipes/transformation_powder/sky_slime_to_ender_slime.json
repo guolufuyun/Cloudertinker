@@ -1,0 +1,6 @@
+{
+  "type": "twilightforest:transformation_powder",
+  "from": "tconstruct:sky_slime",
+  "reversible": true,
+  "to": "tconstruct:ender_slime"
+}

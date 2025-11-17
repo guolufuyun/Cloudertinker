@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:part_builder",
+  "pattern": "cloudertinker:knightmetal_ring_part",
+  "pattern_item": [
+    {
+      "item": "twilightforest:knightmetal_ring"
+    }
+  ],
+  "cost": 4,
+  "result": {
+    "item": "cloudertinker:knightmetal_ring_part"
+  }
+}

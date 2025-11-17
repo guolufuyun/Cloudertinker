@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "cloudertinker:magala_ingot"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_magala",
+    "amount": 90
+  },
+  "temperature": 2000,
+  "time": 20
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "cloudertinker:chimera_ingot"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_chimera",
+    "amount": 90
+  },
+  "temperature": 1500,
+  "time": 180
+}

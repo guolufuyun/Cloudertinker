@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "item": "cloudertinker:phantom_ingot"
+    }
+  },
+  "result": {
+    "item": "twilightforest:phantom_helmet",
+    "count": 1
+  }
+}

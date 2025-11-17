@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:table_casting_material",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/giant_blade"
+  },
+  "item_cost": 32,
+  "result": "cloudertinker:giant_blade"
+}

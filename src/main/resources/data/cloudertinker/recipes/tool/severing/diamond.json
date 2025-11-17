@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "types": [
+      "twilightforest:redcap",
+      "twilightforest:redcap_sapper"
+    ]
+  },
+  "result": {"count": 2,
+    "item":"minecraft:diamond"
+  }
+}

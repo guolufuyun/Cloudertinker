@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EBG",
+    "HAI",
+    "DCF"
+  ],
+  "key": {
+    "A": {
+      "item": "twilightforest:mining_sapling"
+    },
+    "B": {
+      "item": "minecraft:bone_meal"
+    },
+    "C": {
+      "item": "twilightforest:liveroot"
+    },
+    "D": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "E": {
+      "item": "minecraft:raw_iron"
+    },
+    "F": {
+      "item": "minecraft:raw_copper"
+    },
+    "G": {
+      "item": "minecraft:redstone"
+    },
+    "H": {
+      "item": "minecraft:raw_gold"
+    },
+    "I": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:orescore",
+    "count": 5
+  }
+}

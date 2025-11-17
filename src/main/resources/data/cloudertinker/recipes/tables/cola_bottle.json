@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "BCB",
+    "DDD"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:sugar"
+    },
+    "B": {
+      "tag": "minecraft:coals"
+    },
+    "C": {
+      "item": "minecraft:water_bucket"
+    },
+    "D": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:cola_bottle",
+    "count": 3
+  }
+}

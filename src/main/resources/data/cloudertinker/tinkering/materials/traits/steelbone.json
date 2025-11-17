@@ -1,0 +1,64 @@
+{
+  "perStat": {
+    "tconstruct:head": [
+      {
+        "name": "tconstruct:netherite",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:steelbone",
+        "level": 1
+      }
+    ],
+    "tconstruct:handle": [
+      {
+        "name": "tconstruct:netherite",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:steelbone",
+        "level": 1
+      }
+    ],
+    "tconstruct:binding": [
+      {
+        "name": "tconstruct:netherite",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:steelbone",
+        "level": 1
+      }
+    ],
+    "tconstruct:limb": [
+      {
+        "name": "tconstruct:netherite",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:bonebullet",
+        "level": 1
+      }
+    ],
+    "tconstruct:grip": [
+      {
+        "name": "tconstruct:netherite",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:bonebullet",
+        "level": 1
+      }
+    ],
+    "tconstruct:maille": [
+      {
+        "name": "tconstruct:netherite",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:steelbody",
+        "level": 1
+      }
+    ]
+  }
+}

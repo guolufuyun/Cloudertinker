@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "twilightforest:ore_magnet"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_magnet",
+    "amount": 450
+  },
+  "temperature": 1000,
+  "time": 180
+}

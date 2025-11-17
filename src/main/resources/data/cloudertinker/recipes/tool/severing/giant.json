@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:severing",
+  "entity": {
+    "types": [
+      "twilightforest:armored_giant",
+      "twilightforest:giant_miner"
+    ]
+  },
+  "result":"minecraft:player_head"
+}

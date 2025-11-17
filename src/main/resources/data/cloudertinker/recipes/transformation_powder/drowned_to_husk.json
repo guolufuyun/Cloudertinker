@@ -1,0 +1,7 @@
+{
+  "type": "twilightforest:transformation_powder",
+  "from": "minecraft:drowned",
+  "reversible": true,
+  "to": "minecraft:husk"
+}
+
