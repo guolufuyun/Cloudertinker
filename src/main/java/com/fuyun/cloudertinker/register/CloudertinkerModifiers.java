@@ -108,6 +108,9 @@ public class CloudertinkerModifiers {
     public static final StaticModifier<Takerootarmor> takerootarmor=MODIFIERS.register("takerootarmor", Takerootarmor::new);
     public static final StaticModifier<Infect> infect=MODIFIERS.register("infect", Infect::new);
     public static final StaticModifier<React> react=MODIFIERS.register("react", React::new);
+    public static final StaticModifier<Overfreeze> overfreeze=MODIFIERS.register("overfreeze", Overfreeze::new);
+    public static final StaticModifier<Frostspikearrow> frostspikearrow=MODIFIERS.register("frostspikearrow", Frostspikearrow::new);
+    public static final StaticModifier<Frostspikearound> frostspikearound=MODIFIERS.register("frostspikearound", Frostspikearound::new);
 
 
     public static final StaticModifier<Text> text=MODIFIERS.register("text", Text::new);

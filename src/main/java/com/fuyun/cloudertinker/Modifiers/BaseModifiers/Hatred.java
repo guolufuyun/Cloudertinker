@@ -86,7 +86,7 @@ public class Hatred extends ArmorModifier {
         if (player != null) {
             if (tool.getModifierLevel(CloudertinkerModifiers.resentment.getId()) < 1) {
                 ModDataNBT tooldata = tool.getPersistentData();
-                list.add(Component.translatable("modifier.cloudertinker.harted.tooltip", tooldata.getInt(resentment)).withStyle(ChatFormatting.DARK_RED)); }
+                list.add(Component.translatable("modifier.cloudertinker.hatred.tooltip", tooldata.getInt(resentment)).withStyle(ChatFormatting.DARK_RED)); }
         }
     }
 }

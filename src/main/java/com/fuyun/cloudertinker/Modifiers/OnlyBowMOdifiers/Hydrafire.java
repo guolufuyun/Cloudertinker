@@ -13,9 +13,12 @@ import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.EntityHitResult;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class Hydrafire extends BattleModifier {
@@ -45,7 +48,6 @@ public class Hydrafire extends BattleModifier {
                         serverLevel.sendParticles(ParticleTypes.EXPLOSION,target.getX(),target.getY()+0.5*target.getBbHeight(),target.getZ(),1 ,0,0,0,0);
                     }
                 } else if (hunger<=20){
-                     arrow.setBaseDamage(arrow.getBaseDamage() * (hunger * 0.1));
                     List<Mob> mobList = target.getCommandSenderWorld().getEntitiesOfClass(Mob.class, new AABB(x + (hunger * 0.1)*level, y + (hunger * 0.1)*level, z +(hunger * 0.1)*level, x - (hunger * 0.1)*level, y - (hunger * 0.1)*level, z - (hunger * 0.1)*level));
                     for (Mob mob : mobList) {
                         if (mob != null) {
@@ -61,7 +63,6 @@ public class Hydrafire extends BattleModifier {
                     if ( full <=0){player.getFoodData().setFoodLevel(hunger - 2);}
                     if ( full-2 >=0){player.getFoodData().setSaturation(full - 2);}else {player.getFoodData().setSaturation(0);}
                    } else  if ( full >0){
-                    arrow.setBaseDamage(arrow.getBaseDamage() * 2);
                     List<Mob> mobList = target.getCommandSenderWorld().getEntitiesOfClass(Mob.class, new AABB(x + 2*level, y + 2*level, z +2*level, x - 2*level, y - 2*level, z - 2*level));
                     for (Mob mob : mobList) {
                         if (mob != null) {
@@ -81,5 +82,20 @@ public class Hydrafire extends BattleModifier {
             target.setLastHurtByMob(attacker);
         }
     }
+    @Override
+        public void onProjectileLaunch(IToolStackView tool, ModifierEntry modifier, LivingEntity shooter, Projectile projectile, @Nullable AbstractArrow arrow, NamespacedNBT namespacedNBT, boolean primary) {
+    if (arrow != null && shooter instanceof ServerPlayer player) {
+        int hunger = player.getFoodData().getFoodLevel();
+        float full = player.getFoodData().getSaturationLevel();
+        if (hunger < 10) {
+            arrow.setBaseDamage(arrow.getBaseDamage());
+        } else if (hunger <= 20) {
+            arrow.setBaseDamage(arrow.getBaseDamage() * (hunger * 0.1));
+        } else if (full > 0) {
+            arrow.setBaseDamage(arrow.getBaseDamage() * 2);
+        }
+    }
+}
+
    }
 

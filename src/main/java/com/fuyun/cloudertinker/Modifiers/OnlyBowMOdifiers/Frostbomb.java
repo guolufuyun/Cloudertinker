@@ -47,7 +47,7 @@ public class Frostbomb extends BattleModifier {
                 double y = target.getY();
                 double z = target.getZ();
                 int ice = ToolStack.from(attacker.getItemBySlot(EquipmentSlot.MAINHAND)).getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
-                int a = (int) ((tooldata.getInt(frostcraft)+10) * 0.01);
+                int a = (int) ((tooldata.getInt(frostcraft)+10+(3*ice+3)) * 0.01);
                 List<Mob> mobList = target.level.getEntitiesOfClass(Mob.class, new AABB(x + 2 * a, y + 2 * a, z + 2 * a, x - 2 * a, y - 2 * a, z - 2 * a));
                 for (Mob mob : mobList) {
                     if (mob != null) {
@@ -56,14 +56,11 @@ public class Frostbomb extends BattleModifier {
                         mob.addEffect(new MobEffectInstance(TFMobEffects.FROSTY.get(),  (20 * (int)(tooldata.getInt(frostcraft)*0.02)),  (int)(tooldata.getInt(frostcraft)*0.02 -1)));
                         mob.invulnerableTime= 0;
                     }}
-                tooldata.putInt(frostcraft,tooldata.getInt(frostcraft)-3 *ice-3);
                 target.playSound(SoundEvents.GENERIC_EXPLODE,1,1);
                 target.setLastHurtByMob(attacker);
                 if (target.level instanceof ServerLevel serverLevel){
                     serverLevel.sendParticles(ParticleTypes.EXPLOSION,target.getX(),target.getY()+0.5*target.getBbHeight(),target.getZ(),2 * a,0,0,0,0);
                 }
-            } else {
-                tooldata.putInt(frostcraft,0);
             }
         }
     }
@@ -74,9 +71,8 @@ public class Frostbomb extends BattleModifier {
             ModDataNBT tooldata = tool.getPersistentData();
             int level = tool.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
             list.add(Component.translatable("modifier.cloudertinker.frostbomb.tooltip1"  ,(int) ((tooldata.getInt(frostcraft)+10) * 0.02)).withStyle(ChatFormatting.AQUA));
-            list.add(Component.translatable("modifier.cloudertinker.frostbomb.tooltip2" ,((tooldata.getInt(frostcraft)) * 0.02)).withStyle(ChatFormatting.AQUA));
-            list.add(Component.translatable("modifier.cloudertinker.frostbomb.tooltip3",(3 * level+3)).withStyle(ChatFormatting.AQUA));
-        }
+            list.add(Component.translatable("modifier.cloudertinker.frostbomb.tooltip2" ).append((int)((tooldata.getInt(frostcraft)) * 0.02)+"%").withStyle(ChatFormatting.AQUA));
+            }
     }
 
 }

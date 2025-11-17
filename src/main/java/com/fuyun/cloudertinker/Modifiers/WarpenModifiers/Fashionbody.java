@@ -81,7 +81,6 @@ public class Fashionbody extends BattleModifier implements  MeleeHitModifierHook
                     zombie.setItemSlot(EquipmentSlot.CHEST, new ItemStack(TFItems.IRONWOOD_CHESTPLATE.get()));
                     zombie.setItemSlot(EquipmentSlot.LEGS, new ItemStack(TFItems.IRONWOOD_LEGGINGS.get()));
                     zombie.setItemSlot(EquipmentSlot.FEET, new ItemStack(TFItems.IRONWOOD_BOOTS.get()));
-                    zombie.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(TFItems.IRONWOOD_SWORD.get()));
                     zombie.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, time, 0));
                 }
                 zombie.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, time, ability));

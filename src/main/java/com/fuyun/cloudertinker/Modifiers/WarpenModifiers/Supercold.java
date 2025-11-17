@@ -28,8 +28,11 @@ public boolean havenolevel() {
     }
     @Override
     public float getMeleeDamage(IToolStackView iToolStackView, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {
-        MobEffectInstance instance =toolAttackContext.getLivingTarget().getEffect(TFMobEffects.FROSTY.get());
-    return toolAttackContext.getLivingTarget() != null && instance!=null ? v1 + (v1 * 0.35F) : v1;
+        if (toolAttackContext.getLivingTarget() == null) {
+            MobEffectInstance instance =toolAttackContext.getLivingTarget().getEffect(TFMobEffects.FROSTY.get());
+            return toolAttackContext.getLivingTarget() != null && instance!=null ? v1 + (v1 * 0.35F) : v1;
+        }
+    return v1;
     }
     @Override
     public void arrowhurt(ModifierNBT modifiers, NamespacedNBT persistentData, int level, Projectile projectile, EntityHitResult hit, AbstractArrow arrow, LivingEntity attacker, LivingEntity target) {

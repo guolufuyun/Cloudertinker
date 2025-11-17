@@ -47,13 +47,14 @@ public class Harmonize_Armor extends ArmorModifier {
                 case 3:entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,200, 0)) ;
                 case 2:entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED,200, 0));
                 case 1:entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION,400, 0));
+
                 case 0:break;
                 default: entity.addEffect(new MobEffectInstance(MobEffects.LUCK,200, (healPower/10)-7));
-                    entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION,200, 0));
-                    entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,200, 0));
+                    entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION,200, Math.max(Math.min((healPower/30)-6,2),0)));
+                    entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,200, Math.max(Math.min((healPower/20)-5,4),0)));
                     entity.addEffect(new MobEffectInstance(MobEffects.JUMP,200, 0));
                     entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,200, 0)) ;
-                    entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED,200, 0));
+                    entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED,200, Math.max(Math.min((healPower/20)-3,2),0)));
                     entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION,400, 0));
             }
 

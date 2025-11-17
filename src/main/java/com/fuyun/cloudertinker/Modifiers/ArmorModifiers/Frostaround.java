@@ -72,9 +72,8 @@ public class Frostaround extends ArmorModifier {
                         mob.addEffect(new MobEffectInstance(TFMobEffects.FROSTY.get(), 50, 5, true, true));
                     }
                 }
-                tooldata.putInt(frostcraft,tooldata.getInt(frostcraft)-9*level);
                 return amount * (1-((tooldata.getInt(frostcraft) + 10) * 0.002f));
-            } else { tooldata.putInt(frostcraft,0);}
+            }
         }
         return amount;
     }
@@ -85,8 +84,8 @@ public class Frostaround extends ArmorModifier {
             ModDataNBT tooldata = tool.getPersistentData();
             int level = tool.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
             list.add(Component.translatable("modifier.cloudertinker.frostaround.tooltip1",(float) ((tooldata.getInt(frostcraft)+10) * 0.03)).withStyle(ChatFormatting.AQUA));
-            list.add(Component.translatable("modifier.cloudertinker.frostaround.tooltip1",((tooldata.getInt(frostcraft)) * 0.2)).withStyle(ChatFormatting.AQUA));
-            list.add(Component.translatable("modifier.cloudertinker.frostaround.tooltip1" ,(9*level) ).withStyle(ChatFormatting.AQUA));
+            list.add(Component.translatable("modifier.cloudertinker.frostaround.tooltip2").append((int)((tooldata.getInt(frostcraft)) * 0.2)+"%").withStyle(ChatFormatting.AQUA));
+
         }
     }
 

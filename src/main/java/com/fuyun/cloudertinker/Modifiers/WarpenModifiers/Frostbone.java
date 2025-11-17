@@ -23,6 +23,7 @@ import twilightforest.entity.monster.SkeletonDruid;
 
 import java.util.Random;
 
+import static com.fuyun.cloudertinker.Modifiers.BaseModifiers.Frostcraft.Randomfrostuse;
 import static com.fuyun.cloudertinker.Modifiers.BaseModifiers.Frostcraft.frostcraft;
 
 public class Frostbone extends BattleModifier {
@@ -42,7 +43,7 @@ public class Frostbone extends BattleModifier {
                 entity.invulnerableTime = 0;
                 entity.hurt(DamageSource.FREEZE.bypassArmor(), 3*level);
                 entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100 ,  level-1));
-                tooldata.putInt(frostcraft,tooldata.getInt(frostcraft)-5);
+                Randomfrostuse(tool,5);
                 entity.setLastHurtByMob(context.getAttacker());
             }
         }
@@ -53,11 +54,12 @@ public class Frostbone extends BattleModifier {
         if (target != null) {
             ModDataNBT tooldata = ToolStack.from(attacker.getItemBySlot(EquipmentSlot.MAINHAND)).getPersistentData();
             Random random = new Random();
+            IToolStackView tool = ToolStack.from(attacker.getItemBySlot(EquipmentSlot.MAINHAND));
             int randomNum = random.nextInt(10) + 1;
             if (randomNum<=tooldata.getInt(frostcraft)*0.1) {
                 target.hurt(DamageSource.FREEZE.bypassArmor(), 3*level);
                 target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100 ,  level-1));
-                tooldata.putInt(frostcraft,tooldata.getInt(frostcraft)-5);
+                   Randomfrostuse(tool,5);
                 target.invulnerableTime = 0;
                 target.setLastHurtByMob(attacker);
             }

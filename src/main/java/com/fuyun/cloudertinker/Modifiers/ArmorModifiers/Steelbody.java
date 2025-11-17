@@ -31,11 +31,8 @@ public class Steelbody extends ArmorModifier {
     @Override
     public void addAttributes(IToolStackView tool, ModifierEntry modifier, EquipmentSlot slot, BiConsumer<Attribute, AttributeModifier> consumer) {
         if (tool.hasTag(TinkerTags.Items.ARMOR)){
-
             consumer.accept(Attributes.ARMOR, new AttributeModifier(UUIDFromWeapon(slot,this.getId()), String.valueOf(Attributes.ARMOR), 4, AttributeModifier.Operation.ADDITION));
             consumer.accept(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(UUIDFromWeapon(slot,this.getId()), String.valueOf(Attributes.ARMOR_TOUGHNESS), 2, AttributeModifier.Operation.ADDITION));
-
-
         }
     }
 }

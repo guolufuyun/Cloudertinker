@@ -61,4 +61,5 @@ public class CloudertinkerFluid{
     public static final FluidObject<ForgeFlowingFluid> molten_magala = register("molten_magala", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_glavenus = register("molten_glavenus", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_carminite = register("molten_carminite", 5867);
+    public static final FluidObject<ForgeFlowingFluid> molten_frostspikeslime = register("molten_frostspikeslime", 5867);
 }

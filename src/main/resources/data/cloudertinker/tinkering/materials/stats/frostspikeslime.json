@@ -1,0 +1,44 @@
+{
+  "stats": {"tconstruct:limb": {
+"durability": 721,
+"draw_speed": 0.05,
+"velocity": 0,
+"accuracy": 0.1
+},
+"tconstruct:grip": {
+"durability": 0.15,
+"accuracy": 0.12,
+"melee_damage": 3.25
+},
+"tconstruct:curio_extra": {},
+"tconstruct:maille": {},
+"tconstruct:plating_helmet": {
+"armor": 3,
+"durability": 424,
+"knockback_resistance": 0,
+"toughness": 0
+},
+"tconstruct:plating_chestplate": {
+"armor": 7,
+"durability": 748,
+"knockback_resistance": 0.3,
+"toughness": 1
+},
+"tconstruct:plating_leggings": {
+"armor": 5.0,
+"durability": 660,
+"knockback_resistance": 0.2,
+"toughness": 1
+},
+"tconstruct:plating_boots": {
+"armor": 2.0,
+"durability": 535,
+"knockback_resistance": 0,
+"toughness": 0
+},
+"tconstruct:plating_shield": {
+"durability": 670,
+"knockback_resistance": 0.5,
+"toughness": 1
+}
+}}

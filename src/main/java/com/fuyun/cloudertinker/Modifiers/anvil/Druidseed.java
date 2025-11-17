@@ -11,7 +11,6 @@ import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.animal.AbstractGolem;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import util.method.ModifierLevel;
 
@@ -21,18 +20,13 @@ public class Druidseed extends BattleModifier {
         return true;
     }
 
-    @Override
-    public void LivingDamageEvent(LivingDamageEvent event) {
-        super.LivingDamageEvent(event);
-    }
-
     public void LivingHurtEvent(LivingHurtEvent event) {
         if (event.getEntity() != null) {
             LivingEntity entity = event.getEntity();
             Entity entity1=event.getSource().getEntity();
             if (entity1 instanceof LivingEntity livingEntity){
                 if (ModifierLevel.EquipHasModifierlevel(livingEntity, CloudertinkerModifiers.druidseed.getId())) {
-                if ((entity instanceof TamableAnimal animal&&animal.isTame())||entity instanceof Player||entity instanceof AbstractGolem){
+                if ((entity instanceof TamableAnimal animal&&animal.isTame())||entity instanceof Player||(entity instanceof AbstractGolem golem&&golem.getTarget()!=livingEntity)){
                     entity.heal(event.getAmount()+1);
                     event.setAmount(1);
                     entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,140, 1));
@@ -46,7 +40,7 @@ public class Druidseed extends BattleModifier {
                 }
             }else if(entity1 instanceof Projectile projectile){
                 if (ModifierLevel.EquipHasModifierlevel((LivingEntity) projectile.getOwner(), CloudertinkerModifiers.druidseed.getId())) {
-                    if ((entity instanceof TamableAnimal animal&&animal.isTame())||entity instanceof Player||entity instanceof AbstractGolem){
+                    if ((entity instanceof TamableAnimal animal&&animal.isTame())||entity instanceof Player||(entity instanceof AbstractGolem golem&&golem.getTarget()!=projectile.getOwner())){
                         entity.heal(event.getAmount()+1);
                         event.setAmount(1);
                         entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,100, 1));

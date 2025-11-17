@@ -40,7 +40,8 @@
     "magala": "#3C234E",
     "glavenus": "#FC2818",
     "carminite": "#540414",
-    "ironwood":"#72483F"
+    "ironwood":"#72483F",
+    "frostspikeslime":"#B4DFF4"
   },
   "modifier.cloudertinker": {
     "ravenfeather": "#313B49",
@@ -74,7 +75,7 @@
     "relieveresentment": "#690B07",
     "readyboom": "#690B07",
     "nodienoend": "#690B07",
-    "frostcraft": "#1F6C7C",
+    "frostcraft": "#B4DFF4",
     "frostsword": "#1F6C7C",
     "frostbomb": "#1F6C7C",
     "frostaround": "#1F6C7C",
@@ -127,6 +128,9 @@
     "absorb":"#72483F",
     "takeroot":"#72483F",
     "takerootarmor":"#72483F",
-    "react": "#C4D6AE"
+    "react": "#C4D6AE",
+    "overfreeze":"#B4DFF4",
+    "frostspikearrow":"#B4DFF4",
+    "frostspikearound":"#B4DFF4"
   }
 }

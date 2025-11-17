@@ -50,8 +50,8 @@ public class Brokenimpulse extends BattleModifier {
             MobEffectInstance instance = target.getEffect(TinkerModifiers.bleeding.get());
             MobEffectInstance instance1 = target.getEffect(CloudertinkerEffects.Evilmarecurse.get());
             if (instance != null && instance1 == null&&tooldata.getInt(resentment)>=20) {
-                int timeleft = attacker.getEffect(TinkerModifiers.bleeding.get()).getDuration();
-                int EffectLevel = attacker.getEffect(TinkerModifiers.bleeding.get()).getAmplifier();
+                int timeleft = target.getEffect(TinkerModifiers.bleeding.get()).getDuration();
+                int EffectLevel = target.getEffect(TinkerModifiers.bleeding.get()).getAmplifier();
                 target.invulnerableTime = 0;
                 target.hurt(DamageSource.WITHER.bypassArmor().bypassMagic().bypassEnchantments(), 5);
                 target.addEffect(new MobEffectInstance(CloudertinkerEffects.Evilmarecurse.get(), timeleft, EffectLevel));

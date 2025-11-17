@@ -55,7 +55,7 @@ public class Relieveresentment extends BattleModifier{
     public void addTooltip(IToolStackView tool, ModifierEntry modifier, @org.jetbrains.annotations.Nullable Player player, List<Component> list, TooltipKey key, TooltipFlag tooltipFlag) {
         if (player != null) {
             ModDataNBT tooldata = tool.getPersistentData();
-            list.add(Component.translatable("modifier.cloudertinker.relieveresentment.tooltip",tooldata.getInt(resentment)).withStyle(ChatFormatting.DARK_RED));
+            list.add(Component.translatable("modifier.cloudertinker.relieveresentment.tooltip").append((int)(tooldata.getInt(resentment))+"%").withStyle(ChatFormatting.DARK_RED));
         }
     }
 }

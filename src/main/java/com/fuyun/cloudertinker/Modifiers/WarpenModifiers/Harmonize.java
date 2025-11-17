@@ -50,6 +50,7 @@ public class Harmonize extends BattleModifier {
     }
 
     public void steelleafdamage(LivingEntity entity, Player player,int extra){
+        entity.invulnerableTime = 0;
         int healPower = 0;
         NonNullList<ItemStack> playerInv = player.getInventory().items;
         for (int i = 0; i < 9; i++) {
