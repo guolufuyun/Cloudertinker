@@ -7,6 +7,9 @@ import slimeknights.tconstruct.library.modifiers.ModifierId;
 import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 
+import java.nio.charset.StandardCharsets;
+import java.util.UUID;
+
 
 public class ModifierLevel {
     public static int getMainhandModifierlevel(LivingEntity entity, ModifierId modifierId) {
@@ -19,6 +22,9 @@ public class ModifierLevel {
             }
         }
         return 0;
+    }
+    public static UUID UUIDFromWeapon(EquipmentSlot solt, ModifierId modifierId){
+        return UUID.nameUUIDFromBytes((solt.getName()+modifierId.toString()).getBytes(StandardCharsets.UTF_8));
     }
 
     public static int getOffhandModifierlevel(LivingEntity entity, ModifierId modifierId) {

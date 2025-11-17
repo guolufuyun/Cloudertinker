@@ -8,6 +8,7 @@ import net.minecraft.world.entity.projectile.Projectile;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.capability.EntityModifierCapability;
+import slimeknights.tconstruct.library.tools.capability.PersistentDataCapability;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
@@ -20,7 +21,7 @@ public class Seekwind extends BattleModifier {
     @Override
     public int getPriority() {
         // TODO: rethink ordering of ammo modifiers
-        return 60; // after trick quiver, before bulk quiver, can't go after bulk due to desire to use inventory
+        return 1; // after trick quiver, before bulk quiver, can't go after bulk due to desire to use inventory
     }
 
     @Override
@@ -34,7 +35,7 @@ public class Seekwind extends BattleModifier {
             seekerArrow.setOwner(player);
             seekerArrow.setDeltaMovement(arrow.getDeltaMovement());
             player.level.addFreshEntity(seekerArrow);
-
+            PersistentDataCapability.getOrWarn(seekerArrow).copyFrom(namespacedNBT.getCopy());
 
         }
         if (arrow1 != null) {

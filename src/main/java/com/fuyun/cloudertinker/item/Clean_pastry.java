@@ -7,11 +7,11 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import slimeknights.tconstruct.tools.modifiers.effect.NoMilkEffect;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -28,7 +28,7 @@ public class Clean_pastry extends Item {
             Collection<MobEffectInstance> effects=player.getActiveEffects();
             List<MobEffectInstance>effectInstances=new ArrayList<>(effects);
             for(MobEffectInstance effectlist : effectInstances){
-                if (!(effectlist.getEffect() instanceof NoMilkEffect)){
+                if (effectlist.isCurativeItem(new ItemStack(Items.MILK_BUCKET))){
                     player.removeEffect(effectlist.getEffect());
                 }
             }

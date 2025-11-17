@@ -33,11 +33,12 @@ public class Frostcraft extends BattleModifier {
         if (entity instanceof ServerPlayer player) {
             ModDataNBT tooldata = tool.getPersistentData();
             int level = modifier.getLevel();
-            if (player.tickCount %20 ==0 &&tooldata.getInt(frostcraft)<level * 30 + 30 && !isSelected && !isCorrectSlot){
+            if (player.tickCount %20 ==0 &&tooldata.getInt(frostcraft)<level * 30 + 30 && !isSelected ){
                 tooldata.putInt(frostcraft,tooldata.getInt(frostcraft)+1);
 
             }
             if (player.tickCount %20 ==0 &&tooldata.getInt(frostcraft)<0){tooldata.putInt(frostcraft,0);}
+            if (player.tickCount %2 ==0 &&tooldata.getInt(frostcraft)>level * 30 + 30){tooldata.putInt(frostcraft,level * 30 + 30);}
         }
     }
 
@@ -48,7 +49,7 @@ public class Frostcraft extends BattleModifier {
     public void addTooltip(IToolStackView tool, ModifierEntry modifier, @org.jetbrains.annotations.Nullable Player player, List<Component> list, TooltipKey key, TooltipFlag tooltipFlag) {
         if (player != null) {
             ModDataNBT tooldata = tool.getPersistentData();
-            list.add(Component.translatable("modifier.cloudertinker.frostcraft.tooltip", tooldata.getInt(frostcraft)).withStyle(ChatFormatting.AQUA));
+            list.add(Component.translatable("modifier.cloudertinker.frostcraft.tooltip", tooldata.getInt(frostcraft),modifier.getLevel()* 30 + 30).withStyle(ChatFormatting.AQUA));
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.fuyun.cloudertinker.Modifiers.ArmorModifiers;
 
 import com.fuyun.cloudertinker.extend.superclass.ArmorModifier;
+import net.minecraft.core.NonNullList;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -18,13 +19,16 @@ public class Timeflies extends ArmorModifier {
 
     @Override
     public void onInventoryTick(IToolStackView tool, ModifierEntry modifier, Level world, LivingEntity entity, int index, boolean isSelected, boolean isCorrectSlot, ItemStack stack) {
+
         if (entity instanceof ServerPlayer player && isCorrectSlot ) {
             if (player.tickCount %20 ==0) {
                 player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0));
                 player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0));
-                if (RANDOM.nextInt(100)+1 > 95) {
-                    var item = new ItemStack[]{player.getItemBySlot(EquipmentSlot.HEAD), player.getItemBySlot(EquipmentSlot.CHEST), player.getItemBySlot(EquipmentSlot.LEGS), player.getItemBySlot(EquipmentSlot.FEET), player.getItemBySlot(EquipmentSlot.OFFHAND), player.getItemBySlot(EquipmentSlot.MAINHAND)};
-                    for (ItemStack itemStack1 : item) {
+                NonNullList<ItemStack> playerInv = player.getInventory().items;
+                var item = new ItemStack[]{player.getItemBySlot(EquipmentSlot.HEAD), player.getItemBySlot(EquipmentSlot.CHEST), player.getItemBySlot(EquipmentSlot.LEGS), player.getItemBySlot(EquipmentSlot.FEET), player.getItemBySlot(EquipmentSlot.OFFHAND), player.getItemBySlot(EquipmentSlot.MAINHAND)
+                        ,playerInv.get(0),playerInv.get(1),playerInv.get(2),playerInv.get(3),playerInv.get(4),playerInv.get(5),playerInv.get(6),playerInv.get(7),playerInv.get(8),playerInv.get(9)};
+                for (ItemStack itemStack1 : item){
+                    if (RANDOM.nextInt(100)+1 > 95){
                         player.getCooldowns().removeCooldown(itemStack1.getItem());
                     }
                 }

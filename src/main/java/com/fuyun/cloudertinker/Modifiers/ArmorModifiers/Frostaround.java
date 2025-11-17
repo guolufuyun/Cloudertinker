@@ -85,8 +85,8 @@ public class Frostaround extends ArmorModifier {
             ModDataNBT tooldata = tool.getPersistentData();
             int level = tool.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
             list.add(Component.translatable("modifier.cloudertinker.frostaround.tooltip1",(float) ((tooldata.getInt(frostcraft)+10) * 0.03)).withStyle(ChatFormatting.AQUA));
-            list.add(Component.translatable("modifier.cloudertinker.frostaround.tooltip1",((tooldata.getInt(frostcraft)) * 0.2)).withStyle(ChatFormatting.AQUA));
-            list.add(Component.translatable("modifier.cloudertinker.frostaround.tooltip1" ,(9*level) ).withStyle(ChatFormatting.AQUA));
+            list.add(Component.translatable("modifier.cloudertinker.frostaround.tooltip2").append((int)((tooldata.getInt(frostcraft)) * 0.2)+"%").withStyle(ChatFormatting.AQUA));
+            list.add(Component.translatable("modifier.cloudertinker.frostaround.tooltip3" ,(9*level) ).withStyle(ChatFormatting.AQUA));
         }
     }
 

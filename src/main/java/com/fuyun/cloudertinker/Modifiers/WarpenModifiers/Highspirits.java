@@ -15,9 +15,9 @@ public class Highspirits extends BattleModifier {
         if (!living.getCommandSenderWorld().isClientSide){
             if (living instanceof Player player&&player.getFoodData().getFoodLevel()>=20){
                 if (stat == ToolStats.ATTACK_SPEED) {
-                    return (float)(baseValue +  modifier.getLevel() * 0.1 * tool.getMultiplier(ToolStats.ATTACK_SPEED));
+                    return (float)(baseValue +  modifier.getLevel() * 0.2 * tool.getMultiplier(ToolStats.ATTACK_SPEED));
                 } else if (stat == ToolStats.ATTACK_DAMAGE) {
-                    return (float)(baseValue +  modifier.getLevel() * 0.1* tool.getMultiplier(ToolStats.ATTACK_DAMAGE));
+                    return (float)(baseValue +  modifier.getLevel() * 0.2* tool.getMultiplier(ToolStats.ATTACK_DAMAGE));
                 }
             }
             }

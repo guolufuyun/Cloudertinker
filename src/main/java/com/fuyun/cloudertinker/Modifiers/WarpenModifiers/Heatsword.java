@@ -69,6 +69,7 @@ public class Heatsword extends BattleModifier {
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         ModDataNBT tooldata = tool.getPersistentData();
         if (tooldata.getInt(heatsword)>100&&context.getLivingTarget()!=null){
+            context.getLivingTarget().invulnerableTime = 0;
             context.getLivingTarget().hurt(DamageSource.ON_FIRE.bypassArmor(),damageDealt*0.25f*(tooldata.getInt(heatsword)-100)*0.01f);
             context.getLivingTarget().setRemainingFireTicks((6 * (tooldata.getInt(heatsword)-100)));
         }
@@ -85,13 +86,13 @@ public class Heatsword extends BattleModifier {
         if (player != null) {
             ModDataNBT tooldata = tool.getPersistentData();
             list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip1",tooldata.getInt(heatsword)).withStyle(ChatFormatting.RED));
-            list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip2",tooldata.getInt(heatsword)* 0.25f * 0.01f*modifier.getLevel()).withStyle(ChatFormatting.RED));
+            list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip2").append((int)tooldata.getInt(heatsword)* 0.25f * 0.01f*modifier.getLevel()+"%").withStyle(ChatFormatting.RED));
 
             if (tooldata.getInt(heatsword)<=100){
                 list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip3").withStyle(ChatFormatting.RED));
             }else {
                 list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip4").withStyle(ChatFormatting.RED));
-                list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip5",0.25f*(tooldata.getInt(heatsword)-100)).withStyle(ChatFormatting.RED));
+                list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip5").append((int)(0.25f*(tooldata.getInt(heatsword)-100))+"%").withStyle(ChatFormatting.RED));
                 list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip6",(tooldata.getFloat(heatsword) - 100) * 0.1).withStyle(ChatFormatting.RED));
 
             }

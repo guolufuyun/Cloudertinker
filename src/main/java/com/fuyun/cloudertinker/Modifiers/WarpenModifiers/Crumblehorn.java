@@ -31,6 +31,7 @@ public class Crumblehorn extends BattleModifier {
                         entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100 ,  modifier.getLevel()-1));
                 break;
                     case 4:
+                        entity.invulnerableTime = 0;
                         entity.hurt(DamageSource.sonicBoom(context.getAttacker()).bypassArmor().bypassMagic(),5 * modifier.getLevel());
                         entity.invulnerableTime = 0;
                         entity.hurt(DamageSource.thrown(context.getAttacker(), context.getAttacker()).bypassArmor(),5 * modifier.getLevel());

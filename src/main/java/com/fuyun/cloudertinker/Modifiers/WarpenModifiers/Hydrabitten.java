@@ -18,9 +18,9 @@ public class Hydrabitten extends BattleModifier {
             LivingEntity attacker = toolAttackContext.getAttacker();
             if (attacker instanceof ServerPlayer player){
                 int hunger = player.getFoodData().getFoodLevel();
-                if (hunger <6){
+                if (hunger <6){ entity.invulnerableTime = 0;
                     entity.hurt(DamageSource.playerAttack((Player) attacker),modifierEntry.getLevel() * ((20-hunger) + v1 * (8-hunger) /8));
-                    entity.invulnerableTime = 0;
+
                     player.getFoodData().setFoodLevel(20);
                 } else {
                     entity.setRemainingFireTicks((100 * modifierEntry.getLevel()));

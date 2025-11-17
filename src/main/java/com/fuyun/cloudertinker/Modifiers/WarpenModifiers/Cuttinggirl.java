@@ -23,8 +23,9 @@ public class Cuttinggirl extends BattleModifier {
             LivingEntity entity = context.getLivingTarget();
             Random random = new Random();
             int randomNum = random.nextInt(10) + 1;
-            if (randomNum <= 2){  entity.hurt(DamageSource.MAGIC,3 * modifier.getLevel());
-                entity.invulnerableTime = 0;
+            if (randomNum <= 2){   entity.invulnerableTime = 0;
+                entity.hurt(DamageSource.MAGIC,3 * modifier.getLevel());
+
             entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100  ,  modifier.getLevel()-1));
             entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100 ,  modifier.getLevel()-1));
             ModifierUtil.dropItem(entity, new ItemStack(Items.MUSHROOM_STEW));}

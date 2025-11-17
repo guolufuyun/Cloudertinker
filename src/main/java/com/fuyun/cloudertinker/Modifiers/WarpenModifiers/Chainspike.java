@@ -1,7 +1,6 @@
 package com.fuyun.cloudertinker.Modifiers.WarpenModifiers;
 
 import com.fuyun.cloudertinker.extend.superclass.BattleModifier;
-import com.fuyun.cloudertinker.register.CloudertinkerEffects;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
@@ -9,12 +8,18 @@ import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
+import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import java.util.Random;
 
 import static com.fuyun.cloudertinker.Modifiers.BaseModifiers.Resentment.resentment;
 
 public class Chainspike extends BattleModifier {
+    @Override
+    public int getPriority() {
+
+        return 1;
+    }
     public boolean havenolevel() {
         return true;
     }
@@ -26,10 +31,10 @@ public class Chainspike extends BattleModifier {
             Random random = new Random();
             ModDataNBT tooldata = tool.getPersistentData();
             int randomNum = random.nextInt(100) + 1;
-            if (randomNum <= 10 + (tooldata.getInt(resentment) * 0.05)) {
-                entity.hurt(DamageSource.WITHER.bypassArmor().bypassMagic().bypassEnchantments(), 5);
+            if (randomNum <= 10 + (tooldata.getInt(resentment) * 0.1)) {
                 entity.invulnerableTime = 0;
-                entity.addEffect(new MobEffectInstance(CloudertinkerEffects.Evilmarecurse.get(), 100, 1));
+                entity.hurt(DamageSource.WITHER.bypassArmor().bypassMagic().bypassEnchantments(), 5);
+                entity.addEffect(new MobEffectInstance(TinkerModifiers.bleeding.get(),200, 2));
                 entity.setLastHurtByMob(context.getAttacker());
             }
         }

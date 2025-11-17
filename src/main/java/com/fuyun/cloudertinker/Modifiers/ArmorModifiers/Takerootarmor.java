@@ -41,9 +41,9 @@ public class Takerootarmor extends ArmorModifier {
             }
                 if (holder.tickCount % 20 == 0 && holder.getMaxHealth() > holder.getHealth() && (isSelected || isCorrectSlot)) {
                     if (tooldata.getInt(rootgrow) >= 3) {
-                        holder.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 30, 1));
+                        holder.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 1));
                     } else {
-                        holder.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 30, 0));
+                        holder.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 0));
                         ToolDamageUtil.damageAnimated(tool, 1, holder);
                     }
                 }

@@ -74,7 +74,7 @@ public class Frostbomb extends BattleModifier {
             ModDataNBT tooldata = tool.getPersistentData();
             int level = tool.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
             list.add(Component.translatable("modifier.cloudertinker.frostbomb.tooltip1"  ,(int) ((tooldata.getInt(frostcraft)+10) * 0.02)).withStyle(ChatFormatting.AQUA));
-            list.add(Component.translatable("modifier.cloudertinker.frostbomb.tooltip2" ,((tooldata.getInt(frostcraft)) * 0.02)).withStyle(ChatFormatting.AQUA));
+            list.add(Component.translatable("modifier.cloudertinker.frostbomb.tooltip2" ).append((int)((tooldata.getInt(frostcraft)) * 0.02)+"%").withStyle(ChatFormatting.AQUA));
             list.add(Component.translatable("modifier.cloudertinker.frostbomb.tooltip3",(3 * level+3)).withStyle(ChatFormatting.AQUA));
         }
     }

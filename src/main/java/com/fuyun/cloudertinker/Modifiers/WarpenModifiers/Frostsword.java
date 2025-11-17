@@ -7,7 +7,11 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.TooltipFlag;
 import slimeknights.mantle.client.TooltipKey;
@@ -16,8 +20,10 @@ import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import twilightforest.init.TFMobEffects;
+import util.method.ModifierLevel;
 
 import java.util.List;
+import java.util.function.BiConsumer;
 
 import static com.fuyun.cloudertinker.Modifiers.WarpenModifiers.Frosttought.enabled;
 
@@ -43,18 +49,22 @@ public class Frostsword extends BattleModifier {
         }
         return v1;
     }
+    public void addAttributes(IToolStackView tool, ModifierEntry modifier, EquipmentSlot slot, BiConsumer<Attribute, AttributeModifier> consumer) {
+        ModDataNBT tooldata = tool.getPersistentData();
+        int level = tool.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
+        if (tooldata.getInt(frostcraft)>=level * 30 + 20&&slot==EquipmentSlot.MAINHAND){
+            consumer.accept(Attributes.ATTACK_SPEED, new AttributeModifier(ModifierLevel.UUIDFromWeapon(slot,this.getId()), String.valueOf(Attributes.ATTACK_SPEED), (int) 100, AttributeModifier.Operation.ADDITION));
+
+        }
+         }
 
     @Override
     public void addTooltip(IToolStackView tool, ModifierEntry modifier, @org.jetbrains.annotations.Nullable Player player, List<Component> list, TooltipKey key, TooltipFlag tooltipFlag) {
         if (player != null) {
             ModDataNBT tooldata = tool.getPersistentData();
             int level = tool.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
-            int sword = 0;
-             if (tool.getModifierLevel(CloudertinkerModifiers.frostsword.getId())>0) {
-                 list.add(Component.translatable("modifier.cloudertinker.frostsword.tooltip1", tooldata.getInt(frostcraft) * 1.5).withStyle(ChatFormatting.AQUA));
-                 sword = 1;
-            }
-            list.add(Component.translatable("modifier.cloudertinker.frostsword.tooltip1",(3 * level+3) * sword ).withStyle(ChatFormatting.AQUA));
+            list.add(Component.translatable("modifier.cloudertinker.frostsword.tooltip1").append((int)(tooldata.getInt(frostcraft) * 1.5)+"%").withStyle(ChatFormatting.AQUA));
+            list.add(Component.translatable("modifier.cloudertinker.frostsword.tooltip2",(3 * level+3)  ).withStyle(ChatFormatting.AQUA));
         }
     }
 }

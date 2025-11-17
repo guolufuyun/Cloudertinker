@@ -437,7 +437,7 @@
   "modifier.cloudertinker.relieveresentment": "迁怒",
   "modifier.cloudertinker.relieveresentment.description": "穿戴时近战伤害会根据怨念层数提高；\n若目标具有[愤怨烙印]则会尝试扩散到周围生物",
   "modifier.cloudertinker.relieveresentment.flavor": "你们也都是做局的帮凶！",
-  "modifier.cloudertinker.relieveresentment.tooltip": "近战伤害提升%s%",
+  "modifier.cloudertinker.relieveresentment.tooltip": "近战伤害提升",
 
   "modifier.cloudertinker.readyboom": "一触即发",
   "modifier.cloudertinker.readyboom.description": "怨念>100时，你的箭矢会消耗怨念引爆目标半径4范围内的[愤怨烙印]，爆炸半径为4",
@@ -459,28 +459,28 @@
   "modifier.cloudertinker.frosttought.flavor": "“就像冬天把手伸进衣领一样”",
 
   "modifier.cloudertinker.frostcraft": "寒气炼成",
-  "modifier.cloudertinker.frostcraft.description": "不在主手和装备时积攒寒气",
+  "modifier.cloudertinker.frostcraft.description": "不在主手时积攒寒气",
   "modifier.cloudertinker.frostcraft.flavor": "“冰冻三尺非一日之寒”",
-  "modifier.cloudertinker.frostcraft.tooltip": "当前积攒寒气层数%s",
+  "modifier.cloudertinker.frostcraft.tooltip": "当前积攒寒气层数%s/%s",
 
   "modifier.cloudertinker.frostsword": "覆霜之刃",
-  "modifier.cloudertinker.frostsword.description": "攻击消耗寒气并根据寒气层数提高伤害和施加的霜冻效果",
+  "modifier.cloudertinker.frostsword.description": "攻击消耗寒气并根据寒气层数提高伤害和施加的霜冻效果,寒气满时攻速大幅提高",
   "modifier.cloudertinker.frostsword.flavor": "冰刃刺骨",
-  "modifier.cloudertinker.frostsword.tooltip1": "近战伤害提升%s%",
+  "modifier.cloudertinker.frostsword.tooltip1": "近战伤害提升",
   "modifier.cloudertinker.frostsword.tooltip2": "攻击消耗%s层寒气",
 
   "modifier.cloudertinker.frostbomb": "冰结爆破",
   "modifier.cloudertinker.frostbomb.description": "箭矢消耗寒气并根据寒气层数和箭矢基础伤害造成寒冰爆炸和施加的霜冻效果",
   "modifier.cloudertinker.frostbomb.flavor": "一天不止能用三次",
   "modifier.cloudertinker.frostbomb.tooltip1": "爆炸半径%s",
-  "modifier.cloudertinker.frostbomb.tooltip2": "爆炸伤害倍率%s%",
+  "modifier.cloudertinker.frostbomb.tooltip2": "爆炸伤害倍率",
   "modifier.cloudertinker.frostbomb.tooltip3": "射击消耗%s层寒气",
 
   "modifier.cloudertinker.frostaround": "寒气释放",
   "modifier.cloudertinker.frostaround.description": "随机冻结周围生物，受击时消耗寒气冻结周围所有生物并减少受到伤害",
   "modifier.cloudertinker.frostaround.flavor": "通俗来讲就是漏气了",
   "modifier.cloudertinker.frostaround.tooltip1": "影响半径%s",
-  "modifier.cloudertinker.frostaround.tooltip2": "减少%s%受到伤害",
+  "modifier.cloudertinker.frostaround.tooltip2": "减少受到伤害",
   "modifier.cloudertinker.frostaround.tooltip3": "受击消耗%s层寒气",
 
   "modifier.cloudertinker.seektraces": "寻迹",
@@ -500,7 +500,7 @@
   "modifier.cloudertinker.territorialstruggle.flavor": "现在咱就是入侵物种！",
 
   "modifier.cloudertinker.timeflies": "飞逝如梭",
-  "modifier.cloudertinker.timeflies.description": "每秒获得迅捷和急迫并有10%概率清除全身装备冷却",
+  "modifier.cloudertinker.timeflies.description": "每秒获得迅捷和急迫并有10%概率清除全身和快捷栏装备冷却",
   "modifier.cloudertinker.timeflies.flavor": "Made in heaven!!",
 
   "modifier.cloudertinker.overlost": "迷失",
@@ -520,7 +520,7 @@
   "modifier.cloudertinker.variabloodarmor.flavor": "「他们并未统一意见」",
 
   "modifier.cloudertinker.unrestrainedsystem": "不羁原统",
-  "modifier.cloudertinker.unrestrainedsystem.description": "持有/穿戴时不会被施加能被牛奶清除的效果",
+  "modifier.cloudertinker.unrestrainedsystem.description": "持有/穿戴时不会被施加能被牛奶清除的效果，并清除负面效果",
   "modifier.cloudertinker.unrestrainedsystem.flavor": "「束缚毫无意义，锁链早已湮灭」",
 
   "modifier.cloudertinker.winderosion": "风蚀",
@@ -558,7 +558,7 @@
   "modifier.cloudertinker.hatred.tooltip": "当前积攒怨念层数%s",
 
   "modifier.cloudertinker.chainspike": "锁刃刺击",
-  "modifier.cloudertinker.chainspike.description": "近战攻击时有10%的概率造成5凋零伤害并施加[恶魇之咒]，每10点怨念提升5%概率",
+  "modifier.cloudertinker.chainspike.description": "近战攻击时有10%的概率造成5凋零伤害并施加[流血]，每10点怨念提升5%概率",
   "modifier.cloudertinker.chainspike.flavor": "被恶魇之力所伤的伤口，散发着不祥的气息",
 
   "modifier.cloudertinker.brokenimpulse": "破坏冲动",
@@ -570,7 +570,7 @@
   "modifier.cloudertinker.magent.flavor": "你相信[磁力]吗？",
 
   "modifier.cloudertinker.fragile": "易碎",
-  "modifier.cloudertinker.fragile.description": "攻击、挖掘方块时每级会强制消耗100耐久",
+  "modifier.cloudertinker.fragile.description": "攻击、挖掘方块时会强制消耗100耐久",
   "modifier.cloudertinker.fragile.flavor": "轻拿轻放！",
 
   "modifier.cloudertinker.forestquest": "森林之谜",
@@ -616,7 +616,7 @@
   "modifier.cloudertinker.heatsword.tooltip6": "减少自己%s护甲值",
 
   "modifier.cloudertinker.highspirits": "精神抖擞",
-  "modifier.cloudertinker.highspirits.description": "饱食度满时工具攻击力和攻击速度每级提升10%",
+  "modifier.cloudertinker.highspirits.description": "饱食度满时工具攻击力和攻击速度每级提升25%",
   "modifier.cloudertinker.highspirits.flavor": "刀具与火候决定了料理的一切",
 
   "modifier.cloudertinker.ravenfeather": "鸦羽",
