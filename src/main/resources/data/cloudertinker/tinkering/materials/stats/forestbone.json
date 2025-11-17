@@ -24,6 +24,8 @@
       "accuracy": 0.05,
       "melee_damage": 1
     },
-    "tconstruct:curio_extra": {}
+    "tconstruct:curio_extra": {},
+
+    "tconstruct:arrow_shaft": {}
   }
 }

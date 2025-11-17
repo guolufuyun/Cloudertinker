@@ -115,6 +115,20 @@
         "name": "cloudertinker:questprotect",
         "level": 1
       }
+    ],
+    "tconstruct:ammo": [
+      {
+        "name": "tconstruct:lure",
+        "level": 2
+      },
+      {
+        "name": "tconstruct:economical",
+        "level": 1
+      },
+      {
+        "name": "tconstruct:tipped",
+        "level": 1
+      }
     ]
   }
 }

@@ -5,8 +5,8 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "name": "cloudertinker:fire_blood",
-    "amount": 100
+    "name": "tconstruct:fiery_liquid",
+    "amount": 250
   },
   "result": "twilightforest:fiery_blood",
   "cooling_time": 20

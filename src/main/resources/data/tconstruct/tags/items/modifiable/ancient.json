@@ -1,0 +1,7 @@
+{
+  "values": [],
+  "remove": [{
+    "id": "tconstruct:minotaur_axe",
+    "required": false
+  }]
+}

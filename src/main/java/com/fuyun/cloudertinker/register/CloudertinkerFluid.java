@@ -34,7 +34,7 @@ public class CloudertinkerFluid{
     //复制这行，只改<ForgeFlowingFluid>后的命名空间，和register里面的"xxxx"即可,temp一般用不上，瞎填就行
     //材质和model什么的在数据包(resourcepacks）部分
 //    流体注册表
-    public static final FluidObject<ForgeFlowingFluid> molten_fiery = register("molten_fiery", 5867);
+//    public static final FluidObject<ForgeFlowingFluid> molten_fiery = register("molten_fiery", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_knightmetal = register("molten_knightmetal", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_evilmare = register("molten_evilmare", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_bloodshed = register("molten_bloodshed", 5867);
@@ -55,11 +55,12 @@ public class CloudertinkerFluid{
     public static final FluidObject<ForgeFlowingFluid> molten_glaze = register("molten_glaze", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_magnet = register("molten_magnet", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_questiron = register("molten_questiron", 5867);
-    public static final FluidObject<ForgeFlowingFluid> fire_tear = register("fire_tear", 5867);
-    public static final FluidObject<ForgeFlowingFluid> fire_blood = register("fire_blood", 5867);
+//    public static final FluidObject<ForgeFlowingFluid> fire_tear = register("fire_tear", 5867);
+//    public static final FluidObject<ForgeFlowingFluid> fire_blood = register("fire_blood", 5867);
     public static final FluidObject<ForgeFlowingFluid> frost_essence = register("frost_essence", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_frostiron = register("molten_frostiron", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_magala = register("molten_magala", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_glavenus = register("molten_glavenus", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_carminite = register("molten_carminite", 5867);
+    public static final FluidObject<ForgeFlowingFluid> molten_frostspikeslime = register("molten_frostspikeslime", 5867);
 }

@@ -1,12 +1,14 @@
 package com.fuyun.cloudertinker.Modifiers.WarpenModifiers;
 
 import com.fuyun.cloudertinker.extend.superclass.BattleModifier;
+import com.fuyun.cloudertinker.register.CloudertinkerItem;
 import com.fuyun.cloudertinker.register.CloudertinkerModifiers;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.monster.Stray;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
@@ -14,13 +16,17 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.EntityHitResult;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.fml.ModList;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
+import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
+import slimeknights.tconstruct.shared.TinkerMaterials;
 import twilightforest.entity.monster.LoyalZombie;
+import twilightforest.entity.monster.SkeletonDruid;
 import twilightforest.init.TFEntities;
 import twilightforest.init.TFItems;
 import twilightforest.init.TFSounds;
@@ -93,5 +99,10 @@ public class Fashionbody extends BattleModifier  {
                 zombie.playSound(TFSounds.LOYAL_ZOMBIE_SUMMON.get(), 1.0F, zombie.getVoicePitch());
             }
         }
+    }
+    private void LivingDeathEvent(LivingDeathEvent event) {
+        LivingEntity entity = event.getEntity();
+        if (entity instanceof SkeletonDruid druid){
+            ModifierUtil.dropItem(druid, new ItemStack(TinkerMaterials.venombone.get()));}
     }
 }

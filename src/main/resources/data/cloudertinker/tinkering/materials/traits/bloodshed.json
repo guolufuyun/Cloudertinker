@@ -111,13 +111,27 @@
       "level": 1
     }
   ],
-  "solidarytinker:soulge_heart": [
+  "olidarytinker:soulge_heart": [
     {
       "name": "cloudertinker:lichcurse",
       "level": 1
     },
     {
       "name": "tconstruct:necrotic",
+      "level": 1
+    }
+  ],
+  "tconstruct:ammo": [
+    {
+      "name": "cloudertinker:lichcurse",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:necrotic",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:lacerating",
       "level": 1
     }
   ]

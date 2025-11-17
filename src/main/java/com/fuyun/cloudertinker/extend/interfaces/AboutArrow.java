@@ -19,7 +19,7 @@ public interface AboutArrow extends ProjectileHitModifierHook, ProjectileLaunchM
         hookBuilder.addHook(this, ModifierHooks.PROJECTILE_HIT, ModifierHooks.PROJECTILE_LAUNCH);
     }
 
-    default boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+    default boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @javax.annotation.Nullable LivingEntity attacker, @javax.annotation.Nullable LivingEntity target, boolean notBlocked) {
         if (target != null && attacker != null && projectile instanceof AbstractArrow arrow) {
             this.arrowhurt(modifiers, persistentData, modifier.getLevel(), projectile, hit, arrow, attacker, target);
         }

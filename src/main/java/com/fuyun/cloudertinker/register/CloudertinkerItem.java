@@ -52,6 +52,7 @@ public class CloudertinkerItem {
     public static final RegistryObject<Item> frostiron_ingot = ITEMS.register("frostiron_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> magala_ingot = ITEMS.register("magala_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> glavenus_ingot = ITEMS.register("glavenus_ingot", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> frostspikeslime_ingot = ITEMS.register("frostspikeslime_ingot", () -> new Item(new Item.Properties()));
 
 
     public static final RegistryObject<Item> questiron_ingot = ITEMS.register("questiron_ingot", () -> new Item(new Item.Properties()));
@@ -61,7 +62,7 @@ public class CloudertinkerItem {
 
 
 
-    public static final RegistryObject<Item> cola_bottle = ITEMS.register("cola_bottle", () -> new BottleFoodItem( new Item.Properties().stacksTo(1).food(CloudertinkerFood.cola_bottle).craftRemainder(Items.GLASS_BOTTLE)));
+    public static final RegistryObject<Item> cola_bottle = ITEMS.register("cola_bottle", () -> new BottleFoodItem( new Item.Properties().stacksTo(16).food(CloudertinkerFood.cola_bottle).craftRemainder(Items.GLASS_BOTTLE)));
     public static final RegistryObject<Item> iron_cookie = ITEMS.register("iron_cookie", () -> new IronCooikeItem( new Item.Properties().food(CloudertinkerFood.iron_cookie)));
     public static final RegistryObject<Item> obsidian_cookie = ITEMS.register("obsidian_cookie", () -> new SwordItem(Modtires.obsidian_cookie,5,-2.4F,new Item.Properties().food(CloudertinkerFood.obsidian_cookie)));
     public static final RegistryObject<Item> clean_pastry = ITEMS.register("clean_pastry", () -> new Clean_pastry( new Item.Properties().stacksTo(64).food(CloudertinkerFood.clean_pastry)));
@@ -73,6 +74,11 @@ public class CloudertinkerItem {
     public static final RegistryObject<Item> zombie_scepter_core = ITEMS.register("zombie_scepter_core", () -> new Item( new Item.Properties()));
     public static final RegistryObject<Item> lifedrain_scepter_core = ITEMS.register("lifedrain_scepter_core", () -> new Item( new Item.Properties()));
     public static final RegistryObject<Item> twilight_scepter_core = ITEMS.register("twilight_scepter_core", () -> new Item( new Item.Properties()));
+    public static final RegistryObject<Item> savage_tigermark_round = ITEMS.register("savage_tigermark_round", () -> new Item( new Item.Properties().stacksTo(8)));
+    public static final RegistryObject<Item> tigermark_round = ITEMS.register("tigermark_round", () -> new Item( new Item.Properties().stacksTo(8)));
+
+
+
     //方块类要这样,
 //    public static final RegistryObject<BlockItem> Laomo_block = ITEMS.register("laomo_block", () -> new BlockItem(CloudertinkerBlock.Laomo_block.get(), new Item.Properties()));
 

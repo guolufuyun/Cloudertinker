@@ -3,6 +3,7 @@
     "tconstruct:binding": {},
     "tconstruct:bowstring": {},
     "tconstruct:maille": {},
-    "tconstruct:shield_core": {}
+    "tconstruct:shield_core": {},
+    "tconstruct:fletching": {}
   }
 }

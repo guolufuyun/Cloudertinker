@@ -27,5 +27,8 @@
     "tconstruct:curio_extra": {}
   },
   "tconstruct:maille": {},
-  "tconstruct:shield_core": {}
+  "tconstruct:shield_core": {},
+
+  "tconstruct:arrow_shaft": {}
+
 }

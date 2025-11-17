@@ -54,6 +54,12 @@
       "name": "tconstruct:tanned",
       "level": 1
     }
+  ],
+  "tconstruct:ammo": [
+    {
+      "name": "cloudertinker:supercold",
+      "level": 1
+    }
   ]
 }
 }

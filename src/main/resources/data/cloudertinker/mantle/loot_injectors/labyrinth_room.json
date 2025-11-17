@@ -1,0 +1,67 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "twilightforest"
+    }
+  ],
+  "name": "twilightforest:chests/labyrinth_room",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "tconstruct:add_tool_data",
+              "materials": [
+                {
+                  "type": "tconstruct:fixed",
+                  "material": "cloudertinker:minodiamond"
+                },
+                {
+                  "type": "tconstruct:fixed",
+                  "material": "cloudertinker:minogold"
+                },
+                {
+                  "type": "tconstruct:fixed",
+                  "material": "cloudertinker:minogold"
+                }
+              ]
+            }
+          ],
+          "name": "tconstruct:minotaur_axe"
+        }
+      ],
+      "name": "pool1"
+    },
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "tconstruct:add_tool_data",
+              "materials": [
+                {
+                  "type": "tconstruct:fixed",
+                  "material": "cloudertinker:minogold"
+                },
+                {
+                  "type": "tconstruct:fixed",
+                  "material": "cloudertinker:minogold"
+                },
+                {
+                  "type": "tconstruct:fixed",
+                  "material": "cloudertinker:minogold"
+                }
+              ]
+            }
+          ],
+          "name": "tconstruct:minotaur_axe"
+        }
+      ],
+      "name": "pool2"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.phys.EntityHitResult;
+import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.common.TinkerEffect;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
@@ -32,7 +33,7 @@ public class Variablood extends BattleModifier {
     }
     @Override
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
-        if (context.getLivingTarget() != null||context.getLivingTarget().isAlive()){
+        if (context.getLivingTarget() != null&&context.getLivingTarget().isAlive()){
             context.getLivingTarget().invulnerableTime = 0;
             context.getLivingTarget().hurt(context.getLivingTarget().damageSources().magic(),damageDealt * 0.2f );
             context.getLivingTarget().setLastHurtByMob(context.getAttacker());
@@ -45,8 +46,13 @@ public class Variablood extends BattleModifier {
             entity.hurt(entity.damageSources().magic(), (attacker.getMaxHealth() * 0.2f));
             entity.addEffect(new MobEffectInstance(TinkerEffects.bleeding.get(), attacker.getArmorValue()/5 * 20  ,  (int)(attacker.getMaxHealth()/10)-1));
             entity.invulnerableTime = 0;
+
+        }
+    }
+    @Override
+    public void onProjectileLaunch(IToolStackView tool, ModifierEntry modifier, LivingEntity shooter, Projectile projectile, @Nullable AbstractArrow arrow, ModDataNBT namespacedNBT, boolean primary) {
+        if (arrow != null) {
             arrow.setBaseDamage(arrow.getBaseDamage() * 1.4);
         }
     }
-
 }

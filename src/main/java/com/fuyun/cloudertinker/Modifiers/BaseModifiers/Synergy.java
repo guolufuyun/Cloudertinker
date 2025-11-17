@@ -29,7 +29,6 @@ public boolean havenolevel() {
             if (!needsRepair(tool)) return;
             if (player.isUsingItem()||player.isBlocking()||player.gameMode.isDestroyingBlock)return;
             int healPower = 0;
-//          定义一个整数
             NonNullList<ItemStack> playerInv = player.getInventory().items;
 //          这里是获取player背包物品列表，你写的话就是：右边那个
             for (int i = 0; i < 9; i++) {

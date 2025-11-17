@@ -7,6 +7,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.phys.EntityHitResult;
+import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
@@ -26,6 +27,12 @@ public class Territorialstruggle extends BattleModifier {
                 attacker.addEffect(new MobEffectInstance(MobEffects.HUNGER, 100, 0));
                 attacker.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 0));
             }
+
+        }
+    }
+    @Override
+    public void onProjectileLaunch(IToolStackView tool, ModifierEntry modifier, LivingEntity shooter, Projectile projectile, @Nullable AbstractArrow arrow, ModDataNBT namespacedNBT, boolean primary) {
+        if (arrow != null) {
             arrow.setBaseDamage(arrow.getBaseDamage() + (0.5 * arrow.getBaseDamage()));
         }
     }

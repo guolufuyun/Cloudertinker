@@ -25,6 +25,8 @@
       "melee_damage": 4
     },
     "tconstruct:curio_extra": {},
-    "tconstruct:maille": {}
+    "tconstruct:maille": {},
+    "tconstruct:arrow_head": {},
+    "tconstruct:arrow_shaft": {}
   }
 }

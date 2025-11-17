@@ -1,5 +1,6 @@
 package com.fuyun.cloudertinker.register;
 
+import com.fuyun.cloudertinker.Modifiers.AmmoModifiers.Hyperplasia;
 import com.fuyun.cloudertinker.Modifiers.ArmorModifiers.*;
 import com.fuyun.cloudertinker.Modifiers.BaseModifiers.*;
 import com.fuyun.cloudertinker.Modifiers.OnlyBowMOdifiers.*;
@@ -105,6 +106,12 @@ public class CloudertinkerModifiers {
     public static final StaticModifier<Takerootarmor> takerootarmor=MODIFIERS.register("takerootarmor", Takerootarmor::new);
     public static final StaticModifier<Infect> infect=MODIFIERS.register("infect", Infect::new);
     public static final StaticModifier<React> react=MODIFIERS.register("react", React::new);
+    public static final StaticModifier<Hyperplasia> hyperplasia=MODIFIERS.register("hyperplasia", Hyperplasia::new);
+    public static final StaticModifier<Overfreeze> overfreeze=MODIFIERS.register("overfreeze", Overfreeze::new);
+    public static final StaticModifier<Frostspikearrow> frostspikearrow=MODIFIERS.register("frostspikearrow", Frostspikearrow::new);
+    public static final StaticModifier<Frostspikearound> frostspikearound=MODIFIERS.register("frostspikearound", Frostspikearound::new);
 
+
+    public static final StaticModifier<TianTuiStar> tiantuistar=MODIFIERS.register("tiantuistar", TianTuiStar::new);
 
 }

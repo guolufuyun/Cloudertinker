@@ -1,5 +1,6 @@
 package com.fuyun.cloudertinker.Modifiers.WarpenModifiers;
 
+import com.fuyun.cloudertinker.CTKConfig;
 import com.fuyun.cloudertinker.extend.superclass.BattleModifier;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -29,7 +30,7 @@ public class Cuttinggirl extends BattleModifier {
             Random random = new Random();
             int randomNum = random.nextInt(10) + 1;
             if (randomNum <= 2){   entity.invulnerableTime = 0;
-                entity.hurt(entity.damageSources().magic(),3 * modifierEntry.getLevel());
+                entity.hurt(entity.damageSources().magic(), CTKConfig.COMMON.Cuttinggirl_damage.get() * modifierEntry.getLevel());
 
             entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100  ,  modifierEntry.getLevel()-1));
             entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100 ,  modifierEntry.getLevel()-1));

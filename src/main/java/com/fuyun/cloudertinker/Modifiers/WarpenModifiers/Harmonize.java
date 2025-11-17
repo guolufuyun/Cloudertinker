@@ -1,5 +1,6 @@
 package com.fuyun.cloudertinker.Modifiers.WarpenModifiers;
 
+import com.fuyun.cloudertinker.CTKConfig;
 import com.fuyun.cloudertinker.extend.superclass.BattleModifier;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.damagesource.DamageSource;
@@ -60,9 +61,9 @@ public class Harmonize extends BattleModifier {
                 healPower += 1;
             }
         }
-        if ((float) healPower/9<=64){
+        if ((float) healPower/9<= CTKConfig.COMMON.Harmonize_MAX.get()){
             entity.hurt(entity.damageSources().magic(),averageInt((float) healPower /(9*extra)));
-        }else { entity.hurt(entity.damageSources().magic(), (float) 64 /extra);
+        }else { entity.hurt(entity.damageSources().magic(), (float) CTKConfig.COMMON.Harmonize_MAX.get() /extra);
         }
         entity.setLastHurtByMob(player);
     }

@@ -2,8 +2,8 @@
   "type": "tconstruct:alloy",
   "inputs": [
     {
-      "name": "cloudertinker:molten_fiery",
-      "amount": 90
+      "name": "tconstruct:fiery_liquid",
+      "amount": 250
     },
     {
       "tag": "forge:molten_cobalt",

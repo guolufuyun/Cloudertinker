@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "item": "tconstruct:slimesteel_ingot"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "cloudertinker:frost_essence",
+    "amount": 250
+  },
+  "result": "cloudertinker:frostspikeslime_ingot",
+  "cooling_time": 60
+}

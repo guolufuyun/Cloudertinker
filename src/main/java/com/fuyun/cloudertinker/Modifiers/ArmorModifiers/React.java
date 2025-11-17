@@ -8,6 +8,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
+import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.helper.ToolAttackUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
@@ -18,13 +19,27 @@ public class React extends ArmorModifier {
 
     @Override
     public float TrueDamageamount(IToolStackView armor, int level, EquipmentContext context, EquipmentSlot slot, DamageSource source, float amount, boolean isDirectDamage, LivingEntity entity, LivingEntity enemy) {
-        if (enemy != null&&enemy!=entity&&!source.is(DamageTypeTags.AVOIDS_GUARDIAN_THORNS)&&entity instanceof Player  player) {
+        if (enemy != null && enemy != entity && !source.is(DamageTypeTags.AVOIDS_GUARDIAN_THORNS) && entity instanceof Player player) {
             if (!player.getCooldowns().isOnCooldown(armor.getItem())) {
                 if (enemy.isAlive()) {
-                    if (slot==EquipmentSlot.MAINHAND){
-                        ToolAttackUtil.attackEntity(armor, player, InteractionHand.MAIN_HAND, enemy, () -> 1.0, true);
-                    } else if (slot==EquipmentSlot.OFFHAND) {
-                        ToolAttackUtil.attackEntity(armor, player, InteractionHand.OFF_HAND, enemy, () -> 1.0, true);
+                    if (slot == EquipmentSlot.MAINHAND) {
+                        ToolAttackContext attackContext = ToolAttackContext.attacker(player)
+                                .target(enemy)
+                                .slot(EquipmentSlot.MAINHAND, InteractionHand.MAIN_HAND)
+                                .cooldown(1.0f)
+                                .toolAttributes(armor)
+                                .extraAttack()
+                                .build();
+                        ToolAttackUtil.performAttack(armor, attackContext);
+                    } else if (slot == EquipmentSlot.OFFHAND) {
+                        ToolAttackContext attackContext = ToolAttackContext.attacker(player)
+                                .target(enemy)
+                                .slot(EquipmentSlot.OFFHAND, InteractionHand.OFF_HAND)
+                                .cooldown(1.0f)
+                                .toolAttributes(armor)
+                                .extraAttack()
+                                .build();
+                        ToolAttackUtil.performAttack(armor, attackContext);
                     }
                     enemy.setLastHurtByMob(player);
                     player.getCooldowns().addCooldown(armor.getItem(), 15);
@@ -33,4 +48,5 @@ public class React extends ArmorModifier {
         }
         return amount;
     }
+
 }

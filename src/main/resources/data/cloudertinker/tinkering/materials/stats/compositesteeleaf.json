@@ -50,6 +50,7 @@
       "toughness": 1
     },
     "tconstruct:shield_core": {},
-    "tconstruct:maille": {}
+    "tconstruct:maille": {},
+    "tconstruct:arrow_head": {}
   }
 }

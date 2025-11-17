@@ -1,5 +1,6 @@
 package com.fuyun.cloudertinker.Modifiers.BaseModifiers;
 
+import com.fuyun.cloudertinker.CTKConfig;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -31,8 +32,8 @@ public class Fragile extends NoLevelsModifier implements BlockBreakModifierHook,
     @Override
     public float getMeleeDamage(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
         if (context.getLivingTarget()!=null&& !context.isExtraAttack()&&(context.getAttacker()instanceof Player player)&&!player.getAbilities().instabuild) {
-            ToolDamageUtil.damageAnimated(tool, 75 , context.getAttacker());
-            tool.setDamage(tool.getDamage()+25);
+            ToolDamageUtil.damageAnimated(tool, (int) (CTKConfig.COMMON.Fragile_damage.get()*0.75), context.getAttacker());
+            tool.setDamage(tool.getDamage()+(int)(CTKConfig.COMMON.Fragile_damage.get()*0.25));
             return damage;
         }
         return damage;
