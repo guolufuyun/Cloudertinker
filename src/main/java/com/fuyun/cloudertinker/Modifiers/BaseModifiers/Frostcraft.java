@@ -46,7 +46,7 @@ public class Frostcraft extends Modifier implements ModifyDamageModifierHook , M
     }
     @Override
     public int getPriority() {
-        // TODO: rethink ordering of ammo modifiers
+
         return 90; // after trick quiver, before bulk quiver, can't go after bulk due to desire to use inventory
     }
     @Override
