@@ -535,7 +535,7 @@
   "modifier.cloudertinker.winderosion.flavor": "长期风吹雨打留下的影响",
 
   "modifier.cloudertinker.magicforce": "符文力场",
-  "modifier.cloudertinker.magicforce.description": "满血时受伤减少75%，伤害量大于自身剩余血量时会消耗坚固度减少等量伤害",
+  "modifier.cloudertinker.magicforce.description": "满血时受伤减少60%，伤害量大于自身剩余血量时会消耗坚固度减少等量伤害",
   "modifier.cloudertinker.magicforce.flavor": "虽然是借来的，不过这个力场很好用不是么",
 
   "modifier.cloudertinker.highlandwatching": "高地守望",

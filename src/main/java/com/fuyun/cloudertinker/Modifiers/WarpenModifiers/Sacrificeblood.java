@@ -1,5 +1,6 @@
 package com.fuyun.cloudertinker.Modifiers.WarpenModifiers;
 
+import com.fuyun.cloudertinker.CTKConfig;
 import com.fuyun.cloudertinker.Cloudertinker;
 import com.fuyun.cloudertinker.extend.superclass.ArmorModifier;
 import net.minecraft.network.chat.Component;
@@ -58,7 +59,7 @@ public class Sacrificeblood extends ArmorModifier {
             ToolDamageUtil.damageAnimated(tool, 5 , entity);
             tooldata.putInt(sbcooldown,1);
             player.invulnerableTime = 0;
-            if (timeleft >= 0&& EffectLevel<=9) {
+            if (timeleft >= 0&& EffectLevel< CTKConfig.COMMON.Sacrificeblood_MAX.get()) {
                 player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, timeleft + 20 + 30 * modifier.getLevel() -30, EffectLevel + 1 ));
             }else{
                 player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, timeleft + 20 + 30 * modifier.getLevel() -30, 10 ));

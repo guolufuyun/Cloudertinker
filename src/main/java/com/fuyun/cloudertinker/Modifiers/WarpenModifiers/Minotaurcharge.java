@@ -1,5 +1,6 @@
 package com.fuyun.cloudertinker.Modifiers.WarpenModifiers;
 
+import com.fuyun.cloudertinker.CTKConfig;
 import com.fuyun.cloudertinker.extend.superclass.BattleModifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -17,7 +18,7 @@ public class Minotaurcharge extends BattleModifier implements MeleeDamageModifie
             LivingEntity entity =context.getLivingTarget();
             if (context.getAttacker() instanceof Player player) {
                 if (player.isSprinting()) {
-                    return damage * 1.7F;
+                    return (float) (damage * CTKConfig.COMMON.Minotaurcharge_damage.get());
                 }
             }
         }

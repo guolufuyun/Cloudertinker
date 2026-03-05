@@ -1,5 +1,6 @@
 package com.fuyun.cloudertinker.Modifiers.WarpenModifiers;
 
+import com.fuyun.cloudertinker.CTKConfig;
 import com.fuyun.cloudertinker.extend.superclass.BattleModifier;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -21,7 +22,7 @@ public class Overlost extends BattleModifier {
             int current = overslime.getShield(iToolStackView);
             if (instance != null) {
                 int EffectLevel = entity.getEffect(MobEffects.MOVEMENT_SLOWDOWN).getAmplifier();
-                return v1 + Math.min((v1 * 0.1f * modifierEntry.getLevel() * (EffectLevel + 1)),v1*2);
+                return (float) (v1 + Math.min((v1 * 0.1f * modifierEntry.getLevel() * (EffectLevel + 1)),v1* CTKConfig.COMMON.Overlost_MAX.get()));
             }else if(current>=overslime.getShieldCapacity(iToolStackView,modifierEntry) *0.1){
                 entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,(int) (overslime.getShieldCapacity(iToolStackView,modifierEntry) *0.1) , modifierEntry.getLevel()-1));
                 overslime.addOverslime(iToolStackView,modifierEntry, -(int) (overslime.getShieldCapacity(iToolStackView,modifierEntry) *0.1));

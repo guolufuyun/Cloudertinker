@@ -26,6 +26,7 @@ public class Cloudertinker {
         //如果你新稿了别的注册表记得这边填一下
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         eventBus.addListener(this::commonSetup);
+        CTKConfig.init();
         MinecraftForge.EVENT_BUS.register(this);
         CloudertinkerItem.ITEMS.register(eventBus);
         CloudertinkerItem.OTHER_ITEM.register(eventBus);

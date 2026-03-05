@@ -1,5 +1,6 @@
 package com.fuyun.cloudertinker.Modifiers.WarpenModifiers;
 
+import com.fuyun.cloudertinker.CTKConfig;
 import com.fuyun.cloudertinker.extend.superclass.BattleModifier;
 import com.fuyun.cloudertinker.register.CloudertinkerEffects;
 import com.fuyun.cloudertinker.register.CloudertinkerModifiers;
@@ -40,7 +41,7 @@ public class Breakphantom extends BattleModifier implements MeleeDamageModifierH
                 entity.addEffect(new MobEffectInstance(CloudertinkerEffects.Armorbroken.get(), 100  ,  2));
                 entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100 ,  2));
                 player.removeEffect(MobEffects.INVISIBILITY);
-                return damage * 2.5f ;
+                return (float) (damage * CTKConfig.COMMON.Breakphantom_damage.get());
             }
         }
         return damage ;

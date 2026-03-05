@@ -18,8 +18,6 @@ import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.library.tools.nbt.*;
-import slimeknights.tconstruct.shared.TinkerMaterials;
-import twilightforest.entity.monster.SkeletonDruid;
 
 import java.util.Random;
 
@@ -71,13 +69,11 @@ public class Frostbone extends BattleModifier {
 
     private void LivingDeathEvent(LivingDeathEvent event) {
         LivingEntity entity = event.getEntity();
-        DamageSource source=entity.getLastDamageSource();
-        if (entity instanceof Stray stray){
-            ModifierUtil.dropItem(stray, new ItemStack(CloudertinkerItem.forestbone.get()));}
-        if (entity instanceof SkeletonDruid druid){
-            ModifierUtil.dropItem(druid, new ItemStack(TinkerMaterials.venombone.get()));}
-
+        DamageSource source = entity.getLastDamageSource();
+        if (entity instanceof Stray stray) {
+            ModifierUtil.dropItem(stray, new ItemStack(CloudertinkerItem.forestbone.get()));
         }
 
+    }
         }
 

@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "minecraft:saplings"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "cloudertinker:molten_changeheart",
+    "amount": 100
+  },
+  "result": "twilightforest:transformation_sapling",
+  "cooling_time": 200
+}
