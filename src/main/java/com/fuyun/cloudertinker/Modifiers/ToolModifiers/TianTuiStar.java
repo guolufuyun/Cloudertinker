@@ -1,13 +1,14 @@
 package com.fuyun.cloudertinker.Modifiers.ToolModifiers;
 
 import com.fuyun.cloudertinker.Cloudertinker;
-import com.fuyun.cloudertinker.extend.superclass.ArmorModifier;
 import com.fuyun.cloudertinker.register.CloudertinkerItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -22,35 +23,33 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.mantle.client.TooltipKey;
-import slimeknights.tconstruct.common.TinkerTags;
-import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
+import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeDamageModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeHitModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.display.TooltipModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.GeneralInteractionModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.InteractionSource;
+import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.helper.ToolAttackUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
-import twilightforest.init.TFBlocks;
-import twilightforest.init.TFItems;
-import twilightforest.util.TFItemStackUtils;
-import twilightforest.util.TwilightItemTier;
+import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class TianTuiStar extends Modifier implements GeneralInteractionModifierHook, TooltipModifierHook{
+public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionModifierHook, TooltipModifierHook, MeleeDamageModifierHook, MeleeHitModifierHook {
     private static final ResourceLocation thrust= Cloudertinker.getResource("thrust");
     private static final ResourceLocation round_type= Cloudertinker.getResource("round_type");
     private static final ResourceLocation round_num= Cloudertinker.getResource("round_num");
     private final List<Mob> moblist1 = new ArrayList<>();
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this,  ModifierHooks.GENERAL_INTERACT, ModifierHooks.TOOLTIP);
+        hookBuilder.addHook(this,  ModifierHooks.GENERAL_INTERACT, ModifierHooks.TOOLTIP,ModifierHooks.MELEE_DAMAGE,ModifierHooks.MELEE_HIT);
     }
     public @NotNull InteractionResult onToolUse(IToolStackView tool, ModifierEntry modifier, Player player, InteractionHand interactionHand, InteractionSource interactionSource) {
         if (interactionSource == InteractionSource.RIGHT_CLICK) {
@@ -83,7 +82,8 @@ public class TianTuiStar extends Modifier implements GeneralInteractionModifierH
             double x = entity.getX();
             double y = entity.getY();
             double z = entity.getZ();
-            List<Mob> mobList = entity.getCommandSenderWorld().getEntitiesOfClass(Mob.class, new AABB(x + 0.5, y + 2, z + 0.5, x - 0.5, y - 1, z - 0.5));
+            double a=0.5+(0.5*tool.getModifierLevel(TinkerModifiers.expanded.get()));
+            List<Mob> mobList = entity.getCommandSenderWorld().getEntitiesOfClass(Mob.class, new AABB(x + a, y + 2, z + a, x - a, y - 1, z - a));
             for (Mob mob : mobList){
                 if (mob != null&& mob.isAlive()&&!moblist1.contains(mob)){
                         ToolAttackContext attackContext = ToolAttackContext.attacker(player)
@@ -93,8 +93,9 @@ public class TianTuiStar extends Modifier implements GeneralInteractionModifierH
                                 .toolAttributes(tool)
                                 .extraAttack()
                                 .build();
-                        ToolAttackUtil.performAttack(tool ,attackContext);
+                    if (ToolAttackUtil.performAttack(tool, attackContext)) {
                         moblist1.add(mob);
+                    }
                 }
             }
             if (level.isClientSide) {
@@ -111,7 +112,41 @@ public class TianTuiStar extends Modifier implements GeneralInteractionModifierH
     public int getUseDuration(IToolStackView tool, ModifierEntry modifier) {
         return 32767;
     }
-    private boolean fillround(IToolStackView tool,Player player){
+    @Override
+    public void onStoppedUsing(IToolStackView tool, ModifierEntry modifier, LivingEntity entity, int timeLeft) {
+        moblist1.clear();
+    }
+
+    @Override
+    public float getMeleeDamage(IToolStackView tool, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {
+       if (tool.getPersistentData().getInt(round_type)==2){
+           return v1*1.5f;
+       }
+        return v1;
+    }
+
+    @Override
+    public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
+        ModDataNBT tooldata = tool.getPersistentData();
+        if (tooldata.getInt(thrust)>0&&context.getLivingTarget()!=null&&context.getLivingTarget().isAlive()&&context.getAttacker() instanceof Player player){
+           context.getLivingTarget().invulnerableTime = 0;
+            if (context.isCritical()){
+              context.getLivingTarget().hurt(context.getLivingTarget().damageSources().explosion(context.getAttacker(), context.getAttacker()),damageDealt*0.25f);
+              if (!fillround(tool,player)){
+                  tooldata.putInt(thrust,0);
+              }
+                context.getLivingTarget().playSound(SoundEvents.GENERIC_EXPLODE,1,1);
+                context.getLivingTarget().setLastHurtByMob(player);
+                if (context.getLivingTarget().getCommandSenderWorld() instanceof ServerLevel serverLevel){
+                    serverLevel.sendParticles(ParticleTypes.EXPLOSION,context.getLivingTarget().getX(),context.getLivingTarget().getY()+0.5*context.getLivingTarget().getBbHeight(),context.getLivingTarget().getZ(),2 ,0,0,0,0);
+                }
+            }else {
+                context.getLivingTarget().setRemainingFireTicks(100);
+            }
+        }
+    }
+
+    private boolean fillround(IToolStackView tool, Player player){
         ModDataNBT tooldata = tool.getPersistentData();
         moblist1.clear();
         if (tooldata.getInt(round_num)<8){
@@ -124,29 +159,48 @@ public class TianTuiStar extends Modifier implements GeneralInteractionModifierH
                     tooldata.putInt(thrust,50);
                     tooldata.putInt(round_type,1);
                     player.getCooldowns().addCooldown(tool.getItem(), 10);
-                    break;
+                    return true;
                 } else if (invSlot.is(CloudertinkerItem.savage_tigermark_round.get())) {
                     invSlot.setCount(invSlot.getCount()-1);
                     tooldata.putInt(round_num,tooldata.getInt(round_num)+1);
-                    tooldata.putInt(thrust,50);
+                    tooldata.putInt(thrust,100);
                     tooldata.putInt(round_type,2);
                     player.getCooldowns().addCooldown(tool.getItem(), 10);
-                    break;
+                    return true;
                 }
             }
+            return false;
         }else {
             tooldata.putInt(round_num,0);
-            player.getCooldowns().addCooldown(tool.getItem(), 200);
+            tooldata.putInt(round_type,0);
+            player.getCooldowns().addCooldown(tool.getItem(), 100);
+            return false;
         }
-        
-        return false;
     }
 
     @Override
     public void addTooltip(IToolStackView tool, ModifierEntry modifier, @org.jetbrains.annotations.Nullable Player player, List<Component> list, TooltipKey key, TooltipFlag tooltipFlag) {
         if (player != null) {
             ModDataNBT tooldata = tool.getPersistentData();
-
+            ChatFormatting color ;
+            switch (tooldata.getInt(round_type)){
+                case 1:
+                    color = ChatFormatting.RED;
+                    list.add(Component.translatable("modifier.cloudertinker.tiantuistar.type1").withStyle(color));
+                    break;
+                case 2:
+                    color = ChatFormatting.DARK_RED;
+                    list.add(Component.translatable("modifier.cloudertinker.tiantuistar.type2").withStyle(color));
+                    break;
+                default:
+                    color = ChatFormatting.WHITE;
+                    list.add(Component.translatable("modifier.cloudertinker.tiantuistar.type0").withStyle(color));
+                    break;
+            }
+            list.add(Component.translatable("modifier.cloudertinker.tiantuistar.tooltip1", tooldata.getInt(thrust),50*tooldata.getInt(round_type)).withStyle(color));
+            list.add(Component.translatable("modifier.cloudertinker.tiantuistar.tooltip2", tooldata.getInt(round_num),8).withStyle(color));
         }
     }
+
+
 }

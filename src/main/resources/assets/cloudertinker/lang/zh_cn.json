@@ -742,8 +742,13 @@
   "modifier.cloudertinker.toolsonly": "工具专属",
 
   "modifier.cloudertinker.tiantuistar": "天退星",
-  "modifier.cloudertinker.tiantuistar.description": "按住右键消耗推力向前冲刺并造成伤害，拥有推力时会让攻击点燃对方且暴击时消耗推力造成额外伤害\n推力不足时消耗快捷栏的虎标弹填充，每8次会暂时无法装填",
+  "modifier.cloudertinker.tiantuistar.description": "按住右键消耗推力向前冲刺并造成伤害，拥有推力时会让攻击点燃对方且暴击时消耗推力造成额外爆炸伤害\n推力不足时消耗快捷栏的虎标弹填充，每8次会暂时无法装填",
   "modifier.cloudertinker.tiantuistar.flavor": "“再这么杵着，脑袋可要搬家咯”",
+  "modifier.cloudertinker.tiantuistar.type1": "当前装填：虎标弹",
+  "modifier.cloudertinker.tiantuistar.type2": "当前装填：猛虎标弹",
+  "modifier.cloudertinker.tiantuistar.type0": "当前装填：无",
+  "modifier.cloudertinker.tiantuistar.tooltip1": "拥有推力%s/%s",
+  "modifier.cloudertinker.tiantuistar.tooltip2": "已使用弹药%s/%s",
 
   "modifier.cloudertinker.bing": "画的饼",
   "黑骷髅头": "黑骷髅头",

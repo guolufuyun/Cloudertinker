@@ -599,5 +599,18 @@
   "modifier.cloudertinker.mysteriousveil.flavor": "This place holds few secrets for you anymore, filling you with determination",
   "modifier.cloudertinker.allscepters": "All Scepters Combined",
   "modifier.cloudertinker.allscepters.description": "Gain an additional defense slot!",
-  "modifier.cloudertinker.allscepters.flavor": "What happens when the power of four scepters gathers? Now you know the answer"
+  "modifier.cloudertinker.allscepters.flavor": "What happens when the power of four scepters gathers? Now you know the answer",
+
+  "modifier.cloudertinker.toolsonly": "Tool Only",
+
+  "modifier.cloudertinker.tiantuistar": "TianTuiStar",
+  "modifier.cloudertinker.tiantuistar.description": "Hold right-click to consume thrust and dash forward dealing damage. When you have thrust, attacks will ignite enemies and critical hits will consume thrust to deal additional explosion damage.\nWhen thrust is insufficient, consume Tigermark Rounds from the hotbar to refill. Every 8 refills will temporarily prevent loading.",
+  "modifier.cloudertinker.tiantuistar.flavor": "\"Eyes up here,boys! Don'tcha go losin' yer heads now!\"",
+  "modifier.cloudertinker.tiantuistar.type1": "Currently loaded: Tigermark Round",
+  "modifier.cloudertinker.tiantuistar.type2": "Currently loaded: Savage Tigermark Round",
+  "modifier.cloudertinker.tiantuistar.type0": "Currently loaded: None",
+  "modifier.cloudertinker.tiantuistar.tooltip1": "Thrust available %s/%s",
+  "modifier.cloudertinker.tiantuistar.tooltip2": "Ammunition used %s/%s"
+
+
 }

@@ -17,6 +17,16 @@
       "name": "cloudertinker:cuttinggirl",
       "level": 1
     }
+  ],
+  "tconstruct:ammo": [
+    {
+      "name": "tconstruct:keen",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:tipped",
+      "level": 1
+    }
   ]
 }
 }

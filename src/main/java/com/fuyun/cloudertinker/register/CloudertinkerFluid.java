@@ -35,7 +35,7 @@ public class CloudertinkerFluid{
     //材质和model什么的在数据包(resourcepacks）部分
 //    流体注册表
 //    public static final FluidObject<ForgeFlowingFluid> molten_fiery = register("molten_fiery", 5867);
-    public static final FluidObject<ForgeFlowingFluid> molten_knightmetal = register("molten_knightmetal", 5867);
+//    public static final FluidObject<ForgeFlowingFluid> molten_knightmetal = register("molten_knightmetal", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_evilmare = register("molten_evilmare", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_bloodshed = register("molten_bloodshed", 5867);
     public static final FluidObject<ForgeFlowingFluid> molten_prublaze = register("molten_prublaze", 5867);

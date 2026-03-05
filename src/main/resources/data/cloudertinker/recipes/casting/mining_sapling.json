@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "minecraft:sapling"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "cloudertinker:molten_orescore",
+    "amount": 100
+  },
+  "result": "twilightforest:mining_sapling",
+  "cooling_time": 200
+}

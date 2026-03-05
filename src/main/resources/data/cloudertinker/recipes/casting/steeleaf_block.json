@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_basin",
+  "cast": {
+    "tag": "minecraft:leaves"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "cloudertinker:molten_changeheart",
+    "amount": 100
+  },
+  "result": "twilightforest:steeleaf_block",
+  "cooling_time": 400
+}
