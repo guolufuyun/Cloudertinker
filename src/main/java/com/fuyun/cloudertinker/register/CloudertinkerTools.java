@@ -39,6 +39,7 @@ public class CloudertinkerTools extends CloudertinkerOther{
     }
 
     public static final ItemObject<ModifiableItem> hard_shield = ITEMS.register("hard_shield", () -> new Giantsword(new Item.Properties().stacksTo(1), toolDefinitions.HARD_SHIELD));
+    public static final ItemObject<ModifiableItem> tiantuistar_blade = ITEMS.register("tiantuistar_blade", () -> new Giantsword(new Item.Properties().stacksTo(1), toolDefinitions.TIANTUISTAR_BLADE));
     public static final ItemObject<ModifiableItem> giantsword = ITEMS.register("giantsword", () -> new Giantsword(new Item.Properties().stacksTo(1), toolDefinitions.GIANTSWORD));
     public static final ItemObject<ToolPartItem> giant_blade= ITEMS.register("giant_blade", () -> new ToolPartItem(new Item.Properties().stacksTo(64), HeadMaterialStats.ID));
     public static final ItemObject<ToolPartItem> knightmetal_ring_part= ITEMS.register("knightmetal_ring_part", () -> new ToolPartItem(new Item.Properties().stacksTo(64), StatlessMaterialStats.BINDING.getIdentifier()));
@@ -54,6 +55,7 @@ public class CloudertinkerTools extends CloudertinkerOther{
         acceptPart(output1,hard_plating);
         acceptTool(output1, giantsword);
         acceptTool(output1, hard_shield);
+        acceptTool(output1, tiantuistar_blade);
     }
     private static void acceptTool(Consumer<ItemStack> output, Supplier<? extends IModifiable> tool) {
         ToolBuildHandler.addVariants(output, tool.get(), "");

@@ -62,6 +62,9 @@
   "item.cloudertinker.giantsword.description": "Swing with caution!\nThe Giant's Sword is cumbersome to wield, but its range and power are unparalleled.",
   "item.cloudertinker.hard_shield": "Knight's Bastion",
   "item.cloudertinker.hard_shield.description": "The Knight's Bastion is a heavy shield that excels in both offense and defense,\nboasting considerable defensive capabilities and impressive damage potential.",
+  "item.cloudertinker.tiantuistar_blade": "天退星刀",
+  "item.cloudertinker.tiantuistar_blade.description": "挥动的时候可得悠着点！\n巨人剑挥起来很费劲，但是它的范围与威力都是无与伦比的。",
+
   "item.cloudertinker.giant_blade": "Giant's Blade",
   "pattern.cloudertinker.giant_blade": "Giant's Blade",
   "item.cloudertinker.knightmetal_ring_part": "Knight's Ring",
@@ -103,6 +106,7 @@
   "item.cloudertinker.glavenus_ingot": "Glavenus Ingot",
   "item.cloudertinker.frostspikeslime_ingot": "Frost Spike Slime Ingot",
 
+  "cloudertinker.item.tooltip.holdshift":"Press and hold Shift to view details",
   "item.cloudertinker.iron_cookie": "Iron Cookie",
   "item.cloudertinker.obsidian_cookie": "Obsidian Cookie",
   "item.cloudertinker.cola_bottle": "Cola Bottle",
@@ -116,6 +120,10 @@
   "item.cloudertinker.phantom_card": "Phantom Knight Card",
   "item.cloudertinker.savage_tigermark_round": "Savage Tigermark Round",
   "item.cloudertinker.tigermark_round": "Tigermark Round",
+  "cloudertinker.item.tooltip.round.value1": "Damage Multiplier:%s%%",
+  "cloudertinker.item.tooltip.round.value2": "Provides Thrust:%s",
+  "cloudertinker.item.tooltip.round.value3": "Charge Power:%s",
+  "cloudertinker.item.tooltip.round.value4": "Explosion Damage Multiplier:%s%%",
 
 
   "item.cloudertinker.molten_fiery_bucket": "Molten Fiery Iron Bucket",
@@ -606,9 +614,8 @@
   "modifier.cloudertinker.tiantuistar": "TianTuiStar",
   "modifier.cloudertinker.tiantuistar.description": "Hold right-click to consume thrust and dash forward dealing damage. When you have thrust, attacks will ignite enemies and critical hits will consume thrust to deal additional explosion damage.\nWhen thrust is insufficient, consume Tigermark Rounds from the hotbar to refill. Every 8 refills will temporarily prevent loading.",
   "modifier.cloudertinker.tiantuistar.flavor": "\"Eyes up here,boys! Don'tcha go losin' yer heads now!\"",
-  "modifier.cloudertinker.tiantuistar.type1": "Currently loaded: Tigermark Round",
-  "modifier.cloudertinker.tiantuistar.type2": "Currently loaded: Savage Tigermark Round",
-  "modifier.cloudertinker.tiantuistar.type0": "Currently loaded: None",
+  "modifier.cloudertinker.tiantuistar.type0": "None",
+  "modifier.cloudertinker.tiantuistar.current_round": "Currently loaded:：%s",
   "modifier.cloudertinker.tiantuistar.tooltip1": "Thrust available %s/%s",
   "modifier.cloudertinker.tiantuistar.tooltip2": "Ammunition used %s/%s"
 

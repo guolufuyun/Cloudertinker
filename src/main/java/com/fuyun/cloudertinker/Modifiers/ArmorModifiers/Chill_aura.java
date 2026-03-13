@@ -2,6 +2,7 @@ package com.fuyun.cloudertinker.Modifiers.ArmorModifiers;
 
 import com.fuyun.cloudertinker.extend.superclass.ArmorModifier;
 import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;

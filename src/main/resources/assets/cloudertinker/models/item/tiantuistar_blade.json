@@ -1,0 +1,31 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "blade": "cloudertinker:item/tool/tiantuistar/tiantuistar1/tiantuistar1",
+    "gradle2": "cloudertinker:item/tool/tiantuistar/tiantuistar2/tiantuistar2",
+    "gradle1": "cloudertinker:item/tool/tiantuistar/tiantuistar3/tiantuistar3",
+    "gradle3": "cloudertinker:item/tool/tiantuistar/tiantuistar4/tiantuistar4"
+  },
+  "modifier_roots": [
+    "cloudertinker:item/tool/trident/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "blade",
+      "index": 0
+    },
+    {
+      "name": "gradle3",
+      "index": 1
+    },
+    {
+      "name": "gradle1",
+      "index": 2
+    },
+    {
+      "name": "gradle2",
+      "index": 3
+    }
+  ]
+}

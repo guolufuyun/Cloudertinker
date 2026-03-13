@@ -38,7 +38,13 @@ public class CTKConfig {
         public final ForgeConfigSpec.IntValue Fragile_damage;
         public final ForgeConfigSpec.IntValue Harmonize_MAX;
 //
-
+        public final ForgeConfigSpec.DoubleValue Push_Power;
+        public final ForgeConfigSpec.DoubleValue Savage_Push_Power;
+        public final ForgeConfigSpec.DoubleValue Charge_range;
+        public final ForgeConfigSpec.DoubleValue Expanded_Charge_range;
+        public final ForgeConfigSpec.DoubleValue Savage_round_damage;
+        public final ForgeConfigSpec.DoubleValue Explosion_damage;
+        public final ForgeConfigSpec.DoubleValue Savage_Explosion_damage;
         public Common(ForgeConfigSpec.Builder builder){
             builder.comment("Modifiers behaviour").comment("词条行为").push("modifiers_behaviour");
             this.Cuttinggirl_damage = builder.comment("Cuttinggirl damage, 3*level by default.").comment("断鸡少女伤害，默认每级3。")
@@ -60,6 +66,28 @@ public class CTKConfig {
                     .defineInRange("Harmonize_MAX",64,1, Integer.MAX_VALUE);
             builder.pop();
 
+            builder.comment("Tiantuistar blade").comment("天退星刀").push("tiantuistar_blade");
+            this.Charge_range = builder.comment("Charge attack range, 0.5 by default.").comment("冲刺攻击范围，默认0.5。")
+                    .defineInRange("Charge attack range",0.5,0.0, Double.MAX_VALUE);
+            this.Expanded_Charge_range = builder.comment("Expanded charge attack range, 0.5*level by default.").comment("延展冲刺攻击范围，默认每级0.5。")
+                    .defineInRange("Expanded charge attack range",0.5,0.0, Double.MAX_VALUE);
+            this.Savage_round_damage = builder.comment("Savage tigermark round damage, 150% by default.").comment("猛虎标弹伤害，默认150%。")
+                    .defineInRange("Savage tigermark round damage",1.5,0.0, Double.MAX_VALUE);
+
+            builder.pop();
+
+
+            builder.comment("Tigermark rounds").comment("虎标弹").push("tigermark_round");
+            this.Push_Power = builder.comment("Tigermark round push power, 0.2 by default.").comment("虎标弹推进力度，默认0.2。")
+                    .defineInRange("Tigermark round push power",0.2,0.0, Double.MAX_VALUE);
+            this.Explosion_damage = builder.comment("Tigermark round Explosion damage, 25% by default.").comment("虎标弹爆炸伤害，默认25%")
+                    .defineInRange("Tigermark round Explosion damage",0.25,0.0, Double.MAX_VALUE);
+
+            this.Savage_Push_Power = builder.comment("Savage tigermark round push power, 0.5 by default.").comment("猛虎标弹推进力度，默认0.5。")
+                    .defineInRange("Savage tigermark round push power",0.5,0.0, Double.MAX_VALUE);
+            this.Savage_Explosion_damage = builder.comment("Savage tigermark round Explosion damage, 50% by default.").comment("猛虎标弹爆炸伤害，默认50%")
+                    .defineInRange("Savage tigermark round Explosion damage",0.5,0.0, Double.MAX_VALUE);
+            builder.pop();
         }
     }
     public static class Client{

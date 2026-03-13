@@ -4,6 +4,8 @@ import com.fuyun.cloudertinker.item.BottleFoodItem;
 import com.fuyun.cloudertinker.item.Chimera_ingot;
 import com.fuyun.cloudertinker.item.Clean_pastry;
 import com.fuyun.cloudertinker.item.IronCooikeItem;
+import com.fuyun.cloudertinker.item.Rounds.Normal_round;
+import com.fuyun.cloudertinker.item.Rounds.Savage_round;
 import com.fuyun.cloudertinker.tool.Giantsword;
 import com.fuyun.cloudertinker.tool.toolDefinitions;
 import net.minecraft.world.item.*;
@@ -74,8 +76,8 @@ public class CloudertinkerItem {
     public static final RegistryObject<Item> zombie_scepter_core = ITEMS.register("zombie_scepter_core", () -> new Item( new Item.Properties()));
     public static final RegistryObject<Item> lifedrain_scepter_core = ITEMS.register("lifedrain_scepter_core", () -> new Item( new Item.Properties()));
     public static final RegistryObject<Item> twilight_scepter_core = ITEMS.register("twilight_scepter_core", () -> new Item( new Item.Properties()));
-    public static final RegistryObject<Item> savage_tigermark_round = ITEMS.register("savage_tigermark_round", () -> new Item( new Item.Properties().stacksTo(8)));
-    public static final RegistryObject<Item> tigermark_round = ITEMS.register("tigermark_round", () -> new Item( new Item.Properties().stacksTo(8)));
+    public static final RegistryObject<Item> savage_tigermark_round = ITEMS.register("savage_tigermark_round", () -> new Savage_round( new Item.Properties().stacksTo(8)));
+    public static final RegistryObject<Item> tigermark_round = ITEMS.register("tigermark_round", () -> new Normal_round( new Item.Properties().stacksTo(8)));
 
 
 

@@ -1,10 +1,12 @@
 package com.fuyun.cloudertinker.Modifiers.ToolModifiers;
 
+import com.fuyun.cloudertinker.CTKConfig;
 import com.fuyun.cloudertinker.Cloudertinker;
-import com.fuyun.cloudertinker.register.CloudertinkerItem;
+import com.fuyun.cloudertinker.item.Tigermark_rounds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -15,6 +17,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.UseAnim;
@@ -44,8 +47,8 @@ import java.util.List;
 
 public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionModifierHook, TooltipModifierHook, MeleeDamageModifierHook, MeleeHitModifierHook {
     private static final ResourceLocation thrust= Cloudertinker.getResource("thrust");
-    private static final ResourceLocation round_type= Cloudertinker.getResource("round_type");
     private static final ResourceLocation round_num= Cloudertinker.getResource("round_num");
+    private static final ResourceLocation round_type = Cloudertinker.getResource("round_type");
     private final List<Mob> moblist1 = new ArrayList<>();
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
@@ -67,14 +70,13 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
                 tooldata.putInt(thrust,tooldata.getInt(thrust)-1);
             Level level = entity.level();
             Vec3 lookVec = player.getLookAngle().normalize();
-            double pushp;
-            if (tooldata.getInt(round_type)==1){
-                pushp = 0.2f;
-            } else if (tooldata.getInt(round_type)==2) {
-                pushp=0.5f;
-            }else {
-                pushp = 0.2f;
-            }
+            double pushp=0;
+                boolean influid = entity.isInFluidType();
+            if (BuiltInRegistries.ITEM.get(new ResourceLocation(tooldata.getString(round_type))) instanceof Tigermark_rounds round) {
+                pushp = round.push_power;
+                if(influid)pushp*=0.5;
+                round.onCharge(tool, modifier, player,tooldata.getInt(thrust));
+
                 double pushX = lookVec.x * pushp;
             double pushY = lookVec.y * pushp * 0.1;
             double pushZ = lookVec.z * pushp;
@@ -82,7 +84,7 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
             double x = entity.getX();
             double y = entity.getY();
             double z = entity.getZ();
-            double a=0.5+(0.5*tool.getModifierLevel(TinkerModifiers.expanded.get()));
+            double a=CTKConfig.COMMON.Charge_range.get()+(CTKConfig.COMMON.Expanded_Charge_range.get()*tool.getModifierLevel(TinkerModifiers.expanded.get()));
             List<Mob> mobList = entity.getCommandSenderWorld().getEntitiesOfClass(Mob.class, new AABB(x + a, y + 2, z + a, x - a, y - 1, z - a));
             for (Mob mob : mobList){
                 if (mob != null&& mob.isAlive()&&!moblist1.contains(mob)){
@@ -95,8 +97,10 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
                                 .build();
                     if (ToolAttackUtil.performAttack(tool, attackContext)) {
                         moblist1.add(mob);
+                        round.onChargeHit(tool,modifier,entity,mob,tooldata.getInt(thrust),moblist1);
                     }
                 }
+            }
             }
             if (level.isClientSide) {
                 // 可以添加粒子效果等视觉反馈
@@ -107,20 +111,23 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
         }
     }
     public UseAnim getUseAction(IToolStackView tool, ModifierEntry modifier) {
-        return UseAnim.NONE;
+        return UseAnim.BOW;
     }
     public int getUseDuration(IToolStackView tool, ModifierEntry modifier) {
         return 32767;
     }
     @Override
     public void onStoppedUsing(IToolStackView tool, ModifierEntry modifier, LivingEntity entity, int timeLeft) {
+        if (BuiltInRegistries.ITEM.get(new ResourceLocation(tool.getPersistentData().getString(round_type))) instanceof Tigermark_rounds round){
+            round.onStoppedUsing(tool,modifier,entity,tool.getPersistentData().getInt(thrust),moblist1);
+        }
         moblist1.clear();
     }
-
     @Override
     public float getMeleeDamage(IToolStackView tool, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {
-       if (tool.getPersistentData().getInt(round_type)==2){
-           return v1*1.5f;
+       if (BuiltInRegistries.ITEM.get(new ResourceLocation(tool.getPersistentData().getString(round_type))) instanceof Tigermark_rounds round){
+           round.onMeleeDamage(tool,modifierEntry,toolAttackContext,v,v1);
+           return (float) (v1*round.damageboost);
        }
         return v1;
     }
@@ -128,14 +135,15 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
     @Override
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         ModDataNBT tooldata = tool.getPersistentData();
-        if (tooldata.getInt(thrust)>0&&context.getLivingTarget()!=null&&context.getLivingTarget().isAlive()&&context.getAttacker() instanceof Player player){
+        if (BuiltInRegistries.ITEM.get(new ResourceLocation(tool.getPersistentData().getString(round_type))) instanceof Tigermark_rounds round&&tooldata.getInt(thrust)>0&&context.getLivingTarget()!=null&&context.getLivingTarget().isAlive()&&context.getAttacker() instanceof Player player){
            context.getLivingTarget().invulnerableTime = 0;
             if (context.isCritical()){
-              context.getLivingTarget().hurt(context.getLivingTarget().damageSources().explosion(context.getAttacker(), context.getAttacker()),damageDealt*0.25f);
+              context.getLivingTarget().hurt(context.getLivingTarget().damageSources().explosion(context.getAttacker(), context.getAttacker()), damageDealt*round.explosion_damage);
               if (!fillround(tool,player)){
                   tooldata.putInt(thrust,0);
               }
                 context.getLivingTarget().playSound(SoundEvents.GENERIC_EXPLODE,1,1);
+                context.getLivingTarget().setRemainingFireTicks(200);
                 context.getLivingTarget().setLastHurtByMob(player);
                 if (context.getLivingTarget().getCommandSenderWorld() instanceof ServerLevel serverLevel){
                     serverLevel.sendParticles(ParticleTypes.EXPLOSION,context.getLivingTarget().getX(),context.getLivingTarget().getY()+0.5*context.getLivingTarget().getBbHeight(),context.getLivingTarget().getZ(),2 ,0,0,0,0);
@@ -143,6 +151,7 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
             }else {
                 context.getLivingTarget().setRemainingFireTicks(100);
             }
+            round.afterMeleeHit(tool,modifier,context,damageDealt);
         }
     }
 
@@ -153,51 +162,43 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
             for (int i = 0; i < 9; i++) {
                 NonNullList<ItemStack> playerInv = player.getInventory().items;
                 ItemStack invSlot = playerInv.get(i);
-                if (invSlot.is(CloudertinkerItem.tigermark_round.get())) {
+                if (invSlot.getItem() instanceof Tigermark_rounds round){
                     invSlot.setCount(invSlot.getCount()-1);
+                    ResourceLocation itemRegistryName = BuiltInRegistries.ITEM.getKey(round);
+                    tooldata.putString(round_type, itemRegistryName.toString());
                     tooldata.putInt(round_num,tooldata.getInt(round_num)+1);
-                    tooldata.putInt(thrust,50);
-                    tooldata.putInt(round_type,1);
+                    tooldata.putInt(thrust,round.thrust);
                     player.getCooldowns().addCooldown(tool.getItem(), 10);
-                    return true;
-                } else if (invSlot.is(CloudertinkerItem.savage_tigermark_round.get())) {
-                    invSlot.setCount(invSlot.getCount()-1);
-                    tooldata.putInt(round_num,tooldata.getInt(round_num)+1);
-                    tooldata.putInt(thrust,100);
-                    tooldata.putInt(round_type,2);
-                    player.getCooldowns().addCooldown(tool.getItem(), 10);
+                    round.onFillRound(tool,player);
                     return true;
                 }
             }
-            return false;
         }else {
             tooldata.putInt(round_num,0);
-            tooldata.putInt(round_type,0);
+            tooldata.putString(round_type, "");
             player.getCooldowns().addCooldown(tool.getItem(), 100);
-            return false;
         }
+        return false;
     }
 
     @Override
     public void addTooltip(IToolStackView tool, ModifierEntry modifier, @org.jetbrains.annotations.Nullable Player player, List<Component> list, TooltipKey key, TooltipFlag tooltipFlag) {
         if (player != null) {
             ModDataNBT tooldata = tool.getPersistentData();
-            ChatFormatting color ;
-            switch (tooldata.getInt(round_type)){
-                case 1:
-                    color = ChatFormatting.RED;
-                    list.add(Component.translatable("modifier.cloudertinker.tiantuistar.type1").withStyle(color));
-                    break;
-                case 2:
-                    color = ChatFormatting.DARK_RED;
-                    list.add(Component.translatable("modifier.cloudertinker.tiantuistar.type2").withStyle(color));
-                    break;
-                default:
-                    color = ChatFormatting.WHITE;
-                    list.add(Component.translatable("modifier.cloudertinker.tiantuistar.type0").withStyle(color));
-                    break;
+            String roundtype = tooldata.getString(round_type);
+            Component roundName=Component.translatable("modifier.cloudertinker.tiantuistar.type0");
+            ChatFormatting color=ChatFormatting.WHITE;
+            int thrustmax=0;
+            if (!roundtype.isEmpty()) {
+                Item roundItem = BuiltInRegistries.ITEM.get(new ResourceLocation(roundtype));
+                if (roundItem instanceof Tigermark_rounds round) {
+                    roundName = roundItem.getName(new ItemStack(roundItem));
+                    thrustmax=round.thrust;
+                    color = round.color;
+                }
             }
-            list.add(Component.translatable("modifier.cloudertinker.tiantuistar.tooltip1", tooldata.getInt(thrust),50*tooldata.getInt(round_type)).withStyle(color));
+            list.add(Component.translatable("modifier.cloudertinker.tiantuistar.current_round", roundName).withStyle(color));
+            list.add(Component.translatable("modifier.cloudertinker.tiantuistar.tooltip1", tooldata.getInt(thrust),thrustmax).withStyle(color));
             list.add(Component.translatable("modifier.cloudertinker.tiantuistar.tooltip2", tooldata.getInt(round_num),8).withStyle(color));
         }
     }
