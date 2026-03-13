@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " B ",
+    "DAD",
+    "DCD"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:gunpowder"
+    },
+    "B": {
+      "item": "minecraft:iron_nugget"
+    },
+    "C": {
+      "item": "minecraft:gold_ingot"
+    },
+    "D": {
+      "item": "minecraft:brick"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:tigermark_round",
+    "count": 8
+  }
+}

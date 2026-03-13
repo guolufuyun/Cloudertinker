@@ -56,6 +56,8 @@
   "fluid.cloudertinker.molten_magala": "Molten Gore Magala",
   "fluid.cloudertinker.molten_glavenus": "Molten Glavenus",
   "fluid.cloudertinker.molten_carminite": "Molten Carminite",
+  "fluid.cloudertinker.molten_frostspikeslime": "Molten Frost Spike Slime",
+
   "item.cloudertinker.giantsword": "Giant's Sword",
   "item.cloudertinker.giantsword.description": "Swing with caution!\nThe Giant's Sword is cumbersome to wield, but its range and power are unparalleled.",
   "item.cloudertinker.hard_shield": "Knight's Bastion",
@@ -101,6 +103,7 @@
   "item.cloudertinker.glavenus_ingot": "Glavenus Ingot",
   "item.cloudertinker.frostspikeslime_ingot": "Frost Spike Slime Ingot",
 
+  "cloudertinker.item.tooltip.holdshift":"Press and hold Shift to view details",
   "item.cloudertinker.iron_cookie": "Iron Cookie",
   "item.cloudertinker.obsidian_cookie": "Obsidian Cookie",
   "item.cloudertinker.cola_bottle": "Cola Bottle",
@@ -112,6 +115,14 @@
   "item.cloudertinker.twilight_scepter_core": "Twilight Scepter Core",
   "item.cloudertinker.bloodlust_power": "Frenzy Dust",
   "item.cloudertinker.phantom_card": "Phantom Knight Card",
+  "item.cloudertinker.savage_tigermark_round": "Savage Tigermark Round",
+  "item.cloudertinker.tigermark_round": "Tigermark Round",
+  "cloudertinker.item.tooltip.round.value1": "Damage Multiplier:%s%%",
+  "cloudertinker.item.tooltip.round.value2": "Provides Thrust:%s",
+  "cloudertinker.item.tooltip.round.value3": "Charge Power:%s",
+  "cloudertinker.item.tooltip.round.value4": "Explosion Damage Multiplier:%s%%",
+
+
   "item.cloudertinker.molten_fiery_bucket": "Molten Fiery Iron Bucket",
   "item.cloudertinker.molten_knightmetal_bucket": "Molten Knightmetal Bucket",
   "item.cloudertinker.molten_evilmare_bucket": "Molten Evilmare Bucket",
@@ -593,5 +604,13 @@
   "modifier.cloudertinker.mysteriousveil.flavor": "This place holds few secrets for you anymore, filling you with determination",
   "modifier.cloudertinker.allscepters": "All Scepters Combined",
   "modifier.cloudertinker.allscepters.description": "Gain an additional defense slot!",
-  "modifier.cloudertinker.allscepters.flavor": "What happens when the power of four scepters gathers? Now you know the answer"
+  "modifier.cloudertinker.allscepters.flavor": "What happens when the power of four scepters gathers? Now you know the answer",
+
+  "modifier.cloudertinker.tiantuistar": "TianTuiStar",
+  "modifier.cloudertinker.tiantuistar.description": "Hold right-click to consume thrust and dash forward dealing damage. When you have thrust, attacks will ignite enemies and critical hits will consume thrust to deal additional explosion damage.\nWhen thrust is insufficient, consume Tigermark Rounds from the hotbar to refill. Every 8 refills will temporarily prevent loading.",
+  "modifier.cloudertinker.tiantuistar.flavor": "\"Eyes up here,boys! Don'tcha go losin' yer heads now!\"",
+  "modifier.cloudertinker.tiantuistar.type0": "None",
+  "modifier.cloudertinker.tiantuistar.current_round": "Currently loaded:：%s",
+  "modifier.cloudertinker.tiantuistar.tooltip1": "Thrust available %s/%s",
+  "modifier.cloudertinker.tiantuistar.tooltip2": "Ammunition used %s/%s"
 }

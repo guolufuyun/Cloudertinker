@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " B ",
+    "DAD",
+    "DCD"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:fire_charge"
+    },
+    "B": {
+      "item": "tconstruct:steel_nugget"
+    },
+    "C": {
+      "item": "minecraft:gold_ingot"
+    },
+    "D": {
+      "item": "tconstruct:scorched_brick"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:savage_tigermark_round",
+    "count": 8
+  }
+}

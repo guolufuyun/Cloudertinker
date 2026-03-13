@@ -6,6 +6,7 @@ import com.fuyun.cloudertinker.Modifiers.OnlyBowMOdifiers.*;
 import com.fuyun.cloudertinker.Modifiers.ToolModifiers.Darkness;
 import com.fuyun.cloudertinker.Modifiers.ToolModifiers.Magent;
 import com.fuyun.cloudertinker.Modifiers.ToolModifiers.Precipitate;
+import com.fuyun.cloudertinker.Modifiers.ToolModifiers.TianTuiStar;
 import com.fuyun.cloudertinker.Modifiers.WarpenModifiers.*;
 import com.fuyun.cloudertinker.Modifiers.anvil.*;
 import com.fuyun.cloudertinker.Modifiers.anvil.Slots.*;
@@ -112,7 +113,7 @@ public class CloudertinkerModifiers {
     public static final StaticModifier<Frostspikearrow> frostspikearrow=MODIFIERS.register("frostspikearrow", Frostspikearrow::new);
     public static final StaticModifier<Frostspikearound> frostspikearound=MODIFIERS.register("frostspikearound", Frostspikearound::new);
 
-
+    public static final StaticModifier<TianTuiStar> tiantuistar=MODIFIERS.register("tiantuistar", TianTuiStar::new);
     public static final StaticModifier<Text> text=MODIFIERS.register("text", Text::new);
 
 

@@ -4,6 +4,9 @@ import com.fuyun.cloudertinker.item.BottleFoodItem;
 import com.fuyun.cloudertinker.item.Chimera_ingot;
 import com.fuyun.cloudertinker.item.Clean_pastry;
 import com.fuyun.cloudertinker.item.IronCooikeItem;
+import com.fuyun.cloudertinker.item.Rounds.Normal_round;
+import com.fuyun.cloudertinker.item.Rounds.Savage_round;
+import com.fuyun.cloudertinker.tool.Giantsword;
 import com.fuyun.cloudertinker.tool.toolDefinitions;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -78,6 +81,8 @@ public class CloudertinkerItem {
     public static final RegistryObject<Item> twilight_scepter_core = ITEMS.register("twilight_scepter_core", () -> new Item( new Item.Properties().tab(CloudertinkerTab.OTHERS)));
     public static final RegistryObject<Item> bloodlust_power = ITEMS.register("bloodlust_power", () -> new Item( new Item.Properties().tab(CloudertinkerTab.OTHERS)));
     public static final RegistryObject<Item> phantom_card = ITEMS.register("phantom_card", () -> new Item( new Item.Properties().tab(CloudertinkerTab.OTHERS)));
+    public static final RegistryObject<Item> savage_tigermark_round = ITEMS.register("savage_tigermark_round", () -> new Savage_round( new Item.Properties().stacksTo(8).tab(CloudertinkerTab.OTHERS)));
+    public static final RegistryObject<Item> tigermark_round = ITEMS.register("tigermark_round", () -> new Normal_round( new Item.Properties().stacksTo(8).tab(CloudertinkerTab.OTHERS)));
 
 
     public static final ItemDeferredRegisterExtension OTHER_ITEM = new ItemDeferredRegisterExtension("cloudertinker");
@@ -90,6 +95,7 @@ public class CloudertinkerItem {
 
     public static final RegistryObject<Item> giantsword = ITEMS.register("giantsword", () -> new ModifiableItem(new Item.Properties().stacksTo(1).tab(CloudertinkerTab.TOOLANDPART), toolDefinitions.GIANTSWORD));
     public static final RegistryObject<Item> hard_shield = ITEMS.register("hard_shield", () -> new ModifiableItem(new Item.Properties().stacksTo(1).tab(CloudertinkerTab.TOOLANDPART), toolDefinitions.HARD_SHIELD));
+    public static final RegistryObject<Item> tiantuistar_blade = ITEMS.register("tiantuistar_blade", () -> new Giantsword(new Item.Properties().stacksTo(1).tab(CloudertinkerTab.TOOLANDPART), toolDefinitions.TIANTUISTAR_BLADE));
 
 
 

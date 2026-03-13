@@ -51,6 +51,22 @@
     {
       "path": "cloudertinker:item/tool/hard_shield/hard_shield5/hard_shield5",
       "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "cloudertinker:item/tool/tiantuistar/tiantuistar1/tiantuistar1",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "cloudertinker:item/tool/tiantuistar/tiantuistar2/tiantuistar2",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "cloudertinker:item/tool/tiantuistar/tiantuistar3/tiantuistar3",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "cloudertinker:item/tool/tiantuistar/tiantuistar4/tiantuistar4",
+      "stat_type": "tconstruct:handle"
     }
   ],
   "replace": false

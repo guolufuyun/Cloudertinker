@@ -68,6 +68,9 @@
   "item.cloudertinker.giantsword.description": "挥动的时候可得悠着点！\n巨人剑挥起来很费劲，但是它的范围与威力都是无与伦比的。",
   "item.cloudertinker.hard_shield": "骑士坚盾",
   "item.cloudertinker.hard_shield.description": "骑士坚盾是一种攻守兼备的重型盾牌，\n拥有不俗的防御能力和优秀的伤害能力。",
+  "item.cloudertinker.tiantuistar_blade": "天退星刀",
+  "item.cloudertinker.tiantuistar_blade.description": "动手就得有始有终，对不？\n天退星刀可以通过击发虎标弹进行冲刺或加强攻击。",
+
 
   "item.cloudertinker.giant_blade": "巨人剑刃",
   "pattern.cloudertinker.giant_blade": "巨人剑刃",
@@ -111,6 +114,7 @@
   "item.cloudertinker.glavenus_ingot": "灼炎锭",
   "item.cloudertinker.frostspikeslime_ingot": "冰刺史莱姆锭",
 
+  "cloudertinker.item.tooltip.holdshift":"按住 Shift 键查看详情",
   "item.cloudertinker.iron_cookie": "铁粒曲奇饼",
   "item.cloudertinker.obsidian_cookie": "黑曜石铁饼",
   "item.cloudertinker.cola_bottle": "可乐瓶",
@@ -123,6 +127,12 @@
   "item.cloudertinker.twilight_scepter_core": "黄昏核心",
   "item.cloudertinker.bloodlust_power": "狂龙粉尘",
   "item.cloudertinker.phantom_card": "幻影骑士卡片",
+  "item.cloudertinker.savage_tigermark_round": "猛虎标弹",
+  "item.cloudertinker.tigermark_round": "虎标弹",
+  "cloudertinker.item.tooltip.round.value1": "伤害倍率：%s%%",
+  "cloudertinker.item.tooltip.round.value2": "提供推力：%s",
+  "cloudertinker.item.tooltip.round.value3": "冲刺力度：%s",
+  "cloudertinker.item.tooltip.round.value4": "爆炸伤害倍率：%s%%",
 
   "item.cloudertinker.molten_fiery_bucket": "熔融炽铁桶",
   "item.cloudertinker.molten_knightmetal_bucket": "熔融骑士金属桶",
@@ -732,6 +742,15 @@
   "modifier.cloudertinker.allscepters.description": "获得一个额外的防御槽！",
   "modifier.cloudertinker.allscepters.flavor": "四把权杖的力量聚到一起会发生什么？现在你知道答案了",
 
+  "modifier.cloudertinker.toolsonly": "工具专属",
+
+  "modifier.cloudertinker.tiantuistar": "天退星",
+  "modifier.cloudertinker.tiantuistar.description": "按住右键消耗推力向前冲刺并造成伤害，拥有推力时会让攻击点燃对方且暴击时消耗推力造成额外爆炸伤害\n推力不足时消耗快捷栏的虎标弹填充，每8次会暂时无法装填",
+  "modifier.cloudertinker.tiantuistar.flavor": "“再这么杵着，脑袋可要搬家咯”",
+  "modifier.cloudertinker.tiantuistar.current_round": "当前装填：%s",
+  "modifier.cloudertinker.tiantuistar.type0": "无",
+  "modifier.cloudertinker.tiantuistar.tooltip1": "拥有推力%s/%s",
+  "modifier.cloudertinker.tiantuistar.tooltip2": "已使用弹药%s/%s",
 
   "modifier.cloudertinker.bing": "画的饼",
   "黑骷髅头": "黑骷髅头",
