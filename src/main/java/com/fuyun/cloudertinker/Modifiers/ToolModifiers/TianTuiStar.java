@@ -72,7 +72,7 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
             double pushp = 0;
                 boolean influid = entity.isInFluidType();
                 if (ForgeRegistries.ITEMS.getValue(new ResourceLocation(tooldata.getString(round_type))) instanceof Tigermark_rounds round) {
-                    pushp = round.push_power;
+                    pushp = round.beforeCharge(tool, modifier, entity,tooldata.getInt(thrust));
                     if(influid)pushp*=0.5;
                     round.onCharge(tool, modifier, player,tooldata.getInt(thrust));
                 double pushX = lookVec.x * pushp;
@@ -118,8 +118,8 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
     @Override
     public float getMeleeDamage(IToolStackView tool, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {
         if (ForgeRegistries.ITEMS.getValue(new ResourceLocation(tool.getPersistentData().getString(round_type))) instanceof Tigermark_rounds round){
-            round.onMeleeDamage(tool,modifierEntry,toolAttackContext,v,v1);
-            return (float) (v1*round.damageboost);
+            round.onMeleeHit(tool,modifierEntry,toolAttackContext,v,v1);
+            return (float) (round.getMeleedamage(tool,modifierEntry,toolAttackContext,v,v1));
         }
         return v1;
     }
@@ -130,7 +130,7 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
         if (ForgeRegistries.ITEMS.getValue(new ResourceLocation(tool.getPersistentData().getString(round_type))) instanceof Tigermark_rounds round&&tooldata.getInt(thrust)>0&&context.getLivingTarget()!=null&&context.getLivingTarget().isAlive()&&context.getAttacker() instanceof Player player){
            context.getLivingTarget().invulnerableTime = 0;
             if (context.isCritical()){
-              context.getLivingTarget().hurt(DamageSource.explosion(context.getAttacker()),damageDealt*round.explosion_damage);
+              context.getLivingTarget().hurt(DamageSource.explosion(context.getAttacker()),damageDealt*round.onExplosion(tool,modifier,context,damageDealt));
               if (!fillround(tool,player)){
                   tooldata.putInt(thrust,0);
               }
@@ -159,7 +159,7 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
                     ResourceLocation itemRegistryName =  ForgeRegistries.ITEMS.getKey(round);
                     tooldata.putString(round_type, itemRegistryName.toString());
                     tooldata.putInt(round_num,tooldata.getInt(round_num)+1);
-                    tooldata.putInt(thrust,round.thrust);
+                    tooldata.putInt(thrust,round.getThrust());
                     player.getCooldowns().addCooldown(tool.getItem(), 10);
                     round.onFillRound(tool,player);
                     return true;
@@ -185,7 +185,7 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
                 Item roundItem = ForgeRegistries.ITEMS.getValue(new ResourceLocation(roundtype));
                 if (roundItem instanceof Tigermark_rounds round) {
                     roundName = roundItem.getName(new ItemStack(roundItem));
-                    thrustmax=round.thrust;
+                    thrustmax=round.getThrust();
                     color = round.color;
                 }
             }

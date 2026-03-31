@@ -121,6 +121,8 @@
   "cloudertinker.item.tooltip.round.value2": "Provides Thrust:%s",
   "cloudertinker.item.tooltip.round.value3": "Charge Power:%s",
   "cloudertinker.item.tooltip.round.value4": "Explosion Damage Multiplier:%s%%",
+  "item.cloudertinker.fiery_tigermark_round": "Fiery Tigermark Round",
+  "cloudertinker.item.tooltip.fround.value": "Damage increased by 50% against burning enemies",
 
 
   "item.cloudertinker.molten_fiery_bucket": "Molten Fiery Iron Bucket",

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "cloudertinker:questiron_block"
+    "cloudertinker:questiron_block",
+    "cloudertinker:fiery_melter"
   ]
 }

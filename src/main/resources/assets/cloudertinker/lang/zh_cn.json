@@ -1,6 +1,8 @@
 {
   "block.cloudertinker.laomo_block": "牢墨块",
   "block.cloudertinker.questiron_block": "谜之金属块",
+  "block.cloudertinker.fiery_melter": "§6炽铁熔化炉",
+  "cloudertinker.item.tooltip.fiery_melter": "未接入流体燃料时持续以%s°温度熔炼物品",
 
   "effect.cloudertinker.hongwen": "红温",
   "item.minecraft.potion.effect.armorbroken_potion": "破防药水",
@@ -133,6 +135,8 @@
   "cloudertinker.item.tooltip.round.value2": "提供推力：%s",
   "cloudertinker.item.tooltip.round.value3": "冲刺力度：%s",
   "cloudertinker.item.tooltip.round.value4": "爆炸伤害倍率：%s%%",
+  "item.cloudertinker.fiery_tigermark_round": "炽虎爆弹",
+  "cloudertinker.item.tooltip.fround.value": "对着火的敌人伤害提升50%",
 
   "item.cloudertinker.molten_fiery_bucket": "熔融炽铁桶",
   "item.cloudertinker.molten_knightmetal_bucket": "熔融骑士金属桶",

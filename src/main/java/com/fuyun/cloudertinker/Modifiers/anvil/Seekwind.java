@@ -34,15 +34,16 @@ public class Seekwind extends BattleModifier {
             seekerArrow.load(originalNBT);
             arrow.getCapability(EntityModifierCapability.CAPABILITY);
             seekerArrow.setBaseDamage((float) (arrow.getBaseDamage()));
-            arrow.getCapability(EntityModifierCapability.CAPABILITY).ifPresent(originalCap -> {
-                var originalModifiers = originalCap.getModifiers();
-                seekerArrow.getCapability(EntityModifierCapability.CAPABILITY).ifPresent(newCap -> {
-                    ModifierNBT.Builder builder = ModifierNBT.builder();
-                    builder.add(originalModifiers);
-                    builder.add(modifiers);
-                    newCap.setModifiers(builder.build());
-                });
-            });
+//            arrow.getCapability(EntityModifierCapability.CAPABILITY).ifPresent(originalCap -> {
+//                var originalModifiers = originalCap.getModifiers();
+//                seekerArrow.getCapability(EntityModifierCapability.CAPABILITY).ifPresent(newCap -> {
+//                    ModifierNBT.Builder builder = ModifierNBT.builder();
+//                    builder.add(originalModifiers);
+//                    builder.add(modifiers);
+//                    newCap.setModifiers(builder.build());
+//                });
+//            });
+            seekerArrow.getCapability(EntityModifierCapability.CAPABILITY).ifPresent(cap -> cap.setModifiers(modifiers));
             seekerArrow.setPos(arrow.getX(), arrow.getY(), arrow.getZ());
             seekerArrow.setOwner(player);
             seekerArrow.setDeltaMovement(arrow.getDeltaMovement());

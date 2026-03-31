@@ -32,7 +32,10 @@ public class Cloudertinker {
         CloudertinkerItem.OTHER_ITEM.register(eventBus);
         CloudertinkerModifiers.MODIFIERS.register(eventBus);
         CloudertinkerFluid.FLUIDS.register(eventBus);
+        CloudertinkerBlockEntity.BLOCK_ENTITIES.register(eventBus);
         CloudertinkerBlock.BLOCK.register(eventBus);
+
+
         CloudertinkerEffects.EFFECT.register(eventBus);
         CloudertinkerPotion.POTIONS.register(eventBus);
         if (enabled1){

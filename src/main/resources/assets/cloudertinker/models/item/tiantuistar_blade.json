@@ -5,11 +5,19 @@
     "blade": "cloudertinker:item/tool/tiantuistar/tiantuistar1/tiantuistar1",
     "gradle2": "cloudertinker:item/tool/tiantuistar/tiantuistar2/tiantuistar2",
     "gradle1": "cloudertinker:item/tool/tiantuistar/tiantuistar3/tiantuistar3",
-    "gradle3": "cloudertinker:item/tool/tiantuistar/tiantuistar4/tiantuistar4"
+    "gradle3": "cloudertinker:item/tool/tiantuistar/tiantuistar4/tiantuistar4",
+
+    "large_blade": "cloudertinker:item/tool/tiantuistarlarge/tiantuistar1/tiantuistar1",
+    "large_gradle2": "cloudertinker:item/tool/tiantuistarlarge/tiantuistar2/tiantuistar2",
+    "large_gradle1": "cloudertinker:item/tool/tiantuistarlarge/tiantuistar3/tiantuistar3",
+    "large_gradle3": "cloudertinker:item/tool/tiantuistarlarge/tiantuistar4/tiantuistar4"
   },
-  "modifier_roots": [
-    "cloudertinker:item/tool/trident/modifiers/"
-  ],
+  "modifier_roots":{
+  "small": ["cloudertinker:item/tool/trident/modifiers/"],
+  "large": [ "cloudertinker:item/tool/trident/modifiers/" ]
+},
+"large": true,
+"large_offset": [-2, 2],
   "parts": [
     {
       "name": "blade",

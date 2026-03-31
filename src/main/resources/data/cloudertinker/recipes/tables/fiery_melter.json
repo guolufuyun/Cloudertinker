@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DBD",
+    "BAB",
+    "DBD"
+  ],
+  "key": {
+    "A": {
+      "item": "tconstruct:seared_melter"
+    },
+    "B": {
+      "item": "tconstruct:seared_reinforcement"
+    },
+    "D": {
+      "item": "twilightforest:fiery_ingot"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:fiery_melter",
+    "count": 1
+  }
+}

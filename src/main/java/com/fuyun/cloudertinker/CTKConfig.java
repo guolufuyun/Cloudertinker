@@ -37,6 +37,7 @@ public class CTKConfig {
         public final ForgeConfigSpec.DoubleValue Overlost_MAX;
         public final ForgeConfigSpec.IntValue Fragile_damage;
         public final ForgeConfigSpec.IntValue Harmonize_MAX;
+        public final ForgeConfigSpec.IntValue FIERY_TEMPERATURE;
 //
 public final ForgeConfigSpec.DoubleValue Push_Power;
         public final ForgeConfigSpec.DoubleValue Savage_Push_Power;
@@ -75,7 +76,10 @@ public final ForgeConfigSpec.DoubleValue Push_Power;
                     .defineInRange("Savage tigermark round damage",1.5,0.0, Double.MAX_VALUE);
 
             builder.pop();
-
+            builder.comment("Fiery melter").comment("炽铁熔化炉").push("fiery_melter");
+            this.FIERY_TEMPERATURE = builder.comment("Fiery melter temperature, 1500 by default.").comment("炽铁熔化炉温度。")
+                    .defineInRange("FIERY_TEMPERATURE",1500,1, Integer.MAX_VALUE);
+            builder.pop();
 
             builder.comment("Tigermark rounds").comment("虎标弹").push("tigermark_round");
             this.Push_Power = builder.comment("Tigermark round push power, 0.2 by default.").comment("虎标弹推进力度，默认0.2。")
@@ -85,8 +89,8 @@ public final ForgeConfigSpec.DoubleValue Push_Power;
 
             this.Savage_Push_Power = builder.comment("Savage tigermark round push power, 0.5 by default.").comment("猛虎标弹推进力度，默认0.5。")
                     .defineInRange("Savage tigermark round push power",0.5,0.0, Double.MAX_VALUE);
-            this.Savage_Explosion_damage = builder.comment("Savage tigermark round Explosion damage, 50% by default.").comment("猛虎标弹爆炸伤害，默认50%")
-                    .defineInRange("Savage tigermark round Explosion damage",0.5,0.0, Double.MAX_VALUE);
+            this.Savage_Explosion_damage = builder.comment("Savage tigermark round Explosion damage, 25% by default.").comment("猛虎标弹爆炸伤害，默认25%")
+                    .defineInRange("Savage tigermark round Explosion damage",0.25,0.0, Double.MAX_VALUE);
             builder.pop();
         }
     }
