@@ -20,10 +20,10 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import java.util.List;
 
 public abstract class Tigermark_rounds extends Item {
-    public float damageboost= 1.0f;
-    public int thrust= 50;
-    public double push_power= CTKConfig.COMMON.Push_Power.get();
-    public float explosion_damage= CTKConfig.COMMON.Explosion_damage.get().floatValue();
+    protected float damageboost= 1.0f;
+    protected int thrust= 50;
+    protected double push_power= CTKConfig.COMMON.Push_Power.get();
+    protected float explosion_damage= CTKConfig.COMMON.Explosion_damage.get().floatValue();
     public ChatFormatting color=ChatFormatting.RED;
 
     public Tigermark_rounds(Properties pProperties) {
@@ -32,18 +32,42 @@ public abstract class Tigermark_rounds extends Item {
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, List<Component> list, @NotNull TooltipFlag flag) {
         if (Screen.hasShiftDown()){
-            list.add(Component.translatable("cloudertinker.item.tooltip.round.value1",this.damageboost*100).withStyle(this.color));
-            list.add(Component.translatable("cloudertinker.item.tooltip.round.value2",this.thrust).withStyle(this.color));
-            list.add(Component.translatable("cloudertinker.item.tooltip.round.value3",this.push_power).withStyle(this.color));
-            list.add(Component.translatable("cloudertinker.item.tooltip.round.value4",this.explosion_damage*100).withStyle(this.color));
+            list.add(Component.translatable("cloudertinker.item.tooltip.round.value1",String.format("%.0f", this.damageboost*100)).withStyle(this.color));
+            list.add(Component.translatable("cloudertinker.item.tooltip.round.value2", this.thrust).withStyle(this.color));
+            list.add(Component.translatable("cloudertinker.item.tooltip.round.value3", this.push_power).withStyle(this.color));
+            list.add(Component.translatable("cloudertinker.item.tooltip.round.value4",String.format("%.0f", this.explosion_damage*100)).withStyle(this.color));
         }else {
             list.add(Component.translatable("cloudertinker.item.tooltip.holdshift").withStyle(this.color));
         }
         super.appendHoverText(stack, level, list, flag);
     }
+    public float getDamageBoost() {
+        return this.damageboost;
+    }
 
-    public void onMeleeDamage(IToolStackView tool, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {}
+    public int getThrust() {
+        return this.thrust;
+    }
+
+    public double getPushPower() {
+        return this.push_power;
+    }
+
+    public float getExplosionDamage() {
+        return this.explosion_damage;
+    }
+
+    public float getMeleedamage(IToolStackView tool, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {
+        return v1*this.getDamageBoost();
+    }
+    public void onMeleeHit(IToolStackView tool, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {}
+    public float onExplosion(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
+        return this.getExplosionDamage();
+    }
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt){}
+    public double beforeCharge(IToolStackView tool, ModifierEntry modifier, LivingEntity entity, int thrust){
+        return this.getPushPower();
+    }
     public void onCharge(IToolStackView tool, ModifierEntry modifier, LivingEntity entity, int thrust){}
     public void onChargeHit(IToolStackView tool, ModifierEntry modifier, LivingEntity attacker,LivingEntity target, int thrust ,List<Mob> mobList){}
     public void onStoppedUsing(IToolStackView tool, ModifierEntry modifier, LivingEntity entity, int thrust,List<Mob> mobList){}

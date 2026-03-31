@@ -14,8 +14,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import slimeknights.tconstruct.library.tools.capability.TinkerDataCapability;
-import twilightforest.client.renderer.entity.ThrownIceRenderer;
-import twilightforest.init.TFEntities;
 
 import java.util.Locale;
 
@@ -24,10 +22,13 @@ import static slimeknights.tconstruct.TConstruct.makeTranslationKey;
 @Mod(Cloudertinker.MODID)
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD,modid = Cloudertinker.MODID)
 public class Cloudertinker {
+
 //    主类，不在这里注册是没有用的
     public static boolean enabled1 = ModList.get().isLoaded("twilightforest");
     public static final String MODID = "cloudertinker";
+
     public Cloudertinker() {
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         CTKConfig.init();
@@ -36,7 +37,9 @@ public class Cloudertinker {
         CloudertinkerItem.OTHER_ITEM.register(modEventBus);
         CloudertinkerModifiers.MODIFIERS.register(modEventBus);
         CloudertinkerFluid.FLUIDS.register(modEventBus);
+        CloudertinkerBlockEntity.BLOCK_ENTITIES.register(modEventBus);
         CloudertinkerBlock.BLOCK.register(modEventBus);
+
         CloudertinkerEffects.EFFECT.register(modEventBus);
         CloudertinkerEntity.ENTITIES.register(modEventBus);
         CloudertinkerPotion.POTIONS.register(modEventBus);
@@ -46,9 +49,11 @@ public class Cloudertinker {
         modEventBus.register(new CloudertinkerMaterials());
         modEventBus.register(new CloudertinkerOther());
         modEventBus.register(new CloudertinkerTools());
+
         CloudertinkerMaterials.initRegisters();
 
     }
+
     public static ResourceLocation prefix(String name) {
         return new ResourceLocation(MODID, name.toLowerCase(Locale.ROOT));
     }

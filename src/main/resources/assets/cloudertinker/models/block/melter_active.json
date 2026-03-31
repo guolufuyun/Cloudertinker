@@ -1,0 +1,6 @@
+{
+  "parent": "cloudertinker:block/fiery_melter",
+  "textures": {
+    "front": "cloudertinker:block/melter/melter_active"
+  }
+}

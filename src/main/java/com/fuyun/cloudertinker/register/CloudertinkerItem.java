@@ -1,21 +1,14 @@
 package com.fuyun.cloudertinker.register;
 
-import com.fuyun.cloudertinker.item.BottleFoodItem;
-import com.fuyun.cloudertinker.item.Chimera_ingot;
-import com.fuyun.cloudertinker.item.Clean_pastry;
-import com.fuyun.cloudertinker.item.IronCooikeItem;
-import com.fuyun.cloudertinker.item.Rounds.Normal_round;
-import com.fuyun.cloudertinker.item.Rounds.Savage_round;
-import com.fuyun.cloudertinker.tool.Giantsword;
-import com.fuyun.cloudertinker.tool.toolDefinitions;
+import com.fuyun.cloudertinker.item.*;
+import com.fuyun.cloudertinker.item.Blockitem.FieryMelter;
+import com.fuyun.cloudertinker.item.Rounds.*;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.common.registration.ItemDeferredRegisterExtension;
-import slimeknights.tconstruct.library.tools.part.ToolPartItem;
-import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
 
 import static com.fuyun.cloudertinker.Cloudertinker.MODID;
 
@@ -59,7 +52,7 @@ public class CloudertinkerItem {
 
     public static final RegistryObject<Item> questiron_ingot = ITEMS.register("questiron_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<BlockItem> questiron_block = ITEMS.register("questiron_block", () -> new BlockItem(CloudertinkerBlock.questiron_block.get(), new Item.Properties()));
-
+    public static final RegistryObject<BlockItem> fiery_melter = ITEMS.register("fiery_melter", () -> new FieryMelter(CloudertinkerBlock.fiery_melter.get(), new Item.Properties()));
 
 
 
@@ -78,6 +71,7 @@ public class CloudertinkerItem {
     public static final RegistryObject<Item> twilight_scepter_core = ITEMS.register("twilight_scepter_core", () -> new Item( new Item.Properties()));
     public static final RegistryObject<Item> savage_tigermark_round = ITEMS.register("savage_tigermark_round", () -> new Savage_round( new Item.Properties().stacksTo(8)));
     public static final RegistryObject<Item> tigermark_round = ITEMS.register("tigermark_round", () -> new Normal_round( new Item.Properties().stacksTo(8)));
+    public static final RegistryObject<Item> fiery_tigermark_round = ITEMS.register("fiery_tigermark_round", () -> new Fiery_round( new Item.Properties().stacksTo(8)));
 
 
 

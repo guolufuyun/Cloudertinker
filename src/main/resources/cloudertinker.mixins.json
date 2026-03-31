@@ -5,7 +5,9 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "cloudertinker.refmap.json",
   "mixins": [
-    "LivingEntityMixin"
+    "LivingEntityMixin",
+    "MelterBlockEntityAccessor",
+    "FuelModuleAccessor"
   ],
   "client": [
   ],

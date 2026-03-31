@@ -1,0 +1,9 @@
+{
+  "parent": "cloudertinker:block/half_tank",
+  "textures": {
+    "top":    "cloudertinker:block/melter/gauge_top",
+    "side":   "cloudertinker:block/melter/melter_side",
+    "bottom": "cloudertinker:block/melter/bricks",
+    "inside": "cloudertinker:block/melter/bricks"
+  }
+}
