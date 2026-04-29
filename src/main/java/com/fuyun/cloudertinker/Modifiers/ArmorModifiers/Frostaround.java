@@ -73,7 +73,7 @@ public class Frostaround extends ArmorModifier {
                     }
                 }
 
-                return amount * (1-((tooldata.getInt(frostcraft) + 10) * 0.002f));
+                return amount * (1-Math.min(0.9f,(tooldata.getInt(frostcraft) + 10) * 0.002f));
             }
         }
         return amount;

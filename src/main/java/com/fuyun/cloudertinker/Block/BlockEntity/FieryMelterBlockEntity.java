@@ -35,10 +35,9 @@ public class FieryMelterBlockEntity extends MelterBlockEntity {
         BlockEntity downTE = level.getBlockEntity(downPos);
 
         if (downTE instanceof TankBlockEntity tankTE) {
-            // 检查下方储罐是否有流体
+            
             boolean hasFuelTank = tankTE.getTank().getFluidAmount() > 0;
 
-            // Tick 0: 寻找燃料
             if (accessor.getTick() == 0) {
                 if (!accessor.getFuelModule().hasFuel() &&
                         accessor.getMeltingInventory().canHeat(accessor.getFuelModule().findFuel(false))) {
@@ -46,17 +45,13 @@ public class FieryMelterBlockEntity extends MelterBlockEntity {
                 }
             }
 
-            // Tick 2: 加热和消耗燃料
             if (accessor.getTick() == 2) {
                 boolean hasFuel = accessor.getFuelModule().hasFuel();
                 if (hasFuel) {
-                    // 使用高温高速加热
                     level.setBlockAndUpdate(pos, state.setValue(ControllerBlock.ACTIVE, true));
                     accessor.getMeltingInventory().heatItems(accessor.getFuelModule().getTemperature(), accessor.getFuelModule().getRate());
-                    // 消耗燃料
                     accessor.getFuelModule().decreaseFuel(1);
 
-                    // 如果燃料耗尽且下方储罐也没燃料，切换到独立模式
                     if (!accessor.getFuelModule().hasFuel() && !hasFuelTank) {
                         tickStandalone(level, pos, state, accessor);
                     }
@@ -66,7 +61,7 @@ public class FieryMelterBlockEntity extends MelterBlockEntity {
                 }
             }
 
-            // 更新 tick 计数器
+
             accessor.setTick((accessor.getTick() + 1) % 4);
         } else {
             tickStandalone(level, pos, state, accessor);
