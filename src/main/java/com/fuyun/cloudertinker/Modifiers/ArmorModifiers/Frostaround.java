@@ -72,7 +72,7 @@ public class Frostaround extends ArmorModifier {
                         mob.addEffect(new MobEffectInstance(TFMobEffects.FROSTY.get(), 50, 5, true, true));
                     }
                 }
-                return amount * (1-((tooldata.getInt(frostcraft) + 10) * 0.002f));
+                return amount * (1-Math.min(0.9f,(tooldata.getInt(frostcraft) + 10) * 0.002f));
             }
         }
         return amount;
