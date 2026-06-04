@@ -2,7 +2,6 @@ package com.fuyun.cloudertinker.Modifiers.WarpenModifiers;
 
 import com.fuyun.cloudertinker.extend.superclass.BattleModifier;
 import com.fuyun.cloudertinker.register.CloudertinkerModifiers;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -15,19 +14,15 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.EntityHitResult;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.fml.ModList;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeHitModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.ranged.ProjectileHitModifierHook;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
-import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
-import slimeknights.tconstruct.shared.TinkerMaterials;
 import twilightforest.entity.monster.LoyalZombie;
-import twilightforest.entity.monster.SkeletonDruid;
 import twilightforest.init.TFEntities;
 import twilightforest.init.TFItems;
 import twilightforest.init.TFSounds;
@@ -99,12 +94,6 @@ public class Fashionbody extends BattleModifier implements  MeleeHitModifierHook
             }
         }
     }
-    private void LivingDeathEvent(LivingDeathEvent event) {
-        LivingEntity entity = event.getEntity();
-        DamageSource source=entity.getLastDamageSource();
-        if (entity instanceof SkeletonDruid druid){
-            ModifierUtil.dropItem(druid, new ItemStack(TinkerMaterials.venombone.get()));}
 
-    }
 
 }

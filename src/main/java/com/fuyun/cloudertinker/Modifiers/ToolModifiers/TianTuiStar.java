@@ -1,5 +1,6 @@
 package com.fuyun.cloudertinker.Modifiers.ToolModifiers;
 
+import com.fuyun.cloudertinker.CTKConfig;
 import com.fuyun.cloudertinker.Cloudertinker;
 import com.fuyun.cloudertinker.item.Tigermark_rounds;
 import net.minecraft.ChatFormatting;
@@ -82,13 +83,14 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
             double x = entity.getX();
             double y = entity.getY();
             double z = entity.getZ();
-            double a=0.5+(0.5*tool.getModifierLevel(TinkerModifiers.expanded.get()));
+            double a= CTKConfig.COMMON.Charge_range.get()+(CTKConfig.COMMON.Expanded_Charge_range.get()*tool.getModifierLevel(TinkerModifiers.expanded.get()));
             List<Mob> mobList = entity.getCommandSenderWorld().getEntitiesOfClass(Mob.class, new AABB(x + a, y + 2, z + a, x - a, y - 1, z - a));
             for (Mob mob : mobList){
                 if (mob != null&& mob.isAlive()&&!moblist1.contains(mob)){
 
                     if (ToolAttackUtil.attackEntity(tool, player, InteractionHand.MAIN_HAND, mob, () -> 1.0, true)) {
                         moblist1.add(mob);
+//                        player.sendSystemMessage(Component.translatable("成功造成伤害并添加实体"));
                         round.onChargeHit(tool,modifier,entity,mob,tooldata.getInt(thrust),moblist1);
                     }
                 }
@@ -110,6 +112,7 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
     @Override
     public void onStoppedUsing(IToolStackView tool, ModifierEntry modifier, LivingEntity entity, int timeLeft) {
         if (ForgeRegistries.ITEMS.getValue(new ResourceLocation(tool.getPersistentData().getString(round_type))) instanceof Tigermark_rounds round){
+
             round.onStoppedUsing(tool,modifier,entity,tool.getPersistentData().getInt(thrust),moblist1);
         }
         moblist1.clear();
@@ -130,18 +133,19 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
         if (ForgeRegistries.ITEMS.getValue(new ResourceLocation(tool.getPersistentData().getString(round_type))) instanceof Tigermark_rounds round&&tooldata.getInt(thrust)>0&&context.getLivingTarget()!=null&&context.getLivingTarget().isAlive()&&context.getAttacker() instanceof Player player){
            context.getLivingTarget().invulnerableTime = 0;
             if (context.isCritical()){
+//                context.getLivingTarget().addEffect(new MobEffectInstance(CloudertinkerEffects.Armorbroken.get(), round.getThrust(), round(7*((float) tooldata.getInt(thrust) /round.getThrust()))));
               context.getLivingTarget().hurt(DamageSource.explosion(context.getAttacker()),damageDealt*round.onExplosion(tool,modifier,context,damageDealt));
               if (!fillround(tool,player)){
                   tooldata.putInt(thrust,0);
               }
                 context.getLivingTarget().playSound(SoundEvents.GENERIC_EXPLODE,1,1);
-                context.getLivingTarget().setRemainingFireTicks(200);
+                context.getLivingTarget().setRemainingFireTicks(context.getLivingTarget().getRemainingFireTicks()+200);
                 context.getLivingTarget().setLastHurtByMob(player);
                 if (context.getLivingTarget().getCommandSenderWorld() instanceof ServerLevel serverLevel){
                     serverLevel.sendParticles(ParticleTypes.EXPLOSION,context.getLivingTarget().getX(),context.getLivingTarget().getY()+0.5*context.getLivingTarget().getBbHeight(),context.getLivingTarget().getZ(),2 ,0,0,0,0);
                 }
             }else {
-                context.getLivingTarget().setRemainingFireTicks(100);
+                context.getLivingTarget().setRemainingFireTicks(context.getLivingTarget().getRemainingFireTicks()+100);
             }
             round.afterMeleeHit(tool,modifier,context,damageDealt);
         }
@@ -150,6 +154,9 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
     private boolean fillround(IToolStackView tool, Player player){
         ModDataNBT tooldata = tool.getPersistentData();
         moblist1.clear();
+        if (ForgeRegistries.ITEMS.getValue(new ResourceLocation(tool.getPersistentData().getString(round_type))) instanceof Tigermark_rounds rounds){
+            rounds.beforeFillRound(tool,player);
+        }
         if (tooldata.getInt(round_num)<8){
             for (int i = 0; i < 9; i++) {
                 NonNullList<ItemStack> playerInv = player.getInventory().items;

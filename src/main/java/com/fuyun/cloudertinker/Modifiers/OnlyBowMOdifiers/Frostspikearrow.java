@@ -60,7 +60,7 @@ public class Frostspikearrow extends NoLevelsModifier implements ProjectileLaunc
             ModDataNBT arrowdata = ModDataNBT.readFromNBT(arrow.getPersistentData());
             int ice = iToolStackView.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
             int current = overslime.getShield(iToolStackView);
-            if (ice>0&&tooldata.getInt(frostcraft)>=30){
+            if (ice>0&&tooldata.getInt(frostcraft)>=10){
                 arrow.setPierceLevel((byte)(arrow.getPierceLevel()+1));
                 arrowdata.putInt(frostspike,2);
             }

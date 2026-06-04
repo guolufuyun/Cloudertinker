@@ -1,5 +1,6 @@
 package com.fuyun.cloudertinker.register;
 
+import com.fuyun.cloudertinker.item.Blockitem.FieryAlloyer;
 import com.fuyun.cloudertinker.item.Blockitem.FieryMelter;
 import com.fuyun.cloudertinker.item.BottleFoodItem;
 import com.fuyun.cloudertinker.item.Chimera_ingot;
@@ -8,6 +9,7 @@ import com.fuyun.cloudertinker.item.IronCooikeItem;
 import com.fuyun.cloudertinker.item.Rounds.Fiery_round;
 import com.fuyun.cloudertinker.item.Rounds.Normal_round;
 import com.fuyun.cloudertinker.item.Rounds.Savage_round;
+import com.fuyun.cloudertinker.item.Rounds.Void_power_round;
 import com.fuyun.cloudertinker.tool.Giantsword;
 import com.fuyun.cloudertinker.tool.toolDefinitions;
 import net.minecraft.world.item.BlockItem;
@@ -84,12 +86,12 @@ public class CloudertinkerItem {
     public static final RegistryObject<Item> bloodlust_power = ITEMS.register("bloodlust_power", () -> new Item( new Item.Properties().tab(CloudertinkerTab.OTHERS)));
     public static final RegistryObject<Item> phantom_card = ITEMS.register("phantom_card", () -> new Item( new Item.Properties().tab(CloudertinkerTab.OTHERS)));
     public static final RegistryObject<BlockItem> fiery_melter = ITEMS.register("fiery_melter", () -> new FieryMelter(CloudertinkerBlock.fiery_melter.get(), new Item.Properties().tab(CloudertinkerTab.OTHERS)));
+    public static final RegistryObject<BlockItem> fiery_alloyer = ITEMS.register("fiery_alloyer", () -> new FieryAlloyer(CloudertinkerBlock.fiery_alloyer.get(), new Item.Properties().tab(CloudertinkerTab.OTHERS)));
 
-
-    public static final RegistryObject<Item> savage_tigermark_round = ITEMS.register("savage_tigermark_round", () -> new Savage_round( new Item.Properties().stacksTo(8).tab(CloudertinkerTab.OTHERS)));
-    public static final RegistryObject<Item> tigermark_round = ITEMS.register("tigermark_round", () -> new Normal_round( new Item.Properties().stacksTo(8).tab(CloudertinkerTab.OTHERS)));
-    public static final RegistryObject<Item> fiery_tigermark_round = ITEMS.register("fiery_tigermark_round", () -> new Fiery_round( new Item.Properties().stacksTo(8).tab(CloudertinkerTab.OTHERS)));
-
+    public static final RegistryObject<Item> savage_tigermark_round = ITEMS.register("savage_tigermark_round", () -> new Savage_round( new Item.Properties().stacksTo(64).tab(CloudertinkerTab.OTHERS)));
+    public static final RegistryObject<Item> tigermark_round = ITEMS.register("tigermark_round", () -> new Normal_round( new Item.Properties().stacksTo(32).tab(CloudertinkerTab.OTHERS)));
+    public static final RegistryObject<Item> fiery_tigermark_round = ITEMS.register("fiery_tigermark_round", () -> new Fiery_round( new Item.Properties().stacksTo(16).tab(CloudertinkerTab.OTHERS)));
+    public static final RegistryObject<Item> void_power_round = ITEMS.register("void_power_round", () -> new Void_power_round( new Item.Properties().stacksTo(16).tab(CloudertinkerTab.OTHERS)));
 
     public static final ItemDeferredRegisterExtension OTHER_ITEM = new ItemDeferredRegisterExtension("cloudertinker");
     private static final Item.Properties CASTS = (new Item.Properties()).tab(CloudertinkerTab.TOOLANDPART).stacksTo(64);

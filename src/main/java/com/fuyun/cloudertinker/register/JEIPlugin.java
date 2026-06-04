@@ -17,5 +17,6 @@ public class JEIPlugin implements IModPlugin {
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
        registration.addRecipeCatalyst(new ItemStack(CloudertinkerItem.fiery_melter.get()), TConstructJEIConstants.MELTING);
+        registration.addRecipeCatalyst(new ItemStack(CloudertinkerItem.fiery_alloyer.get()), TConstructJEIConstants.ALLOY);
     }
 }

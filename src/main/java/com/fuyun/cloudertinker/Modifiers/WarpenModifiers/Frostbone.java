@@ -1,22 +1,16 @@
 package com.fuyun.cloudertinker.Modifiers.WarpenModifiers;
 
 import com.fuyun.cloudertinker.extend.superclass.BattleModifier;
-import com.fuyun.cloudertinker.register.CloudertinkerItem;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.Stray;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.EntityHitResult;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
-import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.library.tools.nbt.*;
 
 import java.util.Random;
@@ -25,9 +19,9 @@ import static com.fuyun.cloudertinker.Modifiers.BaseModifiers.Frostcraft.Randomf
 import static com.fuyun.cloudertinker.Modifiers.BaseModifiers.Frostcraft.frostcraft;
 
 public class Frostbone extends BattleModifier {
-    public Frostbone() {
-        MinecraftForge.EVENT_BUS.addListener(this::LivingDeathEvent);
-    }
+//    public Frostbone() {
+//        MinecraftForge.EVENT_BUS.addListener(this::LivingDeathEvent);
+//    }
 
     @Override
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damage ) {
@@ -67,13 +61,13 @@ public class Frostbone extends BattleModifier {
 
 
 
-    private void LivingDeathEvent(LivingDeathEvent event) {
-        LivingEntity entity = event.getEntity();
-        DamageSource source = entity.getLastDamageSource();
-        if (entity instanceof Stray stray) {
-            ModifierUtil.dropItem(stray, new ItemStack(CloudertinkerItem.forestbone.get()));
-        }
-
-    }
+//    private void LivingDeathEvent(LivingDeathEvent event) {
+//        LivingEntity entity = event.getEntity();
+//        DamageSource source = entity.getLastDamageSource();
+//        if (entity instanceof Stray stray) {
+//            ModifierUtil.dropItem(stray, new ItemStack(CloudertinkerItem.forestbone.get()));
+//        }
+//
+//    }
         }
 

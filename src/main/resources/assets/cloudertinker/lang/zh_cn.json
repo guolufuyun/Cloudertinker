@@ -3,6 +3,8 @@
   "block.cloudertinker.questiron_block": "谜之金属块",
   "block.cloudertinker.fiery_melter": "§6炽铁熔化炉",
   "cloudertinker.item.tooltip.fiery_melter": "未接入流体燃料时持续以%s°温度熔炼物品",
+  "block.cloudertinker.fiery_alloyer": "§6炽铁合金炉",
+  "cloudertinker.item.tooltip.fiery_alloyer": "未接入流体燃料时持续以%s°温度进行合金",
 
   "effect.cloudertinker.hongwen": "红温",
   "item.minecraft.potion.effect.armorbroken_potion": "破防药水",
@@ -137,6 +139,8 @@
   "cloudertinker.item.tooltip.round.value4": "爆炸伤害倍率：%s%%",
   "item.cloudertinker.fiery_tigermark_round": "炽虎爆弹",
   "cloudertinker.item.tooltip.fround.value": "对着火的敌人伤害提升50%",
+  "item.cloudertinker.void_power_round": "虚空动力弹",
+  "cloudertinker.item.tooltip.vpround.value": "结束冲刺时会传送至较近距离内第一个被击中目标，如目标无效向下顺延",
 
   "item.cloudertinker.molten_fiery_bucket": "熔融炽铁桶",
   "item.cloudertinker.molten_knightmetal_bucket": "熔融骑士金属桶",
@@ -630,10 +634,10 @@
   "modifier.cloudertinker.heatsword.description": "全力攻击和着火时会积攒热量来提升每级最高50%攻击力，过热时会点燃自己降低护甲值并额外造成最高25%火焰伤害和燃烧效果。\n着火时不会扣除手持工具的热量",
   "modifier.cloudertinker.heatsword.flavor": "一刀一刀燃烧刀",
   "modifier.cloudertinker.heatsword.tooltip1": "当前热量%s",
-  "modifier.cloudertinker.heatsword.tooltip2": "伤害提升%s%",
+  "modifier.cloudertinker.heatsword.tooltip2": "伤害提升",
   "modifier.cloudertinker.heatsword.tooltip3": "未处于过热状态",
   "modifier.cloudertinker.heatsword.tooltip4": "过热状态！！！",
-  "modifier.cloudertinker.heatsword.tooltip5": "额外造成%s%火焰伤害",
+  "modifier.cloudertinker.heatsword.tooltip5": "额外造成火焰伤害",
   "modifier.cloudertinker.heatsword.tooltip6": "减少自己%s护甲值",
 
   "modifier.cloudertinker.highspirits": "精神抖擞",
@@ -695,6 +699,10 @@
   "modifier.cloudertinker.frostspikearound": "冰刺环绕",
   "modifier.cloudertinker.frostspikearound.description": "收击消耗覆层对目标造成与覆层数量相关的伤害并施加霜冻\n拥有寒气时改为消耗寒气并提升伤害并额外对周围造成伤害",
   "modifier.cloudertinker.frostspikearound.flavor": "并不能用来对付神明吞噬者",
+
+  "modifier.cloudertinker.frostspikeburst": "冰刺迸发",
+  "modifier.cloudertinker.frostspikeburst.description": "收击消耗覆层提升25%伤害对目标施加流血和霜冻\n拥有寒气时改为消耗寒气额外提升25%伤害和效果等级并施加碎甲",
+  "modifier.cloudertinker.frostspikeburst.flavor": "额外的尖刺总是好的，尤其是可再生的",
 
   "modifier.cloudertinker.qianghua": "强化分区",
 

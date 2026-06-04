@@ -1,0 +1,6 @@
+{
+  "parent": "cloudertinker:block/fiery_alloyer",
+  "textures": {
+    "front": "cloudertinker:block/alloyer/alloyer_active"
+  }
+}

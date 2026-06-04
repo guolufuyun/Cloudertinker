@@ -21,7 +21,7 @@ public class Druidseed extends BattleModifier {
     }
 
     public void LivingHurtEvent(LivingHurtEvent event) {
-        if (event.getEntity() != null) {
+        if (event.getEntity() != null&&!event.getSource().isMagic()) {
             LivingEntity entity = event.getEntity();
             Entity entity1=event.getSource().getEntity();
             if (entity1 instanceof LivingEntity livingEntity){
@@ -32,21 +32,21 @@ public class Druidseed extends BattleModifier {
                     entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,140, 1));
                 }else {
                     entity.invulnerableTime = 0;
-                    entity.hurt(DamageSource.MAGIC.bypassArmor(),event.getAmount()*0.2f);
+                    entity.hurt(DamageSource.indirectMagic(livingEntity, livingEntity).bypassArmor(),event.getAmount()*0.2f);
                     entity.invulnerableTime = 0;
                     entity.addEffect(new MobEffectInstance(MobEffects.POISON,200, 1));
                     entity.setLastHurtByMob(livingEntity);
                 }
                 }
             }else if(entity1 instanceof Projectile projectile){
-                if (ModifierLevel.EquipHasModifierlevel((LivingEntity) projectile.getOwner(), CloudertinkerModifiers.druidseed.getId())) {
+                if (ModifierLevel.EquipHasModifierlevel((LivingEntity) projectile.getOwner(), CloudertinkerModifiers.druidseed.getId())&&projectile.getOwner() instanceof LivingEntity) {
                     if ((entity instanceof TamableAnimal animal&&animal.isTame())||entity instanceof Player||(entity instanceof AbstractGolem golem&&golem.getTarget()!=projectile.getOwner())){
                         entity.heal(event.getAmount()+1);
                         event.setAmount(1);
                         entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,100, 1));
                     }else {
                         entity.invulnerableTime = 0;
-                        entity.hurt(DamageSource.MAGIC.bypassArmor(),event.getAmount()*0.2f);
+                        entity.hurt(DamageSource.indirectMagic(projectile.getOwner(), projectile.getOwner()).bypassArmor(),event.getAmount()*0.2f);
                         entity.invulnerableTime = 0;
                         entity.addEffect(new MobEffectInstance(MobEffects.POISON,200, 1));
                         entity.setLastHurtByMob((LivingEntity) projectile.getOwner());

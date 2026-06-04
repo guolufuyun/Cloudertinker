@@ -43,7 +43,7 @@ public class Frostspikearound extends NoLevelsModifier implements ModifyDamageMo
             ModDataNBT tooldata = iToolStackView.getPersistentData();
             int ice = iToolStackView.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
             int current = overslime.getShield(iToolStackView);
-            if (ice>0&&tooldata.getInt(frostcraft)>=20){
+            if (ice>0&&tooldata.getInt(frostcraft)>=10){
                 double x = entity.getX();
                 double y = entity.getY();
                 double z = entity.getZ();

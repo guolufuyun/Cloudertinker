@@ -1,4 +1,47 @@
-{"perStat": {"tconstruct:limb": [
+{"perStat": {
+  "tconstruct:head": [
+    {
+      "name": "tconstruct:overslime",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:overfreeze",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:frostspikeburst",
+      "level": 1
+    }
+  ],
+  "tconstruct:handle": [
+    {
+      "name": "tconstruct:overslime",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:overfreeze",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:frostspikeburst",
+      "level": 1
+    }
+  ],
+  "tconstruct:binding": [
+    {
+      "name": "tconstruct:overslime",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:overfreeze",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:frostspikeburst",
+      "level": 1
+    }
+  ],
+  "tconstruct:limb": [
   {
     "name": "tconstruct:overslime",
     "level": 1

@@ -87,14 +87,14 @@ public class Heatsword extends BattleModifier {
             ModDataNBT tooldata = tool.getPersistentData();
             list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip1",tooldata.getInt(heatsword)).withStyle(ChatFormatting.RED));
 
-            list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip2").append((int)tooldata.getInt(heatsword)* 0.25f * 0.01f*modifier.getLevel()+"%").withStyle(ChatFormatting.RED));
+            list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip2").append((int)(tooldata.getInt(heatsword)* 0.25f *modifier.getLevel())+"%").withStyle(ChatFormatting.RED));
 
             if (tooldata.getInt(heatsword)<=100){
                 list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip3").withStyle(ChatFormatting.RED));
             }else {
                 list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip4").withStyle(ChatFormatting.RED));
                 list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip5").append((int)(0.25f*(tooldata.getInt(heatsword)-100))+"%").withStyle(ChatFormatting.RED));
-                list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip6",(tooldata.getFloat(heatsword) - 100) * 0.1).withStyle(ChatFormatting.RED));
+                list.add(Component.translatable("modifier.cloudertinker.heatsword.tooltip6",String.format("%.1f",(tooldata.getFloat(heatsword) - 100) * 0.1)).withStyle(ChatFormatting.RED));
 
             }
         }

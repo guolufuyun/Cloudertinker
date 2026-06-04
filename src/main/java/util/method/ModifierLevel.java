@@ -49,19 +49,23 @@ public class ModifierLevel {
     public static int getEachHandsTotalModifierlevel(LivingEntity entity, ModifierId modifierId) {
         if (entity != null) {
             if (entity instanceof Player player) {
-                ItemStack itemStack = entity.getItemBySlot(EquipmentSlot.MAINHAND);
-                if (!(itemStack.getItem() instanceof IModifiable))return 0;
-                ToolStack toolStack = ToolStack.from(itemStack);
-                ItemStack itemStack1 = entity.getItemBySlot(EquipmentSlot.OFFHAND);
-                if (!(itemStack1.getItem() instanceof IModifiable))return 0;
-                ToolStack toolStack1 = ToolStack.from(itemStack1);
-                if (!(toolStack.isBroken()||toolStack1.isBroken())) {
-                    return ModifierUtil.getModifierLevel(entity.getItemBySlot(EquipmentSlot.MAINHAND), modifierId) + ModifierUtil.getModifierLevel(entity.getItemBySlot(EquipmentSlot.OFFHAND), modifierId);
-                }else if (!toolStack.isBroken()){
-                    return ModifierUtil.getModifierLevel(entity.getItemBySlot(EquipmentSlot.MAINHAND), modifierId);
-                }else {
-                    return ModifierUtil.getModifierLevel(entity.getItemBySlot(EquipmentSlot.OFFHAND), modifierId);
+                int mainhandLevel = 0;
+                int offhandLevel = 0;
+                ItemStack mainhandStack = entity.getItemBySlot(EquipmentSlot.MAINHAND);
+                if (mainhandStack.getItem() instanceof IModifiable) {
+                    ToolStack mainhandTool = ToolStack.from(mainhandStack);
+                    if (!mainhandTool.isBroken()) {
+                        mainhandLevel = ModifierUtil.getModifierLevel(mainhandStack, modifierId);
+                    }
                 }
+                ItemStack offhandStack = entity.getItemBySlot(EquipmentSlot.OFFHAND);
+                if (offhandStack.getItem() instanceof IModifiable) {
+                    ToolStack offhandTool = ToolStack.from(offhandStack);
+                    if (!offhandTool.isBroken()) {
+                        offhandLevel = ModifierUtil.getModifierLevel(offhandStack, modifierId);
+                    }
+                }
+                return mainhandLevel + offhandLevel;
             }
         }
         return 0;

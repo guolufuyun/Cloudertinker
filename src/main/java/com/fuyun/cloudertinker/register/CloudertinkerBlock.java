@@ -1,5 +1,6 @@
 package com.fuyun.cloudertinker.register;
 
+import com.fuyun.cloudertinker.Block.BlockEntity.FieryAlloyerBlock;
 import com.fuyun.cloudertinker.Block.BlockEntity.FieryMelterBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -26,5 +27,11 @@ public class CloudertinkerBlock {
 //    public static final RegistryObject<BlockEntityType<FieryMelterBlockEntity>> fiery_melter_entity =
 //            BLOCK_ENTITIES.register("fiery_melter_entity", () ->
 //                    BlockEntityType.Builder.of(FieryMelterBlockEntity::new, fiery_melter.get()).build(null));
+public static final RegistryObject<Block> fiery_alloyer= BLOCK.register("fiery_alloyer",
+        () -> new FieryAlloyerBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                .lightLevel(state -> state.getValue(ControllerBlock.ACTIVE) ? 13 : 0)
+                .noOcclusion()));
+
+    // ✅ 注册对应的方块实体类型（必须与方块一起注册）
 
 }

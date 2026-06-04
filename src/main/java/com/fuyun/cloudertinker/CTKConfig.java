@@ -46,6 +46,16 @@ public final ForgeConfigSpec.DoubleValue Push_Power;
         public final ForgeConfigSpec.DoubleValue Savage_round_damage;
         public final ForgeConfigSpec.DoubleValue Explosion_damage;
         public final ForgeConfigSpec.DoubleValue Savage_Explosion_damage;
+
+        public final ForgeConfigSpec.DoubleValue Void_Power_Damage;
+        public final ForgeConfigSpec.IntValue Void_Power_Thrust;
+        public final ForgeConfigSpec.DoubleValue Void_Power_Push_Power;
+        public final ForgeConfigSpec.DoubleValue Void_Power_Explosion_damage;
+
+        public final ForgeConfigSpec.DoubleValue Fiery_Damage;
+        public final ForgeConfigSpec.IntValue Fiery_Thrust;
+        public final ForgeConfigSpec.DoubleValue Fiery_Push_Power;
+        public final ForgeConfigSpec.DoubleValue Fiery_Explosion_damage;
         public Common(ForgeConfigSpec.Builder builder){
             builder.comment("Modifiers behaviour").comment("词条行为").push("modifiers_behaviour");
             this.Cuttinggirl_damage = builder.comment("Cuttinggirl damage, 3*level by default.").comment("断鸡少女伤害，默认每级3。")
@@ -68,13 +78,10 @@ public final ForgeConfigSpec.DoubleValue Push_Power;
             builder.pop();
 
             builder.comment("Tiantuistar blade").comment("天退星刀").push("tiantuistar_blade");
-            this.Charge_range = builder.comment("Charge attack range, 0.5 by default.").comment("冲刺攻击范围，默认0.5。")
-                    .defineInRange("Charge attack range",0.5,0.0, Double.MAX_VALUE);
+            this.Charge_range = builder.comment("Charge attack range, 1.0 by default.").comment("冲刺攻击范围，默认1.0。")
+                    .defineInRange("Charge attack range",1.0,0.0, Double.MAX_VALUE);
             this.Expanded_Charge_range = builder.comment("Expanded charge attack range, 0.5*level by default.").comment("延展冲刺攻击范围，默认每级0.5。")
                     .defineInRange("Expanded charge attack range",0.5,0.0, Double.MAX_VALUE);
-            this.Savage_round_damage = builder.comment("Savage tigermark round damage, 150% by default.").comment("猛虎标弹伤害，默认150%。")
-                    .defineInRange("Savage tigermark round damage",1.5,0.0, Double.MAX_VALUE);
-
             builder.pop();
             builder.comment("Fiery melter").comment("炽铁熔化炉").push("fiery_melter");
             this.FIERY_TEMPERATURE = builder.comment("Fiery melter temperature, 1500 by default.").comment("炽铁熔化炉温度。")
@@ -89,8 +96,30 @@ public final ForgeConfigSpec.DoubleValue Push_Power;
 
             this.Savage_Push_Power = builder.comment("Savage tigermark round push power, 0.5 by default.").comment("猛虎标弹推进力度，默认0.5。")
                     .defineInRange("Savage tigermark round push power",0.5,0.0, Double.MAX_VALUE);
+            this.Savage_round_damage = builder.comment("Savage tigermark round damage, 150% by default.").comment("猛虎标弹伤害，默认150%。")
+                    .defineInRange("Savage tigermark round damage",1.5,0.0, Double.MAX_VALUE);
             this.Savage_Explosion_damage = builder.comment("Savage tigermark round Explosion damage, 25% by default.").comment("猛虎标弹爆炸伤害，默认25%")
                     .defineInRange("Savage tigermark round Explosion damage",0.25,0.0, Double.MAX_VALUE);
+
+            this.Void_Power_Thrust = builder.comment("Void power round thrust, 70 by default.").comment("虚空动力弹推力，默认70。")
+                    .defineInRange("Void power round push power",70,0, Integer.MAX_VALUE);
+            this.Void_Power_Push_Power = builder.comment("Void power round push power, 0.2 by default.").comment("虚空动力弹推进力度，默认0.2。")
+                    .defineInRange("Void power round push power",0.2,0.0, Double.MAX_VALUE);
+            this.Void_Power_Damage = builder.comment("Void power round damage, 150% by default.").comment("虚空动力弹伤害，默认270%。")
+                    .defineInRange("Void power round damage",2.7,0.0, Double.MAX_VALUE);
+            this.Void_Power_Explosion_damage = builder.comment("Void power round Explosion damage, 25% by default.").comment("虚空动力弹爆炸伤害，默认75%")
+                    .defineInRange("Void power round Explosion damage",0.75,0.0, Double.MAX_VALUE);
+
+            this.Fiery_Thrust = builder.comment("Fiery round thrust, 100 by default.").comment("炽虎爆弹推力，默认100。")
+                    .defineInRange("Fiery round push power",100,0, Integer.MAX_VALUE);
+            this.Fiery_Push_Power = builder.comment("Fiery round push power, 0.4 by default.").comment("炽虎爆弹推进力度，默认0.4。")
+                    .defineInRange("Fiery round push power",0.4,0.0, Double.MAX_VALUE);
+            this.Fiery_Damage = builder.comment("Fiery round damage, 150% by default.").comment("炽虎爆弹伤害，默认100%。")
+                    .defineInRange("Fiery round damage",1.0,0.0, Double.MAX_VALUE);
+            this.Fiery_Explosion_damage = builder.comment("Fiery round Explosion damage, 250% by default.").comment("炽虎爆弹爆炸伤害，默认250%")
+                    .defineInRange("Fiery round Explosion damage",2.5,0.0, Double.MAX_VALUE);
+
+
             builder.pop();
         }
     }

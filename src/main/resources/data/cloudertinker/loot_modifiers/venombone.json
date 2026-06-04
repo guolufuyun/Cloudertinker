@@ -1,0 +1,29 @@
+{
+  "type": "mantle:add_entry",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "twilightforest:entities/skeleton_druid"
+    },
+    {
+      "condition": "minecraft:random_chance_with_looting",
+      "chance": 1,
+      "looting_multiplier": 0.06
+    }
+  ],
+  "entry": {
+    "type": "minecraft:item",
+    "name": "tconstruct:venombone"
+  },
+  "functions": [
+    {
+      "function": "minecraft:set_count",
+      "count": {
+        "min": 1,
+        "max": 3
+      }
+    }
+  ],
+  "post_conditions": [
+  ]
+}

@@ -71,6 +71,7 @@ public abstract class Tigermark_rounds extends Item {
     public void onCharge(IToolStackView tool, ModifierEntry modifier, LivingEntity entity, int thrust){}
     public void onChargeHit(IToolStackView tool, ModifierEntry modifier, LivingEntity attacker,LivingEntity target, int thrust ,List<Mob> mobList){}
     public void onStoppedUsing(IToolStackView tool, ModifierEntry modifier, LivingEntity entity, int thrust,List<Mob> mobList){}
+    public void beforeFillRound(IToolStackView tool, Player player){}
     public void onFillRound(IToolStackView tool, Player player){}
 
 }
