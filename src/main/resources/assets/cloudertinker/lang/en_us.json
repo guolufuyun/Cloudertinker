@@ -614,7 +614,7 @@
   "modifier.cloudertinker.allscepters.flavor": "What happens when the power of four scepters gathers? Now you know the answer",
 
   "modifier.cloudertinker.tiantuistar": "TianTuiStar",
-  "modifier.cloudertinker.tiantuistar.description": "Hold right-click to consume thrust and dash forward dealing damage. When you have thrust, attacks will ignite enemies and critical hits will consume thrust to deal additional explosion damage.\nWhen thrust is insufficient, consume Tigermark Rounds from the hotbar to refill. Every 8 refills will temporarily prevent loading.",
+  "modifier.cloudertinker.tiantuistar.description": "Hold right-click to consume thrust and dash forward dealing damage and . When you have thrust, attacks will ignite enemies and critical hits will consume thrust to deal additional explosion damage and applies Armor Shatter based on thrust.\nWhen thrust is insufficient, consume Tigermark Rounds from the hotbar to refill. Every 8 refills will temporarily prevent loading.",
   "modifier.cloudertinker.tiantuistar.flavor": "\"Eyes up here,boys! Don'tcha go losin' yer heads now!\"",
   "modifier.cloudertinker.tiantuistar.type0": "None",
   "modifier.cloudertinker.tiantuistar.current_round": "Currently loaded:：%s",

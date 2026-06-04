@@ -2,6 +2,7 @@ package com.fuyun.cloudertinker.Modifiers.ToolModifiers;
 
 import com.fuyun.cloudertinker.Cloudertinker;
 import com.fuyun.cloudertinker.item.Tigermark_rounds;
+import com.fuyun.cloudertinker.register.CloudertinkerEffects;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.particles.ParticleTypes;
@@ -12,6 +13,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
@@ -42,6 +44,8 @@ import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.lang.Math.round;
 
 
 public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionModifierHook, TooltipModifierHook, MeleeDamageModifierHook, MeleeHitModifierHook {
@@ -130,6 +134,7 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
         if (ForgeRegistries.ITEMS.getValue(new ResourceLocation(tool.getPersistentData().getString(round_type))) instanceof Tigermark_rounds round&&tooldata.getInt(thrust)>0&&context.getLivingTarget()!=null&&context.getLivingTarget().isAlive()&&context.getAttacker() instanceof Player player){
            context.getLivingTarget().invulnerableTime = 0;
             if (context.isCritical()){
+                context.getLivingTarget().addEffect(new MobEffectInstance(CloudertinkerEffects.Armorbroken.get(), round.getThrust(), round(7*((float) tooldata.getInt(thrust) /round.getThrust()))));
               context.getLivingTarget().hurt(DamageSource.explosion(context.getAttacker()),damageDealt*round.onExplosion(tool,modifier,context,damageDealt));
               if (!fillround(tool,player)){
                   tooldata.putInt(thrust,0);

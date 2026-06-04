@@ -6,18 +6,12 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
-import slimeknights.tconstruct.library.module.ModuleHookMap;
 import util.method.ModifierLevel;
 
-public class Knight_honorable extends ArmorModifier  {
-    @Override
-    protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        super.registerHooks(hookBuilder);
-//        hookBuilder.addHook(this, ModifierHooks.MELEE_DAMAGE);
-        MinecraftForge.EVENT_BUS.addListener(this::LivingHurtEvent);
-    }
+public class Knight_honorable extends ArmorModifier {
+
+
 //    @Override
 //    public float TrueDamageamount(IToolStackView armor, int level, EquipmentContext context, EquipmentSlot slot, DamageSource source, float amount, boolean isDirectDamage, LivingEntity entity, LivingEntity enemy) {
 //        if (enemy != null) {

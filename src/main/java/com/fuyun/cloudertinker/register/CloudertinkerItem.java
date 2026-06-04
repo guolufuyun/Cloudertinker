@@ -86,8 +86,8 @@ public class CloudertinkerItem {
     public static final RegistryObject<BlockItem> fiery_melter = ITEMS.register("fiery_melter", () -> new FieryMelter(CloudertinkerBlock.fiery_melter.get(), new Item.Properties().tab(CloudertinkerTab.OTHERS)));
 
 
-    public static final RegistryObject<Item> savage_tigermark_round = ITEMS.register("savage_tigermark_round", () -> new Savage_round( new Item.Properties().stacksTo(8).tab(CloudertinkerTab.OTHERS)));
-    public static final RegistryObject<Item> tigermark_round = ITEMS.register("tigermark_round", () -> new Normal_round( new Item.Properties().stacksTo(8).tab(CloudertinkerTab.OTHERS)));
+    public static final RegistryObject<Item> savage_tigermark_round = ITEMS.register("savage_tigermark_round", () -> new Savage_round( new Item.Properties().stacksTo(32).tab(CloudertinkerTab.OTHERS)));
+    public static final RegistryObject<Item> tigermark_round = ITEMS.register("tigermark_round", () -> new Normal_round( new Item.Properties().stacksTo(16).tab(CloudertinkerTab.OTHERS)));
     public static final RegistryObject<Item> fiery_tigermark_round = ITEMS.register("fiery_tigermark_round", () -> new Fiery_round( new Item.Properties().stacksTo(8).tab(CloudertinkerTab.OTHERS)));
 
 

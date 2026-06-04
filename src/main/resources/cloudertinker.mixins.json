@@ -6,6 +6,7 @@
   "refmap": "cloudertinker.refmap.json",
   "mixins": [
     "FuelModuleAccessor",
+    "LichMixin",
     "LivingEntityMixin",
     "MelterBlockEntityAccessor"
   ],
