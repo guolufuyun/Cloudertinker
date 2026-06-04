@@ -2,6 +2,7 @@ package com.fuyun.cloudertinker.register;
 
 import com.fuyun.cloudertinker.item.*;
 import com.fuyun.cloudertinker.item.Blockitem.FieryMelter;
+import com.fuyun.cloudertinker.item.Blockitem.FieryAlloyer;
 import com.fuyun.cloudertinker.item.Rounds.*;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
@@ -53,7 +54,7 @@ public class CloudertinkerItem {
     public static final RegistryObject<Item> questiron_ingot = ITEMS.register("questiron_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<BlockItem> questiron_block = ITEMS.register("questiron_block", () -> new BlockItem(CloudertinkerBlock.questiron_block.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> fiery_melter = ITEMS.register("fiery_melter", () -> new FieryMelter(CloudertinkerBlock.fiery_melter.get(), new Item.Properties()));
-
+    public static final RegistryObject<BlockItem> fiery_alloyer = ITEMS.register("fiery_alloyer", () -> new FieryAlloyer(CloudertinkerBlock.fiery_alloyer.get(), new Item.Properties()));
 
 
 
