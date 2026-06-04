@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " B ",
+    " A ",
+    " C "
+  ],
+  "key": {
+    "A": {
+      "item": "tprt:void_power_alloy"
+    },
+    "B": {
+      "item": "tconstruct:amethyst_bronze_nugget"
+    },
+    "C": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "cloudertinker:void_power_round",
+    "count": 16
+  }
+}

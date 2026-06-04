@@ -100,9 +100,5 @@ public class Fashionbody extends BattleModifier  {
             }
         }
     }
-    private void LivingDeathEvent(LivingDeathEvent event) {
-        LivingEntity entity = event.getEntity();
-        if (entity instanceof SkeletonDruid druid){
-            ModifierUtil.dropItem(druid, new ItemStack(TinkerMaterials.venombone.get()));}
-    }
+
 }

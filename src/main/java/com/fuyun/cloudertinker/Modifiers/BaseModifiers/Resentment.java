@@ -15,6 +15,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import org.checkerframework.checker.nullness.qual.Nullable;
 import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.library.modifiers.Modifier;
@@ -22,28 +25,66 @@ import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
+import util.method.ModifierLevel;
 
 import java.util.List;
 
 public class Resentment extends ArmorModifier {
     public static final ResourceLocation resentment = Cloudertinker.getResource("resentment");
+    public Resentment() {
+        MinecraftForge.EVENT_BUS.addListener(this::LivingHurtEvent);
+        MinecraftForge.EVENT_BUS.addListener(this::LivingTickEvent);
+    }
+
     public boolean havenolevel() {
         return true;
     }
+
     @Nullable
     public Component onRemoved(IToolStackView iToolStackView, Modifier modifier) {
         iToolStackView.getPersistentData().remove(resentment);
-        return null;}
+        return null;
+    }
+
     @Override
-    public float TrueDamageamount(IToolStackView armor, int level, EquipmentContext context, EquipmentSlot slot, DamageSource source, float amount, boolean isDirectDamage, LivingEntity entity, LivingEntity enemy) {
-        if ( enemy  != null) {
-            ModDataNBT entitydata = ModDataNBT.readFromNBT(entity.getPersistentData());
-            enemy.addEffect(new MobEffectInstance(CloudertinkerEffects.ResentmentBrand.get(),20 * entitydata.getInt(resentment), 0));
-            if (entitydata.getInt(resentment)<200  ) {
-                entitydata.putInt(resentment, entitydata.getInt(resentment) + (int)amount);
-                if (entitydata.getInt(resentment)>=200) entitydata.putInt(resentment, 200);
+    public void LivingHurtEvent(LivingHurtEvent event) {
+        LivingEntity entity = event.getEntity();
+        if (entity instanceof ServerPlayer player&& ModifierLevel.EquipHasModifierlevel(entity,this.getId())) {
+            DamageSource source = event.getSource();
+            if (source.getEntity() instanceof LivingEntity enemy && enemy != entity) {
+                ModDataNBT entitydata = ModDataNBT.readFromNBT(entity.getPersistentData());
+                float amount = event.getAmount();
+
+                enemy.addEffect(new MobEffectInstance(CloudertinkerEffects.ResentmentBrand.get(), 20 * entitydata.getInt(resentment), 0));
+
+                if (entitydata.getInt(resentment) < 200) {
+                    entitydata.putInt(resentment, entitydata.getInt(resentment) + (int) amount);
+                    if (entitydata.getInt(resentment) >= 200) {
+                        entitydata.putInt(resentment, 200);
+                    }
+                }
             }
         }
+    }
+
+    public void LivingTickEvent(LivingEvent.LivingTickEvent event) {
+        LivingEntity entity = event.getEntity();
+        if (entity instanceof ServerPlayer player) {
+            ModDataNBT entitydata = ModDataNBT.readFromNBT(entity.getPersistentData());
+            if (player.tickCount % 20 == 0 && entitydata.getInt(resentment) > 0) {
+                entitydata.putInt(resentment, entitydata.getInt(resentment) - 1);
+            }
+            if (entitydata.getInt(resentment) < 0) {
+                entitydata.putInt(resentment, 0);
+            }
+            if (entitydata.getInt(resentment) > 200) {
+                entitydata.putInt(resentment, 200);
+            }
+        }
+    }
+
+    @Override
+    public float TrueDamageamount(IToolStackView armor, int level, EquipmentContext context, EquipmentSlot slot, DamageSource source, float amount, boolean isDirectDamage, LivingEntity entity, LivingEntity enemy) {
         return amount;
     }
 
@@ -52,24 +93,7 @@ public class Resentment extends ArmorModifier {
         if (entity instanceof ServerPlayer player) {
             ModDataNBT entitydata = ModDataNBT.readFromNBT(entity.getPersistentData());
             ModDataNBT tooldata = tool.getPersistentData();
-            if (player.tickCount %20 ==0 &&entitydata.getInt(resentment)>0) {
-                if (isSelected || isCorrectSlot) {
-                    entitydata.putInt(resentment, entitydata.getInt(resentment) - 1);
-                    tooldata.putInt(resentment, entitydata.getInt(resentment));
-                }
-            }
-            if (player.tickCount %20 ==0 &&entitydata.getInt(resentment)<=0) {
-                if (isSelected || isCorrectSlot) {
-                    entitydata.putInt(resentment, 0);
-                    tooldata.putInt(resentment, entitydata.getInt(resentment));
-                }
-            }
-            if (entitydata.getInt(resentment)>200) {
-                if (isSelected || isCorrectSlot) {
-                    entitydata.putInt(resentment, 200);
-                    tooldata.putInt(resentment, entitydata.getInt(resentment));
-                }
-            }
+            tooldata.putInt(resentment, entitydata.getInt(resentment));
         }
     }
 

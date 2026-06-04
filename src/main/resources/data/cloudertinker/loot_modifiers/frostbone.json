@@ -1,0 +1,29 @@
+{
+  "type": "mantle:add_entry",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/stray"
+    },
+    {
+      "condition": "minecraft:random_chance_with_looting",
+      "chance": 1,
+      "looting_multiplier": 0.06
+    }
+  ],
+  "entry": {
+    "type": "minecraft:item",
+    "name": "cloudertinker:forestbone"
+  },
+  "functions": [
+    {
+      "function": "minecraft:set_count",
+      "count": {
+        "min": 2,
+        "max": 5
+      }
+    }
+  ],
+  "post_conditions": [
+  ]
+}

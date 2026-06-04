@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "cloudertinker:item/food/clean_pastry"
-  }
-}

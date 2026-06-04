@@ -115,9 +115,14 @@ public class Frostcraft extends Modifier implements ModifyDamageModifierHook, Me
     public static void Randomfrostuse (IToolStackView iToolStackView,int usenum) {
         int level = iToolStackView.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
         ModDataNBT tooldata = iToolStackView.getPersistentData();
-        if (tooldata.getInt(frostcraft)>=usenum){
+        OverslimeModule overslimeModule = OverslimeModule.INSTANCE; // 使用模块实例
+        int current = overslimeModule.getAmount(iToolStackView); // 使用新API
+        if (iToolStackView.getModifierLevel(CloudertinkerModifiers.overfreeze.getId())>0&&current>=10*usenum){
+            overslimeModule.removeAmount(iToolStackView,10*usenum);
+        }else{
             tooldata.putInt(frostcraft,tooldata.getInt(frostcraft)-usenum);
         }
+
     }
     public int getMeleefrostused (IToolStackView iToolStackView) {
         int level = iToolStackView.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
@@ -134,6 +139,9 @@ public class Frostcraft extends Modifier implements ModifyDamageModifierHook, Me
                 use+=33;
             }
         }
+        if (iToolStackView.getModifierLevel(CloudertinkerModifiers.frostspikeburst.getId())>0){
+            use+=10;
+        }
 
         return use;
     }
@@ -144,6 +152,9 @@ public class Frostcraft extends Modifier implements ModifyDamageModifierHook, Me
         if (iToolStackView.getModifierLevel(CloudertinkerModifiers.frostbomb.getId())>0){
             use+=3 *level+3;
         }
+        if (iToolStackView.getModifierLevel(CloudertinkerModifiers.frostspikearrow.getId())>0){
+            use+=10;
+        }
         return use;
     }
     public int getArmorfrostused (IToolStackView iToolStackView) {
@@ -152,6 +163,9 @@ public class Frostcraft extends Modifier implements ModifyDamageModifierHook, Me
         int use=0;
         if (iToolStackView.getModifierLevel(CloudertinkerModifiers.frostaround.getId())>0){
             use+=9 *level;
+        }
+        if (iToolStackView.getModifierLevel(CloudertinkerModifiers.frostspikearound.getId())>0){
+            use+=10;
         }
         return use;
     }

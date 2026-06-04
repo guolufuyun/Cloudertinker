@@ -2,7 +2,9 @@ package com.fuyun.cloudertinker.Modifiers.anvil;
 
 import com.fuyun.cloudertinker.extend.superclass.BattleModifier;
 import com.fuyun.cloudertinker.register.CloudertinkerModifiers;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -19,8 +21,12 @@ public class Druidseed extends BattleModifier {
     public boolean havenolevel() {
         return true;
     }
+    public static boolean isMagicDamage(DamageSource source) {
+        return source.is(DamageTypes.MAGIC) || source.is(DamageTypes.INDIRECT_MAGIC);
+    }
+
     public void LivingHurtEvent(LivingHurtEvent event) {
-        if (event.getEntity() != null) {
+        if (event.getEntity() != null&&!isMagicDamage(event.getSource())) {
             LivingEntity entity = event.getEntity();
             Entity entity1=event.getSource().getEntity();
             if (entity1 instanceof LivingEntity livingEntity){
@@ -31,21 +37,21 @@ public class Druidseed extends BattleModifier {
                     entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,140, 1));
                 }else {
                     entity.invulnerableTime = 0;
-                    entity.hurt(entity.damageSources().magic(),event.getAmount()*0.2f);
+                    entity.hurt(entity.damageSources().indirectMagic(livingEntity,livingEntity),event.getAmount()*0.2f);
                     entity.invulnerableTime = 0;
                     entity.addEffect(new MobEffectInstance(MobEffects.POISON,200, 1));
                     entity.setLastHurtByMob(livingEntity);
                 }
                 }
             }else if(entity1 instanceof Projectile projectile){
-                if (ModifierLevel.EquipHasModifierlevel((LivingEntity) projectile.getOwner(), CloudertinkerModifiers.druidseed.getId())) {
+                if (ModifierLevel.EquipHasModifierlevel((LivingEntity) projectile.getOwner(), CloudertinkerModifiers.druidseed.getId())&&projectile.getOwner() instanceof LivingEntity) {
                     if ((entity instanceof TamableAnimal animal&&animal.isTame())||entity instanceof Player||(entity instanceof AbstractGolem golem&&golem.getTarget()!=projectile.getOwner())){
                         entity.heal(event.getAmount()+1);
                         event.setAmount(1);
                         entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,100, 1));
                     }else {
                         entity.invulnerableTime = 0;
-                        entity.hurt(entity.damageSources().magic(),event.getAmount()*0.2f);
+                        entity.hurt(entity.damageSources().indirectMagic(projectile.getOwner(),projectile.getOwner()),event.getAmount()*0.2f);
                         entity.invulnerableTime = 0;
                         entity.addEffect(new MobEffectInstance(MobEffects.POISON,200, 1));
                         entity.setLastHurtByMob((LivingEntity) projectile.getOwner());

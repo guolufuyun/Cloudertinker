@@ -3,6 +3,9 @@
   "block.cloudertinker.questiron_block": "Questiron Block",
   "block.cloudertinker.fiery_melter": "§6Fiery Melter",
   "cloudertinker.item.tooltip.fiery_melter": "Continuously smelts items at %s° temperature when no fluid fuel is connected",
+  "block.cloudertinker.fiery_alloyer": "§6Fiery Alloyer",
+  "cloudertinker.item.tooltip.fiery_alloyer": "Do alloy at %s° temperature when no fluid fuel is connected",
+
 
   "item.minecraft.potion.effect.armorbroken_potion": "Armor Shatter Potion",
   "item.minecraft.potion.effect.armorbroken_potion_long": "Armor Shatter Potion (Extended)",
@@ -128,6 +131,9 @@
   "cloudertinker.item.tooltip.round.value4": "Explosion Damage Multiplier:%s%%",
   "item.cloudertinker.fiery_tigermark_round": "Fiery Tigermark Round",
   "cloudertinker.item.tooltip.fround.value": "Damage increased by 50% against burning enemies",
+  "item.cloudertinker.void_power_round": "Void Power Round",
+  "cloudertinker.item.tooltip.vpround.value": "When ending the dash, teleport to the first hit target within a short distance. If the target is invalid, continue downward.",
+
 
 
   "item.cloudertinker.molten_fiery_bucket": "Molten Fiery Iron Bucket",
@@ -568,11 +574,16 @@
 
   "modifier.cloudertinker.frostspikearrow": "Frost Spike Arrow",
   "modifier.cloudertinker.frostspikearrow.description": "Consumes coating to increase penetration and applies armor-shattering frost pierce effect\nWhen having cold aura, consumes cold aura instead for infinite penetration, with each penetration increasing damage and effect level applied",
-  "modifier.cloudertinker.frostspikearrow.flavor": "Cannot be used against the神明吞噬者",
+  "modifier.cloudertinker.frostspikearrow.flavor": "Cannot be used against The Devourer of Gods",
 
   "modifier.cloudertinker.frostspikearound": "Frost Spike Around",
   "modifier.cloudertinker.frostspikearound.description": "When hit, consumes coating to deal damage related to coating amount to target and applies frost effect\nWhen having cold aura, consumes cold aura instead to increase damage and additionally deals damage to surrounding mobs",
-  "modifier.cloudertinker.frostspikearound.flavor": "Cannot be used against the神明吞噬者",
+  "modifier.cloudertinker.frostspikearound.flavor": "Cannot be used against The Devourer of Gods",
+
+  "modifier.cloudertinker.frostspikeburst": "Frost Spike Burst",
+  "modifier.cloudertinker.frostspikeburst.description": "Attacks consume coating to increase damage by 25% and apply Bleeding and Frost to the target\nWhen having cold aura, consumes cold aura instead to additionally increase damage and effect level by 25% and apply Armor Shatter",
+  "modifier.cloudertinker.frostspikeburst.flavor": "Extra spikes are always good, especially when renewable",
+
 
 
   "modifier.cloudertinker.qianghua": "Reinforcement Partition",

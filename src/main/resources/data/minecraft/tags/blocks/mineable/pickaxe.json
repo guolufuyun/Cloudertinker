@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "cloudertinker:questiron_block",
-    "cloudertinker:fiery_melter"
+    "cloudertinker:fiery_melter",
+    "cloudertinker:fiery_alloyer"
   ]
 }

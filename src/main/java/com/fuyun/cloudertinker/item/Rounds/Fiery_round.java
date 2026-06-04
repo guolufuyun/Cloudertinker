@@ -1,6 +1,7 @@
 package com.fuyun.cloudertinker.item.Rounds;
 
 
+import com.fuyun.cloudertinker.CTKConfig;
 import com.fuyun.cloudertinker.item.Tigermark_rounds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -19,10 +20,10 @@ import java.util.List;
 public class Fiery_round extends Tigermark_rounds {
     public Fiery_round(Properties pProperties) {
         super(pProperties);
-    this.damageboost= 1.0f;
-        this.thrust= 100;
-        this.push_power= 0.4;
-        this.explosion_damage= 0.6f;
+        this.damageboost= CTKConfig.COMMON.Fiery_Damage.get().floatValue();
+        this.thrust= CTKConfig.COMMON.Fiery_Thrust.get();
+        this.push_power= CTKConfig.COMMON.Fiery_Push_Power.get();
+        this.explosion_damage= CTKConfig.COMMON.Fiery_Explosion_damage.get().floatValue();
         this.color= ChatFormatting.DARK_RED;
     }
     @Override

@@ -1,0 +1,76 @@
+{
+  "variants": {
+    "in_structure=false,active=false,facing=north": {
+      "model": "cloudertinker:block/alloyer_inactive"
+    },
+    "in_structure=false,active=false,facing=south": {
+      "model": "cloudertinker:block/alloyer_inactive",
+      "uvlock": true,
+      "y": 180
+    },
+    "in_structure=false,active=false,facing=west": {
+      "model": "cloudertinker:block/alloyer_inactive",
+      "uvlock": true,
+      "y": 270
+    },
+    "in_structure=false,active=false,facing=east": {
+      "model": "cloudertinker:block/alloyer_inactive",
+      "uvlock": true,
+      "y": 90
+    },
+    "in_structure=true,active=false,facing=north": {
+      "model": "cloudertinker:block/alloyer_inactive"
+    },
+    "in_structure=true,active=false,facing=south": {
+      "model": "cloudertinker:block/alloyer_inactive",
+      "uvlock": true,
+      "y": 180
+    },
+    "in_structure=true,active=false,facing=west": {
+      "model": "cloudertinker:block/alloyer_inactive",
+      "uvlock": true,
+      "y": 270
+    },
+    "in_structure=true,active=false,facing=east": {
+      "model": "cloudertinker:block/alloyer_inactive",
+      "uvlock": true,
+      "y": 90
+    },
+    "in_structure=false,active=true,facing=north": {
+      "model": "cloudertinker:block/alloyer_active"
+    },
+    "in_structure=false,active=true,facing=south": {
+      "model": "cloudertinker:block/alloyer_active",
+      "uvlock": true,
+      "y": 180
+    },
+    "in_structure=false,active=true,facing=west": {
+      "model": "cloudertinker:block/alloyer_active",
+      "uvlock": true,
+      "y": 270
+    },
+    "in_structure=false,active=true,facing=east": {
+      "model": "cloudertinker:block/alloyer_active",
+      "uvlock": true,
+      "y": 90
+    },
+    "in_structure=true,active=true,facing=north": {
+      "model": "cloudertinker:block/alloyer_active"
+    },
+    "in_structure=true,active=true,facing=south": {
+      "model": "cloudertinker:block/alloyer_active",
+      "uvlock": true,
+      "y": 180
+    },
+    "in_structure=true,active=true,facing=west": {
+      "model": "cloudertinker:block/alloyer_active",
+      "uvlock": true,
+      "y": 270
+    },
+    "in_structure=true,active=true,facing=east": {
+      "model": "cloudertinker:block/alloyer_active",
+      "uvlock": true,
+      "y": 90
+    }
+  }
+}
