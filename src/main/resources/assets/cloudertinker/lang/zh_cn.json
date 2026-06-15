@@ -707,6 +707,10 @@
   "modifier.cloudertinker.frostspikeburst.description": "收击消耗覆层提升25%伤害对目标施加流血和霜冻\n拥有寒气时改为消耗寒气额外提升25%伤害和效果等级并施加碎甲",
   "modifier.cloudertinker.frostspikeburst.flavor": "额外的尖刺总是好的，尤其是可再生的",
 
+  "modifier.cloudertinker.silhouettedance": "影色舞",
+  "modifier.cloudertinker.silhouettedance.description": "传送时获得增益效果并免疫末影珍珠的传送伤害",
+  "modifier.cloudertinker.silhouettedance.flavor": "请输入文本",
+
   "modifier.cloudertinker.qianghua": "强化分区",
 
   "modifier.cloudertinker.growhedge": "蔓生树篱",

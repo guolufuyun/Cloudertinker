@@ -111,6 +111,8 @@ public class CloudertinkerModifiers {
     public static final StaticModifier<Frostspikearrow> frostspikearrow=MODIFIERS.register("frostspikearrow", Frostspikearrow::new);
     public static final StaticModifier<Frostspikearound> frostspikearound=MODIFIERS.register("frostspikearound", Frostspikearound::new);
     public static final StaticModifier<Frostspikeburst> frostspikeburst=MODIFIERS.register("frostspikeburst", Frostspikeburst::new);
+    public static final StaticModifier<SilhouetteDance> silhouettedance=MODIFIERS.register("silhouettedance", SilhouetteDance::new);
+
 
     public static final StaticModifier<TianTuiStar> tiantuistar=MODIFIERS.register("tiantuistar", TianTuiStar::new);
 
