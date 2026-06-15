@@ -25,8 +25,8 @@ apply plugin: 'org.spongepowered.mixin'
 
 //版本号
 
-version = '1.19.2-forge-1.2.9'
-group = 'com.fuyun.cloudertinker' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = mod_group_id
+version = mod_version// http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'cloudertinker'
 
 //打包后显示名↑
