@@ -1,3 +1,11 @@
+/*
+ * @Author: w 3519533277@qq.com
+ * @Date: 2026-06-14 19:58:42
+ * @LastEditors: w 3519533277@qq.com
+ * @LastEditTime: 2026-06-15 17:15:34
+ * @FilePath: \Cloudertinker\src\main\java\com\fuyun\cloudertinker\register\CloudertinkerItem.java
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 package com.fuyun.cloudertinker.register;
 
 import com.fuyun.cloudertinker.item.*;
@@ -49,7 +57,7 @@ public class CloudertinkerItem {
     public static final RegistryObject<Item> magala_ingot = ITEMS.register("magala_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> glavenus_ingot = ITEMS.register("glavenus_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> frostspikeslime_ingot = ITEMS.register("frostspikeslime_ingot", () -> new Item(new Item.Properties()));
-
+    public static final RegistryObject<Item> blue_iron_ingot = ITEMS.register("blue_iron_ingot", () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> questiron_ingot = ITEMS.register("questiron_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<BlockItem> questiron_block = ITEMS.register("questiron_block", () -> new BlockItem(CloudertinkerBlock.questiron_block.get(), new Item.Properties()));
