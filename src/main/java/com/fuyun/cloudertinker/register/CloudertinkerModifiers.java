@@ -112,7 +112,7 @@ public class CloudertinkerModifiers {
     public static final StaticModifier<Frostspikearound> frostspikearound=MODIFIERS.register("frostspikearound", Frostspikearound::new);
     public static final StaticModifier<Frostspikeburst> frostspikeburst=MODIFIERS.register("frostspikeburst", Frostspikeburst::new);
 public static final StaticModifier<BlueBurnAbility> blueBurn = MODIFIERS.register("blueburn", BlueBurnAbility::new);
-    public static final StaticModifier<FlameOfArmorBurning> flameofarmorburning = MODIFIERS.register("flameofarmorburning", FlameOfArmorBurning::new);
+    public static final StaticModifier<MeltDown> meltdown = MODIFIERS.register("meltdown", MeltDown::new);
 public static final StaticModifier<SilhouetteDance> silhouettedance=MODIFIERS.register("silhouettedance", SilhouetteDance::new);
 
     public static final StaticModifier<TianTuiStar> tiantuistar = MODIFIERS.register("tiantuistar", TianTuiStar::new);

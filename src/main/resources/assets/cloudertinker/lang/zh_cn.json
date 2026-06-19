@@ -711,6 +711,10 @@
   "modifier.cloudertinker.silhouettedance.description": "传送时获得增益效果并免疫末影珍珠的传送伤害",
   "modifier.cloudertinker.silhouettedance.flavor": "请输入文本",
 
+  "modifier.cloudertinker.meltdown": "融毁",
+  "modifier.cloudertinker.meltdown.description": "对目标穿戴的护甲造成高额耐久损耗",
+  "modifier.cloudertinker.meltdown.flavor": "请输入文本",
+
   "modifier.cloudertinker.qianghua": "强化分区",
 
   "modifier.cloudertinker.growhedge": "蔓生树篱",
