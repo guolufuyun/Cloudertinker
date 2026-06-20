@@ -14,19 +14,17 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraftforge.common.MinecraftForge;
+import slimeknights.tconstruct.tools.modifiers.effect.NoMilkEffect;
 import twilightforest.init.TFDamageTypes;
 
 import java.util.Objects;
 
-public class BlueBurn extends StaticEffect {
+public class BlueBurn extends NoMilkEffect {
     public float WeaponAttack = 0f;
 
-    protected BlueBurn(MobEffectCategory type, int color) {
-        super(type, color);
-    }
-
     public BlueBurn() {
-        super(MobEffectCategory.HARMFUL, 0x620591);
+        super(MobEffectCategory.HARMFUL, 0XFFD700,true);
     }
 
     @Override

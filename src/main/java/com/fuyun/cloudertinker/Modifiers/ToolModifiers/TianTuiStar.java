@@ -182,6 +182,9 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
                     return true;
                 }
             }
+            tooldata.putInt(round_num,0);
+            tooldata.putString(round_type, "");
+            player.getCooldowns().addCooldown(tool.getItem(), 10);
         }else {
             tooldata.putInt(round_num,0);
             tooldata.putString(round_type, "");

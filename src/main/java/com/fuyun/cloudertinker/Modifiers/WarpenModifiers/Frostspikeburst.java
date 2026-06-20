@@ -5,10 +5,12 @@ import com.fuyun.cloudertinker.register.CloudertinkerModifiers;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeDamageModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeHitModifierHook;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.modifiers.modules.capacity.OverslimeModule;
+import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
@@ -18,6 +20,12 @@ import twilightforest.init.TFMobEffects;
 import static com.fuyun.cloudertinker.Modifiers.BaseModifiers.Frostcraft.frostcraft;
 
 public class Frostspikeburst extends NoLevelsModifier implements MeleeDamageModifierHook, MeleeHitModifierHook {
+
+    @Override
+    protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
+
+        hookBuilder.addHook(this, ModifierHooks.MELEE_DAMAGE,ModifierHooks.MELEE_HIT);
+    }
     @Override
     public float getMeleeDamage(IToolStackView iToolStackView, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {
         LivingEntity entity=toolAttackContext.getLivingTarget();
