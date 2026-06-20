@@ -54,16 +54,18 @@ public class MeltDown extends Modifier implements MeleeDamageModifierHook {
 //                    i.hurtAndBreak(1000, p, (fuckThisAllShitWorldUsingThisFuckSuperFUCKING_SHIT_WhyNOT_USING_CSHARP_ThatsBetterFuckingCoding) -> {
 //                    });
 //            }
+            boolean hasArmor = false;
             for (EquipmentSlot i : slot) {
                 if (!unit.getItemBySlot(i).isEmpty()){
                     ItemStack armor = unit.getItemBySlot(i);
                     if (!armor.isEmpty()) {
+                        hasArmor = true;
                         if(armor.getItem() instanceof ModifiableItem ){
                             IToolStackView tinkerarmor= ToolStack.from( armor);
-                            if (!tinkerarmor.isBroken()) {                             // 检查是否已损坏
-                                ToolDamageUtil.damageAnimated(tinkerarmor, 1000, unit); // 使用匠魂专用API
+                            if (!tinkerarmor.isBroken()) {
+                                ToolDamageUtil.damageAnimated(tinkerarmor, 1000, unit);
                             }
-                        }else{
+                        }else if(armor.isDamageableItem()){
                             if(armor.getMaxDamage()<= armor.getDamageValue()+1000){
                                 armor.shrink(1);
                                 unit.broadcastBreakEvent(i);
@@ -72,10 +74,12 @@ public class MeltDown extends Modifier implements MeleeDamageModifierHook {
                                 armor.setDamageValue(Math.min(armor.getDamageValue() + 1000, armor.getMaxDamage()));
                         }
 
+
                     }
                 }
 
             }
+            return hasArmor ? v1 : v1 * 2;
         }
         return v1;
     }
