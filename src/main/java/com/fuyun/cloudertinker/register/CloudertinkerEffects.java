@@ -25,7 +25,7 @@ public class CloudertinkerEffects  {
     public static final RegistryObject<MobEffect> Bloodlust_beat = EFFECT.register("bloodlust_beat", Bloodlust_beat::new);
     public static final RegistryObject<MobEffect> Bloodlust_erode = EFFECT.register("bloodlust_erode", Bloodlust_erode::new);
     public static final RegistryObject<MobEffect> Tosteel = EFFECT.register("tosteel", Tosteel::new);
-
+    public static final RegistryObject<MobEffect> BlueBurn = EFFECT.register("blue_burn", BlueBurn::new);
 
 
 }

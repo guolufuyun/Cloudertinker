@@ -58,7 +58,7 @@ public abstract class Tigermark_rounds extends Item {
     }
 
     public float getMeleedamage(IToolStackView tool, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {
-        return v*this.getDamageBoost();
+        return v1*this.getDamageBoost();
     }
     public void onMeleeHit(IToolStackView tool, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {}
     public float onExplosion(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
