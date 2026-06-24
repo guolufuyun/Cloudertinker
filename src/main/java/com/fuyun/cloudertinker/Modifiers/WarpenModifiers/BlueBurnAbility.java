@@ -40,11 +40,14 @@ public class BlueBurnAbility extends BattleModifier {
         if (unit == null)
             return v1;
         //........
+        unit.setRemainingFireTicks(unit.getRemainingFireTicks()+361);
+        unit.addEffect(new MobEffectInstance(CloudertinkerEffects.BlueBurn.get(),360,0));
         BlueBurn b = null;
         MobEffectInstance effect = unit.getEffect(CloudertinkerEffects.BlueBurn.get());
         if (effect != null && effect.getEffect() instanceof BlueBurn) {
             b = (BlueBurn) effect.getEffect();
         }
+
         //........
         if (b == null) return v1;
         if (b.GetVal() < v1)

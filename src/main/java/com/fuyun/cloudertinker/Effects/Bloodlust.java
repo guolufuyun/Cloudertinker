@@ -35,18 +35,18 @@ public class Bloodlust extends NoMilkEffect {
                 ModDataNBT entitydata = ModDataNBT.readFromNBT(livingEntity.getPersistentData());
                 MobEffectInstance instance =livingEntity.getEffect(CloudertinkerEffects.Bloodlust.get());
                 if (instance!=null){
-                    if (entitydata.getInt(bloodlust)>=480)livingEntity.addEffect(new MobEffectInstance(CloudertinkerEffects.Bloodlust_beat.get(),1200,0));
-                    if (livingEntity instanceof Player)entitydata.putInt(bloodlust,entitydata.getInt(bloodlust)+3);
-                    else entitydata.putInt(bloodlust,entitydata.getInt(bloodlust)+120);
+                    if (entitydata.getInt(bloodlust)>=240)livingEntity.addEffect(new MobEffectInstance(CloudertinkerEffects.Bloodlust_beat.get(),1200,0));
+                    if (livingEntity instanceof Player)entitydata.putInt(bloodlust,entitydata.getInt(bloodlust)+9);
+                    else entitydata.putInt(bloodlust,entitydata.getInt(bloodlust)+60);
                 }
             }else if(entity1 instanceof Projectile projectile&&projectile.getOwner()!=null){
                 LivingEntity livingEntity= (LivingEntity) projectile.getOwner();
                 ModDataNBT entitydata = ModDataNBT.readFromNBT(livingEntity.getPersistentData());
                 MobEffectInstance instance =livingEntity.getEffect(CloudertinkerEffects.Bloodlust.get());
                 if (instance!=null){
-                    if (entitydata.getInt(bloodlust)>=480)livingEntity.addEffect(new MobEffectInstance(CloudertinkerEffects.Bloodlust_beat.get(),1200,0));
-                    if (livingEntity instanceof Player)entitydata.putInt(bloodlust,entitydata.getInt(bloodlust)+3);
-                    else entitydata.putInt(bloodlust,entitydata.getInt(bloodlust)+120);
+                    if (entitydata.getInt(bloodlust)>=240)livingEntity.addEffect(new MobEffectInstance(CloudertinkerEffects.Bloodlust_beat.get(),1200,0));
+                    if (livingEntity instanceof Player)entitydata.putInt(bloodlust,entitydata.getInt(bloodlust)+9);
+                    else entitydata.putInt(bloodlust,entitydata.getInt(bloodlust)+60);
                 }
             }
         }

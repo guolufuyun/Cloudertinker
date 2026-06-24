@@ -140,7 +140,7 @@ public class Frostcraft extends Modifier implements ModifyDamageModifierHook, Me
             }
         }
         if (iToolStackView.getModifierLevel(CloudertinkerModifiers.frostspikeburst.getId())>0){
-            use+=10;
+            use+=3;
         }
 
         return use;

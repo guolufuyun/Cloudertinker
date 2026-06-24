@@ -46,7 +46,7 @@ public class Sacrificeblood extends ArmorModifier {
         if ( instance != null) {
             int timeleft = player.getEffect(MobEffects.DAMAGE_BOOST).getDuration();
             int EffectLevel = player.getEffect(MobEffects.DAMAGE_BOOST).getAmplifier();
-            player.hurt(TFDamageTypes.getDamageSource(level ,TFDamageTypes.EXPIRED), 5.0F);
+            player.hurt(TFDamageTypes.getDamageSource(level ,TFDamageTypes.EXPIRED), 3.0F);
             ToolDamageUtil.damageAnimated(tool, 5 , entity);
             player.getCooldowns().addCooldown(player.getMainHandItem().getItem(),10);
             player.invulnerableTime = 0;

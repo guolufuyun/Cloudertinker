@@ -36,7 +36,7 @@ public class Frostspikeburst extends NoLevelsModifier implements MeleeDamageModi
 
             int ice = iToolStackView.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
 
-            if (ice > 0 && tooldata.getInt(frostcraft) >= 10) {
+            if (ice > 0 && tooldata.getInt(frostcraft) >= 3) {
                 return v1*1.25f*1.25f;
             } else if (current > 30) {
               return v1*1.25f;
@@ -55,7 +55,7 @@ public class Frostspikeburst extends NoLevelsModifier implements MeleeDamageModi
 
         LivingEntity entity=context.getLivingTarget();
         if (entity != null){
-            if (ice > 0 && tooldata.getInt(frostcraft) >= 10) {
+            if (ice > 0 && tooldata.getInt(frostcraft) >= 3) {
                 entity.addEffect(new MobEffectInstance(TFMobEffects.FROSTY.get(), 300, 3));
                 entity.addEffect(new MobEffectInstance(TinkerEffects.bleeding.get(), 300 , 4));
                 entity.addEffect(new MobEffectInstance(CloudertinkerEffects.Armorbroken.get(), 300 , 3));

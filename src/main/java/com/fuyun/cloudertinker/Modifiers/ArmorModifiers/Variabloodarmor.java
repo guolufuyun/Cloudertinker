@@ -11,6 +11,7 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierId;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import util.method.ModifierEffect;
 import util.method.ModifierLevel;
 
 import java.nio.charset.StandardCharsets;
@@ -24,8 +25,11 @@ public class Variabloodarmor extends ArmorModifier {
             if (ModifierLevel.getTotalArmorModifierlevel(entity, this.getId()) > 0) {
                 if (entity instanceof Player player) {
                     int hunger = player.getFoodData().getFoodLevel();
-                    event.setAmount(event.getAmount() - (1f*ModifierLevel.getTotalArmorModifierlevel(entity, this.getId())));
-                    player.getFoodData().setFoodLevel(Math.min(hunger + (3*ModifierLevel.getTotalArmorModifierlevel(entity, this.getId())), 20));
+                    int isbene=1;
+                    if (ModifierEffect.hasbeneficialEffect(player)) isbene=2;
+                    event.setAmount(event.getAmount() - (isbene*1f*ModifierLevel.getTotalArmorModifierlevel(entity, this.getId())));
+                    player.getFoodData().setFoodLevel(Math.min(hunger + (3*ModifierLevel.getTotalArmorModifierlevel(entity, this.getId())*isbene), 20));
+
                 }
             }
         }

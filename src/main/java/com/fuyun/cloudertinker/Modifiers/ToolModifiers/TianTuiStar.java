@@ -92,6 +92,7 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
             List<Mob> mobList = entity.getCommandSenderWorld().getEntitiesOfClass(Mob.class, new AABB(x + a, y + 2, z + a, x - a, y - 1, z - a));
             for (Mob mob : mobList){
                 if (mob != null&& mob.isAlive()&&!moblist1.contains(mob)){
+                    mob.invulnerableTime = 0;
                         ToolAttackContext attackContext = ToolAttackContext.attacker(player)
                                 .target(mob)
                                 .slot(EquipmentSlot.MAINHAND, InteractionHand.MAIN_HAND)

@@ -26,7 +26,7 @@
   "item.minecraft.splash_potion.effect.bloodlust_potion": "喷溅型狂龙药水",
   "item.minecraft.tipped_arrow.effect.bloodlust_potion": "狂龙之箭",
 
-
+  "effect.cloudertinker.blue_burn": "蓝焰",
   "effect.cloudertinker.evilmarecurse": "恶魇之咒",
   "effect.cloudertinker.shildcooldown": "护盾冷却",
   "modifier.cloudertinker.shieldcccldown.tooltip": "护盾冷却 %s",
@@ -67,6 +67,7 @@
   "fluid.cloudertinker.molten_glavenus": "熔融灼炎",
   "fluid.cloudertinker.molten_carminite": "熔融砷铅铁",
   "fluid.cloudertinker.molten_frostspikeslime": "熔融冰刺史莱姆",
+  "fluid.cloudertinker.molten_blue_fiery": "熔融炽蓝铁",
 
   "item.cloudertinker.giantsword": "巨人剑",
   "item.cloudertinker.giantsword.description": "挥动的时候可得悠着点！\n巨人剑挥起来很费劲，但是它的范围与威力都是无与伦比的。",
@@ -115,7 +116,7 @@
   "item.cloudertinker.frostiron_ingot": "寒铁锭",
   "item.cloudertinker.magala_ingot": "黑蚀锭",
   "item.cloudertinker.glavenus_ingot": "灼炎锭",
-
+  "item.cloudertinker.blue_fiery_ingot": "炽蓝铁锭",
   "item.cloudertinker.frostspikeslime_ingot": "冰刺史莱姆锭",
 
   "cloudertinker.item.tooltip.holdshift":"按住 Shift 键查看详情",
@@ -176,6 +177,10 @@
   "itemGroup.cloudertinker.toolandpart": "浮云工坊-工具和部件",
 
   "material.cloudertinker.text": "测试工具",
+
+  "material.cloudertinker.blue_fiery": "炽蓝铁",
+  "material.cloudertinker.blue_fiery.flavor": "焰色反应！",
+  "material.cloudertinker.blue_fiery.encyclopedia": "比炽铁更热！光是看着就感觉头部传来幻痛",
 
   "material.cloudertinker.frostspikeslime": "冰刺史莱姆",
   "material.cloudertinker.frostspikeslime.flavor": "又冷又扎手",
@@ -536,7 +541,7 @@
   "modifier.cloudertinker.overmygo.flavor": "即使迷茫也要一同前进",
 
   "modifier.cloudertinker.variablood": "异生恶血",
-  "modifier.cloudertinker.variablood.description": "攻击伤害增加40%，造成20%的法术伤害，同时造成流血减益",
+  "modifier.cloudertinker.variablood.description": "攻击伤害增加40%，造成20%的法术伤害，同时造成流血减益，持有正面效果时翻倍",
   "modifier.cloudertinker.variablood.flavor": "「他们并未统一意见」",
 
   "modifier.cloudertinker.variabloodarmor": "异生恶血",
@@ -712,8 +717,12 @@
   "modifier.cloudertinker.silhouettedance.flavor": "请输入文本",
 
   "modifier.cloudertinker.meltdown": "融毁",
-  "modifier.cloudertinker.meltdown.description": "对目标穿戴的护甲造成高额耐久损耗",
-  "modifier.cloudertinker.meltdown.flavor": "请输入文本",
+  "modifier.cloudertinker.meltdown.description": "对目标穿戴的护甲造成高额耐久损耗，且对无护甲目标造成双倍伤害",
+  "modifier.cloudertinker.meltdown.flavor": "这会很烫！非常！",
+
+  "modifier.cloudertinker.blueburn": "蓝焰",
+  "modifier.cloudertinker.blueburn.description": "攻击会对目标施加蓝焰效果并修改记录伤害\n[蓝焰]：特殊烧伤，每秒受到记录伤害一定比例的火焰伤害（取最高）",
+  "modifier.cloudertinker.blueburn.flavor": "吐息正处于威力最高的状态",
 
   "modifier.cloudertinker.qianghua": "强化分区",
 

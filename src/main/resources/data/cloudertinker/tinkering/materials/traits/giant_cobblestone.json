@@ -2,42 +2,42 @@
   "tconstruct:head": [
     {
       "name": "tconstruct:expanded",
-      "level": 1
+      "level": 3
+    },
+    {
+      "name": "tconstruct:dense",
+      "level": 2
     },
     {
       "name": "tconstruct:heavy",
-      "level": 1
-    },
-    {
-      "name": "tconstruct:stonebound",
       "level": 1
     }
   ],
   "tconstruct:handle": [
     {
       "name": "tconstruct:expanded",
-      "level": 1
+      "level": 3
+    },
+    {
+      "name": "tconstruct:dense",
+      "level": 2
     },
     {
       "name": "tconstruct:heavy",
-      "level": 1
-    },
-    {
-      "name": "tconstruct:stonebound",
       "level": 1
     }
   ],
   "tconstruct:binding": [
     {
       "name": "tconstruct:expanded",
-      "level": 1
+      "level": 3
+    },
+    {
+      "name": "tconstruct:dense",
+      "level": 2
     },
     {
       "name": "tconstruct:heavy",
-      "level": 1
-    },
-    {
-      "name": "tconstruct:stonebound",
       "level": 1
     }
   ]

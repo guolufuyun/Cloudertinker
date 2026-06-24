@@ -42,7 +42,7 @@ public class Heatsword extends BattleModifier {
 
             if (player.tickCount %20 ==0 ){
                 if (tooldata.getInt(heatsword)>100&& (isSelected ||isCorrectSlot))player.setRemainingFireTicks(200);
-                if (tooldata.getInt(heatsword)<200&&player.isOnFire() && (isSelected ||isCorrectSlot))tooldata.putInt(heatsword,tooldata.getInt(heatsword)+1);
+                if (tooldata.getInt(heatsword)<200&&player.isOnFire() && (isSelected ||isCorrectSlot))tooldata.putInt(heatsword,tooldata.getInt(heatsword)+3);
                 else if (tooldata.getInt(heatsword)>=200&&player.isOnFire())tooldata.putInt(heatsword,200);
                 else if (tooldata.getInt(heatsword)>0)tooldata.putInt(heatsword,tooldata.getInt(heatsword)-1);
                 else tooldata.putInt(heatsword,0);
@@ -55,7 +55,7 @@ public class Heatsword extends BattleModifier {
     public float getMeleeDamage(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
         ModDataNBT tooldata = tool.getPersistentData();
         if (context.isFullyCharged()){
-            tooldata.putInt(heatsword,tooldata.getInt(heatsword)+3);
+            tooldata.putInt(heatsword,tooldata.getInt(heatsword)+10);
         }
         if (tooldata.getInt(heatsword)<=200) {
             return damage + (damage * 0.25f * 0.01f * tooldata.getInt(heatsword)*modifier.getLevel());
