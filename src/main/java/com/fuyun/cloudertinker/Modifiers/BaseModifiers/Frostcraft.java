@@ -134,7 +134,7 @@ public static void Randomfrostuse (IToolStackView iToolStackView,int usenum) {
             }
         }
         if (iToolStackView.getModifierLevel(CloudertinkerModifiers.frostspikeburst.getId())>0){
-            use+=10;
+            use+=3;
         }
 
         return use;

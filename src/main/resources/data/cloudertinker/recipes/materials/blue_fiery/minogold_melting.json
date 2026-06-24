@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "cloudertinker:blue_fiery_ingot"
+  },
+  "result": {
+    "fluid": "cloudertinker:molten_blue_fiery",
+    "amount": 90
+  },
+  "temperature": 2500,
+  "time": 20
+}

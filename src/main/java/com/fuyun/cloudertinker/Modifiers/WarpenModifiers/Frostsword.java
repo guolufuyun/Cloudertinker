@@ -40,15 +40,15 @@ public class Frostsword extends BattleModifier {
             ModDataNBT tooldata = iToolStackView.getPersistentData();
             if (tooldata.getInt(frostcraft) > 0){
                 LivingEntity entity = toolAttackContext.getLivingTarget();
-                entity.addEffect(new MobEffectInstance(TFMobEffects.FROSTY.get(),  (20 * (int)(tooldata.getInt(frostcraft)*0.02)),  (int)(tooldata.getInt(frostcraft)*0.02 -1)));
+                entity.addEffect(new MobEffectInstance(TFMobEffects.FROSTY.get(),  (60 * (int)(tooldata.getInt(frostcraft)*0.02)),  (int)(tooldata.getInt(frostcraft)*0.02 -1)));
                if (level < 3){
-                   return (float) (v1 + (v1 * 0.5 ));
+                   return (float) (v1 + (v1 * Math.max(0.5,(tooldata.getInt(frostcraft)*0.01)) ));
                } else if (level <6) {
-                   return (float) (v1 + (v1*1));
+                   return (float) (v1 + (Math.max(1,(tooldata.getInt(frostcraft)*0.01))));
                }else if(level<9){
-                   return (float) (v1 + (v1*2  ));
+                   return (float) (v1 + (v1*Math.max(2,(tooldata.getInt(frostcraft)*0.01) ) ));
                 }else {
-                   return (float) (v1 + (v1 * 3 ));
+                   return (float) (v1 + (v1 * Math.max(3,(tooldata.getInt(frostcraft)*0.01) )));
                }
             }
         }
@@ -70,13 +70,13 @@ public class Frostsword extends BattleModifier {
             int level = tool.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
             int damage;
             if (level < 3){
-               damage=50;
+               damage= Math.max(50,(int) (tooldata.getInt(frostcraft)));
             } else if (level <6) {
-                damage=100;
+                damage=Math.max(100,(int) (tooldata.getInt(frostcraft)));
             }else if(level<9){
-                damage=200;
+                damage=Math.max(200,(int) (tooldata.getInt(frostcraft)));
             }else {
-                damage=300;
+                damage=Math.max(300,(int) (tooldata.getInt(frostcraft)));
             }
             list.add(Component.translatable("modifier.cloudertinker.frostsword.tooltip1").append((int)(damage)+"%").withStyle(ChatFormatting.AQUA));
         }

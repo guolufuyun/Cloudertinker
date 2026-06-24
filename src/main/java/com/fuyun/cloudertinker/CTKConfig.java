@@ -29,7 +29,7 @@ public class CTKConfig {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CTKConfig.commonSpec);
     }
     public static class Common{
-
+        public final ForgeConfigSpec.DoubleValue Blue_Burn_Damage;
         public final ForgeConfigSpec.IntValue Cuttinggirl_damage;
         public final ForgeConfigSpec.IntValue Sacrificeblood_MAX;
         public final ForgeConfigSpec.DoubleValue Minotaurcharge_damage;
@@ -75,13 +75,16 @@ public final ForgeConfigSpec.DoubleValue Push_Power;
                     .defineInRange("Fragile_damage",100,1, Integer.MAX_VALUE);
             this.Harmonize_MAX = builder.comment("Harmonize max damage, 64 by default.").comment("协调伤害上限。")
                     .defineInRange("Harmonize_MAX",64,1, Integer.MAX_VALUE);
+
+            this.Blue_Burn_Damage = builder.comment("Blue burn damage , 18% by default.").comment("蓝焰伤害，默认18%。")
+                    .defineInRange("Blue_Burn_Damage",0.18,0.0, Double.MAX_VALUE);
             builder.pop();
 
             builder.comment("Tiantuistar blade").comment("天退星刀").push("tiantuistar_blade");
             this.Charge_range = builder.comment("Charge attack range, 1.0 by default.").comment("冲刺攻击范围，默认1.0。")
                     .defineInRange("Charge attack range",1.0,0.0, Double.MAX_VALUE);
-            this.Expanded_Charge_range = builder.comment("Expanded charge attack range, 0.5*level by default.").comment("延展冲刺攻击范围，默认每级0.5。")
-                    .defineInRange("Expanded charge attack range",0.5,0.0, Double.MAX_VALUE);
+            this.Expanded_Charge_range = builder.comment("Expanded charge attack range, 1.5*level by default.").comment("延展冲刺攻击范围，默认每级0.5。")
+                    .defineInRange("Expanded charge attack range",1.5,0.0, Double.MAX_VALUE);
             builder.pop();
             builder.comment("Fiery melter").comment("炽铁熔化炉").push("fiery_melter");
             this.FIERY_TEMPERATURE = builder.comment("Fiery melter temperature, 1500 by default.").comment("炽铁熔化炉温度。")

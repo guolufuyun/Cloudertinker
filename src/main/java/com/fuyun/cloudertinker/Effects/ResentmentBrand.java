@@ -14,7 +14,7 @@ public class ResentmentBrand extends StaticEffect{
     @Override
     public void applyEffectTick(LivingEntity living, int amplifier) {
         if(living.tickCount%20==0){
-            living.setRemainingFireTicks((100 * (amplifier+1)));
+            living.setRemainingFireTicks(living.getRemainingFireTicks()+amplifier*20);
             living.invulnerableTime = 0;
         }
     }

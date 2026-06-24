@@ -22,6 +22,8 @@
   "item.minecraft.lingering_potion.effect.bloodlust_potion": "Lingering Frenzy Potion",
   "item.minecraft.splash_potion.effect.bloodlust_potion": "Splash Frenzy Potion",
   "item.minecraft.tipped_arrow.effect.bloodlust_potion": "Arrow of Frenzy",
+
+  "effect.cloudertinker.blue_burn": "Blue Burn",
   "effect.cloudertinker.evilmarecurse": "Curse of the Evil Mare",
   "effect.cloudertinker.shildcooldown": "Shield Cooldown",
   "modifier.cloudertinker.shieldcccldown.tooltip": "Shield Cooldown %s",
@@ -61,6 +63,7 @@
   "fluid.cloudertinker.molten_glavenus": "Molten Glavenus",
   "fluid.cloudertinker.molten_carminite": "Molten Carminite",
   "fluid.cloudertinker.molten_frostspikeslime": "Molten Frost Spike Slime",
+  "fluid.cloudertinker.molten_blue_fiery": "Molten Blue Fiery",
 
   "item.cloudertinker.giantsword": "Giant's Sword",
   "item.cloudertinker.giantsword.description": "Swing with caution!\nThe Giant's Sword is cumbersome to wield, but its range and power are unparalleled.",
@@ -109,6 +112,7 @@
   "item.cloudertinker.magala_ingot": "Gore Magala Ingot",
   "item.cloudertinker.glavenus_ingot": "Glavenus Ingot",
   "item.cloudertinker.frostspikeslime_ingot": "Frost Spike Slime Ingot",
+  "item.cloudertinker.blue_fiery_ingot": "Blue Fiery Ingot",
 
   "cloudertinker.item.tooltip.holdshift":"Press and hold Shift to view details",
   "item.cloudertinker.iron_cookie": "Iron Cookie",
@@ -169,6 +173,10 @@
   "itemGroup.cloudertinker.others": "Clouder's Workshop - Miscellaneous",
   "itemGroup.cloudertinker.toolandpart": "Clouder's Workshop - Tools and Parts",
   "material.cloudertinker.text": "Test Tool",
+
+  "material.cloudertinker.blue_fiery": "Blue Fiery",
+  "material.cloudertinker.blue_fiery.flavor": "Flame test!",
+  "material.cloudertinker.blue_fiery.encyclopedia": "Even hotter than fiery! Just looking at it brings a phantom pain to the head.",
 
   "material.cloudertinker.frostspikeslime": "Frost Spike Slime",
   "material.cloudertinker.frostspikeslime.flavor": "Cold and prickly",
@@ -445,7 +453,7 @@
   "modifier.cloudertinker.overmygo.description": "get 10% * target's Slowness level project. Gain Resistance equal to modifier level when under Slowness yourself",
   "modifier.cloudertinker.overmygo.flavor": "Even if lost, let's move forward together",
   "modifier.cloudertinker.variablood": "Variant Evil Blood",
-  "modifier.cloudertinker.variablood.description": "Attack damage increased by 40%, deals 20% magic damage, and causes Bleeding debuff",
+  "modifier.cloudertinker.variablood.description": "Attack damage increased by 40%, deals 20% magic damage, and causes Bleeding debuff,doubled while having a positive effect",
   "modifier.cloudertinker.variablood.flavor": "\"They did not reach a consensus\"",
   "modifier.cloudertinker.variabloodarmor": "Variant Evil Blood",
   "modifier.cloudertinker.variabloodarmor.description": "Blocking +1, Armor +3, Restores 3 saturation when hit",
@@ -581,6 +589,14 @@
   "modifier.cloudertinker.frostspikeburst": "Frost Spike Burst",
   "modifier.cloudertinker.frostspikeburst.description": "Attacks consume coating to increase damage by 25% and apply Bleeding and Frost to the target\nWhen having cold aura, consumes cold aura instead to additionally increase damage and effect level by 25% and apply Armor Shatter",
   "modifier.cloudertinker.frostspikeburst.flavor": "Extra spikes are always good, especially when renewable",
+
+  "modifier.cloudertinker.meltdown": "Meltdown",
+  "modifier.cloudertinker.meltdown.description": "Deals high durability damage to the target's worn armor, and deals double damage to unarmored targets.",
+  "modifier.cloudertinker.meltdown.flavor": "This is gonna be hot! Very!",
+
+  "modifier.cloudertinker.blueburn": "Blueburn",
+  "modifier.cloudertinker.blueburn.description": "Attacks apply the Blue Flame effect to the target and update recorded damage.\n[Blue Flame]: A special burn that deals fire damage equal to a percentage of the recorded damage per second (takes the highest value).",
+  "modifier.cloudertinker.blueburn.flavor": "The breath is at its most powerful state.",
 
 
   "modifier.cloudertinker.qianghua": "Reinforcement Partition",

@@ -33,7 +33,7 @@ public class Antivirus extends BattleModifier {
         if (target != null ) {
             ModDataNBT entitydata = ModDataNBT.readFromNBT(attacker.getPersistentData());
          if (attacker.getEffect(CloudertinkerEffects.Bloodlust.get())!=null){
-             entitydata.putInt(bloodlust,entitydata.getInt(bloodlust)+3*level);
+             entitydata.putInt(bloodlust,entitydata.getInt(bloodlust)+9*level);
          }
 
         }

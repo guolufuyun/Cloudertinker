@@ -8,6 +8,7 @@
  */
 package com.fuyun.cloudertinker.Effects;
 
+import com.fuyun.cloudertinker.CTKConfig;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -25,9 +26,10 @@ public class BlueBurn extends NoMilkEffect {
     @Override
     public void applyEffectTick(LivingEntity living, int amplifier) {
         if (living.tickCount % 20 == 0) {
-            Objects.requireNonNull(living).hurt(DamageSource.IN_FIRE, WeaponAttack * 0.18f);
+            Objects.requireNonNull(living).hurt(DamageSource.IN_FIRE, WeaponAttack * (CTKConfig.COMMON.Blue_Burn_Damage.get().floatValue()));
 
             living.invulnerableTime = 0;
+            living.setRemainingFireTicks(living.getRemainingFireTicks()+21);
 
         }
     }

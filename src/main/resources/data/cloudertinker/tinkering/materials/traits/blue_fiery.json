@@ -1,0 +1,33 @@
+{"perStat": {
+  "tconstruct:head": [
+    {
+      "name": "cloudertinker:blueburn",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:meltdown",
+      "level": 1
+    }
+  ],
+  "tconstruct:handle": [
+    {
+      "name": "cloudertinker:blueburn",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:meltdown",
+      "level": 1
+    }
+  ],
+  "tconstruct:binding": [
+    {
+      "name": "cloudertinker:blueburn",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:meltdown",
+      "level": 1
+    }
+  ]
+}
+}

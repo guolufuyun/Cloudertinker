@@ -87,7 +87,7 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
             List<Mob> mobList = entity.getCommandSenderWorld().getEntitiesOfClass(Mob.class, new AABB(x + a, y + 2, z + a, x - a, y - 1, z - a));
             for (Mob mob : mobList){
                 if (mob != null&& mob.isAlive()&&!moblist1.contains(mob)){
-
+                    mob.invulnerableTime = 0;
                     if (ToolAttackUtil.attackEntity(tool, player, InteractionHand.MAIN_HAND, mob, () -> 1.0, true)) {
                         moblist1.add(mob);
 //                        player.sendSystemMessage(Component.translatable("成功造成伤害并添加实体"));

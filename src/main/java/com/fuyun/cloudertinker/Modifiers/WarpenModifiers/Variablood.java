@@ -14,6 +14,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
 import slimeknights.tconstruct.tools.TinkerModifiers;
+import util.method.ModifierEffect;
 
 public class Variablood extends BattleModifier {
     public boolean havenolevel() {
@@ -23,10 +24,11 @@ public class Variablood extends BattleModifier {
     public float staticdamage(IToolStackView tool, int level, ToolAttackContext context, LivingEntity attacker, LivingEntity livingTarget, float baseDamage, float damage) {
         if (livingTarget != null) {
             LivingEntity entity= livingTarget;
+            int isbene=1;
+            if (ModifierEffect.hasbeneficialEffect(attacker)) isbene=2;
+            entity.addEffect(new MobEffectInstance(TinkerModifiers.bleeding.get(), attacker.getArmorValue()/5 * 20 *isbene ,  (int)(attacker.getMaxHealth()/10)-1));
 
-            entity.addEffect(new MobEffectInstance(TinkerModifiers.bleeding.get(), attacker.getArmorValue()/5 * 20  ,  (int)(attacker.getMaxHealth()/10)-1));
-
-            return damage *1.4f;
+            return damage+( damage *0.4f*isbene);
         }
         return damage *1.4f;
     }
@@ -34,8 +36,10 @@ public class Variablood extends BattleModifier {
     @Override
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         if (context.getLivingTarget() != null&&context.getLivingTarget().isAlive()){
+            int isbene=1;
+            if (ModifierEffect.hasbeneficialEffect(context.getAttacker())) isbene=2;
             context.getLivingTarget().invulnerableTime = 0;
-            context.getLivingTarget().hurt(DamageSource.MAGIC,damageDealt * 0.2f );
+            context.getLivingTarget().hurt(DamageSource.MAGIC,damageDealt * 0.2f*isbene );
             context.getLivingTarget().setLastHurtByMob(context.getAttacker());
         }
     }
@@ -44,8 +48,10 @@ public class Variablood extends BattleModifier {
     public void arrowhurt(ModifierNBT modifiers, NamespacedNBT persistentData, int level, Projectile projectile, EntityHitResult hit, AbstractArrow arrow, LivingEntity attacker, LivingEntity target) {
         if (target != null) {
             LivingEntity entity= target;
-            entity.hurt(DamageSource.MAGIC,  (attacker.getMaxHealth() * 0.2f));
-            entity.addEffect(new MobEffectInstance(TinkerModifiers.bleeding.get(), attacker.getArmorValue()/5 * 20  ,  (int)(attacker.getMaxHealth()/10)-1));
+            int isbene=1;
+            if (ModifierEffect.hasbeneficialEffect(attacker)) isbene=2;
+            entity.hurt(DamageSource.MAGIC,  (attacker.getMaxHealth() * 0.2f*isbene));
+            entity.addEffect(new MobEffectInstance(TinkerModifiers.bleeding.get(), attacker.getArmorValue()/5 * 20*isbene  ,  (int)(attacker.getMaxHealth()/10)-1));
             entity.invulnerableTime = 0;
 
         }
@@ -54,7 +60,10 @@ public class Variablood extends BattleModifier {
     @Override
     public void onProjectileLaunch(IToolStackView tool, ModifierEntry modifier, LivingEntity shooter, Projectile projectile, @Nullable AbstractArrow arrow, NamespacedNBT namespacedNBT, boolean primary) {
         if (arrow != null) {
-            arrow.setBaseDamage(arrow.getBaseDamage() * 1.4);
+            int isbene=1;
+            if (ModifierEffect.hasbeneficialEffect(shooter)) isbene=2;
+            arrow.setBaseDamage(arrow.getBaseDamage()+(arrow.getBaseDamage() * 0.4*isbene));
         }
     }
+
 }
