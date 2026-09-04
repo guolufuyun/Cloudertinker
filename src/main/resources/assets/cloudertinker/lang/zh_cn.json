@@ -137,6 +137,8 @@
   "item.cloudertinker.tigermark_round": "虎标弹",
   "cloudertinker.item.tooltip.round.value1": "伤害倍率：%s%%",
   "cloudertinker.item.tooltip.round.value2": "提供推力：%s",
+  "cloudertinker.item.tooltip.round.value5": "攻击消耗推力：%s",
+  "cloudertinker.item.tooltip.round.value6": "爆炸消耗推力：%s",
   "cloudertinker.item.tooltip.round.value3": "冲刺力度：%s",
   "cloudertinker.item.tooltip.round.value4": "爆炸伤害倍率：%s%%",
   "item.cloudertinker.fiery_tigermark_round": "炽虎爆弹",

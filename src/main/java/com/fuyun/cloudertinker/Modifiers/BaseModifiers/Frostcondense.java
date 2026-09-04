@@ -28,7 +28,7 @@ public class Frostcondense extends BattleModifier {
             ModDataNBT tooldata = tool.getPersistentData();
             int level = modifier.getLevel();
             int level1 = tool.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());
-            if (player.tickCount %(20/(level*level1)) ==0 &&tooldata.getInt(frostcraft)<level1 * 30 + 30&& !isSelected ){
+            if (level1*level!=0&&player.tickCount %(40/Math.min((level*level1),40)) ==0 &&tooldata.getInt(frostcraft)<level1 * 30 + 30&& !isSelected ){
                 tooldata.putInt(frostcraft,tooldata.getInt(frostcraft)+1);
 
             }

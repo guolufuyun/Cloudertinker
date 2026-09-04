@@ -50,7 +50,7 @@
         "tconstruct:block_amount": 150.0,
         "tconstruct:block_angle": 180.0,
         "tconstruct:attack_damage": 3,
-        "tconstruct:attack_speed": 1.5
+        "tconstruct:attack_speed": 0.7
 
       }
     },

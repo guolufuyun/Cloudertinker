@@ -25,6 +25,7 @@ import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.nbt.*;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class Readyboom extends BattleModifier {
@@ -71,7 +72,7 @@ public class Readyboom extends BattleModifier {
         }
     }
     @Override
-    public void addTooltip(IToolStackView tool, ModifierEntry modifier, @org.jetbrains.annotations.Nullable Player player, List<Component> list, TooltipKey key, TooltipFlag tooltipFlag) {
+    public void addTooltip(IToolStackView tool, ModifierEntry modifier, @Nullable Player player, List<Component> list, TooltipKey key, TooltipFlag tooltipFlag) {
         if (player != null) {
             ModDataNBT tooldata = tool.getPersistentData();
             if (tooldata.getInt(resentment) >= 100) {

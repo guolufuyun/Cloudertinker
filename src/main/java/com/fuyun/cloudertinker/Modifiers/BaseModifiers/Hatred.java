@@ -90,7 +90,7 @@ public class Hatred extends ArmorModifier {
 
     @Override
     public Component getDisplayName(IToolStackView tool, ModifierEntry entry) {
-        if (tool.getModifierLevel(CloudertinkerModifiers.resentment.getId()) >= 1) return null;
+        if (tool.getModifierLevel(CloudertinkerModifiers.resentment.getId()) >= 1) return Component.translatable( "  " );;
         return Component.translatable(this.getDisplayName().getString() + "  " );
     }
 

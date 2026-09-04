@@ -27,6 +27,7 @@ import slimeknights.tconstruct.library.tools.nbt.*;
 import twilightforest.init.TFDamageSources;
 import twilightforest.init.TFMobEffects;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 import static com.fuyun.cloudertinker.Modifiers.ArmorModifiers.Chill_aura.enabled;
@@ -66,7 +67,7 @@ public class Frostbomb extends BattleModifier {
     }
 
     @Override
-    public void addTooltip(IToolStackView tool, ModifierEntry modifier, @org.jetbrains.annotations.Nullable Player player, List<Component> list, TooltipKey key, TooltipFlag tooltipFlag) {
+    public void addTooltip(IToolStackView tool, ModifierEntry modifier, @Nullable Player player, List<Component> list, TooltipKey key, TooltipFlag tooltipFlag) {
         if (player != null) {
             ModDataNBT tooldata = tool.getPersistentData();
             int level = tool.getModifierLevel(CloudertinkerModifiers.frostcraft.getId());

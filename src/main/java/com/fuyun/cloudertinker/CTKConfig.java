@@ -49,11 +49,15 @@ public final ForgeConfigSpec.DoubleValue Push_Power;
 
         public final ForgeConfigSpec.DoubleValue Void_Power_Damage;
         public final ForgeConfigSpec.IntValue Void_Power_Thrust;
+        public final ForgeConfigSpec.IntValue Void_Power_Atk_Thrust;
+        public final ForgeConfigSpec.IntValue Void_Power_Exp_Thrust;
         public final ForgeConfigSpec.DoubleValue Void_Power_Push_Power;
         public final ForgeConfigSpec.DoubleValue Void_Power_Explosion_damage;
 
         public final ForgeConfigSpec.DoubleValue Fiery_Damage;
         public final ForgeConfigSpec.IntValue Fiery_Thrust;
+        public final ForgeConfigSpec.IntValue Fiery_Atk_Thrust;
+        public final ForgeConfigSpec.IntValue Fiery_Exp_Thrust;
         public final ForgeConfigSpec.DoubleValue Fiery_Push_Power;
         public final ForgeConfigSpec.DoubleValue Fiery_Explosion_damage;
         public Common(ForgeConfigSpec.Builder builder){
@@ -106,6 +110,10 @@ public final ForgeConfigSpec.DoubleValue Push_Power;
 
             this.Void_Power_Thrust = builder.comment("Void power round thrust, 70 by default.").comment("虚空动力弹推力，默认70。")
                     .defineInRange("Void power round push power",70,0, Integer.MAX_VALUE);
+            this.Void_Power_Atk_Thrust = builder.comment("Void power round attack use thrust, 3 by default.").comment("虚空动力弹攻击消耗推力，默认7。")
+                    .defineInRange("Void power round push power",7,0, Integer.MAX_VALUE);
+            this.Void_Power_Exp_Thrust = builder.comment("Void power round explosion use thrust, 20 by default.").comment("虚空动力弹爆炸消耗推力，默认10。")
+                    .defineInRange("Void power round push power",10,0, Integer.MAX_VALUE);
             this.Void_Power_Push_Power = builder.comment("Void power round push power, 0.2 by default.").comment("虚空动力弹推进力度，默认0.2。")
                     .defineInRange("Void power round push power",0.2,0.0, Double.MAX_VALUE);
             this.Void_Power_Damage = builder.comment("Void power round damage, 150% by default.").comment("虚空动力弹伤害，默认270%。")
@@ -115,6 +123,10 @@ public final ForgeConfigSpec.DoubleValue Push_Power;
 
             this.Fiery_Thrust = builder.comment("Fiery round thrust, 100 by default.").comment("炽虎爆弹推力，默认100。")
                     .defineInRange("Fiery round push power",100,0, Integer.MAX_VALUE);
+            this.Fiery_Atk_Thrust = builder.comment("Void power round attack use thrust, 10 by default.").comment("炽虎爆弹攻击消耗推力，默认10。")
+                    .defineInRange("Void power round push power",10,0, Integer.MAX_VALUE);
+            this.Fiery_Exp_Thrust = builder.comment("Void power round explosion use thrust, 20 by default.").comment("炽虎爆弹爆炸消耗推力，默认10。")
+                    .defineInRange("Void power round push power",10,0, Integer.MAX_VALUE);
             this.Fiery_Push_Power = builder.comment("Fiery round push power, 0.4 by default.").comment("炽虎爆弹推进力度，默认0.4。")
                     .defineInRange("Fiery round push power",0.4,0.0, Double.MAX_VALUE);
             this.Fiery_Damage = builder.comment("Fiery round damage, 150% by default.").comment("炽虎爆弹伤害，默认100%。")
