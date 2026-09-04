@@ -22,6 +22,8 @@ import java.util.List;
 public abstract class Tigermark_rounds extends Item {
     protected float damageboost= 1.0f;
     protected int thrust= 50;
+    protected int Atk_thrust= 5;
+    protected int Exp_thrust= 15;
     protected double push_power= CTKConfig.COMMON.Push_Power.get();
     protected float explosion_damage= CTKConfig.COMMON.Explosion_damage.get().floatValue();
     public ChatFormatting color=ChatFormatting.RED;
@@ -34,6 +36,8 @@ public abstract class Tigermark_rounds extends Item {
         if (Screen.hasShiftDown()){
             list.add(Component.translatable("cloudertinker.item.tooltip.round.value1",String.format("%.0f", this.damageboost*100)).withStyle(this.color));
             list.add(Component.translatable("cloudertinker.item.tooltip.round.value2", this.thrust).withStyle(this.color));
+            list.add(Component.translatable("cloudertinker.item.tooltip.round.value5", this.Atk_thrust).withStyle(this.color));
+            list.add(Component.translatable("cloudertinker.item.tooltip.round.value6", this.Exp_thrust).withStyle(this.color));
             list.add(Component.translatable("cloudertinker.item.tooltip.round.value3", this.push_power).withStyle(this.color));
             list.add(Component.translatable("cloudertinker.item.tooltip.round.value4",String.format("%.0f", this.explosion_damage*100)).withStyle(this.color));
         }else {
@@ -48,6 +52,13 @@ public abstract class Tigermark_rounds extends Item {
     public int getThrust() {
         return this.thrust;
     }
+    public int getAtk_thrust() {
+        return this.Atk_thrust;
+    }
+    public int getExp_thrust() {
+        return this.Exp_thrust;
+    }
+
 
     public double getPushPower() {
         return this.push_power;
@@ -58,6 +69,7 @@ public abstract class Tigermark_rounds extends Item {
     }
 
     public float getMeleedamage(IToolStackView tool, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {
+
         return v1*this.getDamageBoost();
     }
     public void onMeleeHit(IToolStackView tool, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {}

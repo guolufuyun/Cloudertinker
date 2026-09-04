@@ -131,6 +131,8 @@
   "item.cloudertinker.tigermark_round": "Tigermark Round",
   "cloudertinker.item.tooltip.round.value1": "Damage Multiplier:%s%%",
   "cloudertinker.item.tooltip.round.value2": "Provides Thrust:%s",
+  "cloudertinker.item.tooltip.round.value5": "Attack Use Thrust:%s",
+  "cloudertinker.item.tooltip.round.value6": "Explosion Use Thrust:%s",
   "cloudertinker.item.tooltip.round.value3": "Charge Power:%s",
   "cloudertinker.item.tooltip.round.value4": "Explosion Damage Multiplier:%s%%",
   "item.cloudertinker.fiery_tigermark_round": "Fiery Tigermark Round",
