@@ -137,12 +137,15 @@
   "item.cloudertinker.tigermark_round": "虎标弹",
   "cloudertinker.item.tooltip.round.value1": "伤害倍率：%s%%",
   "cloudertinker.item.tooltip.round.value2": "提供推力：%s",
+  "cloudertinker.item.tooltip.round.value5": "攻击消耗推力：%s",
+  "cloudertinker.item.tooltip.round.value6": "爆炸消耗推力：%s",
   "cloudertinker.item.tooltip.round.value3": "冲刺力度：%s",
   "cloudertinker.item.tooltip.round.value4": "爆炸伤害倍率：%s%%",
   "item.cloudertinker.fiery_tigermark_round": "炽虎爆弹",
   "cloudertinker.item.tooltip.fround.value": "对着火的敌人伤害提升50%",
   "item.cloudertinker.void_power_round": "虚空动力弹",
   "cloudertinker.item.tooltip.vpround.value": "结束冲刺时会传送至较近距离内第一个被击中目标，如目标无效向下顺延",
+  "item.cloudertinker.ember_feather_fan": "余烬羽扇",
 
   "item.cloudertinker.molten_fiery_bucket": "熔融炽铁桶",
   "item.cloudertinker.molten_knightmetal_bucket": "熔融骑士金属桶",
@@ -179,6 +182,10 @@
   "itemGroup.cloudertinker.toolandpart": "浮云工坊-工具和部件",
 
   "material.cloudertinker.text": "测试工具",
+
+  "material.cloudertinker.wool": "羊毛",
+  "material.cloudertinker.wool.flavor": "咩？",
+  "material.cloudertinker.wool.encyclopedia": "咩！",
 
   "material.cloudertinker.blue_fiery": "炽蓝铁",
   "material.cloudertinker.blue_fiery.flavor": "焰色反应！",
@@ -781,6 +788,11 @@
   "modifier.cloudertinker.tiantuistar.type0": "无",
   "modifier.cloudertinker.tiantuistar.tooltip1": "拥有推力%s/%s",
   "modifier.cloudertinker.tiantuistar.tooltip2": "已使用弹药%s/%s",
+
+  "item.tconstruct.slime_helmet.material.cloudertinker.wool": "谜题羊黏液头颅",
+  "modifier.cloudertinker.eatgrass": "食草",
+  "modifier.cloudertinker.eatgrass.description": "按下头盔交互吃掉脚下的草，以此恢复饱食度饱和度并获得羊毛",
+  "modifier.cloudertinker.eatgrass.flavor": "模拟山羊MC",
 
   "modifier.cloudertinker.bing": "画的饼",
   "黑骷髅头": "黑骷髅头",

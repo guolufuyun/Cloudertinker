@@ -1,5 +1,6 @@
 package com.fuyun.cloudertinker;
 
+import com.fuyun.cloudertinker.item.EmberFeatherFan;
 import com.fuyun.cloudertinker.register.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -52,6 +53,7 @@ public class Cloudertinker {
     @SubscribeEvent
     public void commonSetup(FMLCommonSetupEvent event) {
         CloudertinkerPotion.init();
+        event.enqueueWork(EmberFeatherFan::registerEmberBurnRecipes);
        }
     public static <T> TinkerDataCapability.TinkerDataKey<T> createKey(String name) {
         return TinkerDataCapability.TinkerDataKey.of(getResource(name));

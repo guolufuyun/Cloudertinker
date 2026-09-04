@@ -2,20 +2,14 @@ package com.fuyun.cloudertinker.register;
 
 import com.fuyun.cloudertinker.item.Blockitem.FieryAlloyer;
 import com.fuyun.cloudertinker.item.Blockitem.FieryMelter;
-import com.fuyun.cloudertinker.item.BottleFoodItem;
-import com.fuyun.cloudertinker.item.Chimera_ingot;
-import com.fuyun.cloudertinker.item.Clean_pastry;
-import com.fuyun.cloudertinker.item.IronCooikeItem;
+import com.fuyun.cloudertinker.item.*;
 import com.fuyun.cloudertinker.item.Rounds.Fiery_round;
 import com.fuyun.cloudertinker.item.Rounds.Normal_round;
 import com.fuyun.cloudertinker.item.Rounds.Savage_round;
 import com.fuyun.cloudertinker.item.Rounds.Void_power_round;
 import com.fuyun.cloudertinker.tool.Giantsword;
 import com.fuyun.cloudertinker.tool.toolDefinitions;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -65,9 +59,9 @@ public class CloudertinkerItem {
     public static final RegistryObject<Item> compositesteeleaf_ingot = ITEMS.register("compositesteeleaf_ingot", () -> new Item(new Item.Properties().tab(CloudertinkerTab.MATERIALS)));
     public static final RegistryObject<Item> frostiron_ingot = ITEMS.register("frostiron_ingot", () -> new Item(new Item.Properties().tab(CloudertinkerTab.MATERIALS)));
     public static final RegistryObject<Item> magala_ingot = ITEMS.register("magala_ingot", () -> new Item(new Item.Properties().tab(CloudertinkerTab.MATERIALS)));
-    public static final RegistryObject<Item> glavenus_ingot = ITEMS.register("glavenus_ingot", () -> new Item(new Item.Properties().tab(CloudertinkerTab.MATERIALS)));
+    public static final RegistryObject<Item> glavenus_ingot = ITEMS.register("glavenus_ingot", () -> new Item(new Item.Properties().tab(CloudertinkerTab.MATERIALS).fireResistant()));
     public static final RegistryObject<Item> frostspikeslime_ingot = ITEMS.register("frostspikeslime_ingot", () -> new Item(new Item.Properties().tab(CloudertinkerTab.MATERIALS)));
-    public static final RegistryObject<Item> blue_fiery_ingot = ITEMS.register("blue_fiery_ingot", () -> new Item(new Item.Properties().tab(CloudertinkerTab.MATERIALS)));
+    public static final RegistryObject<Item> blue_fiery_ingot = ITEMS.register("blue_fiery_ingot", () -> new Item(new Item.Properties().tab(CloudertinkerTab.MATERIALS).fireResistant()));
 
     public static final RegistryObject<Item> questiron_ingot = ITEMS.register("questiron_ingot", () -> new Item(new Item.Properties().tab(CloudertinkerTab.MATERIALS)));
     public static final RegistryObject<BlockItem> questiron_block = ITEMS.register("questiron_block", () -> new BlockItem(CloudertinkerBlock.questiron_block.get(), new Item.Properties().tab(CloudertinkerTab.MATERIALS)));
@@ -87,6 +81,7 @@ public class CloudertinkerItem {
     public static final RegistryObject<Item> phantom_card = ITEMS.register("phantom_card", () -> new Item( new Item.Properties().tab(CloudertinkerTab.OTHERS)));
     public static final RegistryObject<BlockItem> fiery_melter = ITEMS.register("fiery_melter", () -> new FieryMelter(CloudertinkerBlock.fiery_melter.get(), new Item.Properties().tab(CloudertinkerTab.OTHERS)));
     public static final RegistryObject<BlockItem> fiery_alloyer = ITEMS.register("fiery_alloyer", () -> new FieryAlloyer(CloudertinkerBlock.fiery_alloyer.get(), new Item.Properties().tab(CloudertinkerTab.OTHERS)));
+    public static final RegistryObject<Item> ember_feather_fan = ITEMS.register("ember_feather_fan", () -> new EmberFeatherFan( new Item.Properties().fireResistant().durability(1024).rarity(Rarity.RARE).tab(CloudertinkerTab.OTHERS)));
 
     public static final RegistryObject<Item> savage_tigermark_round = ITEMS.register("savage_tigermark_round", () -> new Savage_round( new Item.Properties().stacksTo(64).tab(CloudertinkerTab.OTHERS)));
     public static final RegistryObject<Item> tigermark_round = ITEMS.register("tigermark_round", () -> new Normal_round( new Item.Properties().stacksTo(32).tab(CloudertinkerTab.OTHERS)));

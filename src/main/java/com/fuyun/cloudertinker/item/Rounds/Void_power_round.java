@@ -23,6 +23,8 @@ public class Void_power_round extends Tigermark_rounds {
         super(pProperties);
         this.damageboost= CTKConfig.COMMON.Void_Power_Damage.get().floatValue();
         this.thrust= CTKConfig.COMMON.Void_Power_Thrust.get();
+        this.Atk_thrust= CTKConfig.COMMON.Void_Power_Atk_Thrust.get();
+        this.Exp_thrust= CTKConfig.COMMON.Void_Power_Exp_Thrust.get();
         this.push_power= CTKConfig.COMMON.Void_Power_Push_Power.get();
         this.explosion_damage= CTKConfig.COMMON.Void_Power_Explosion_damage.get().floatValue();
         this.color= ChatFormatting.DARK_PURPLE;

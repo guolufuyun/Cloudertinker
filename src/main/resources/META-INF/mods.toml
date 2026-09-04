@@ -68,3 +68,9 @@ mandatory=true
 versionRange="[1.19.2-3.8.3.39,)"   #最新的tic版本
 ordering="AFTER"
 side="BOTH"
+[[dependencies.cloudertinker]]
+modId="twilightforest"
+mandatory=true
+versionRange="[4.2.1518,)"
+ordering="AFTER"
+side="BOTH"

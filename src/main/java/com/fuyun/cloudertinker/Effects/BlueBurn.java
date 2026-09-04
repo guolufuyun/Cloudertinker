@@ -11,6 +11,7 @@ package com.fuyun.cloudertinker.Effects;
 import com.fuyun.cloudertinker.CTKConfig;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.tools.modifiers.effect.NoMilkEffect;
 
@@ -22,10 +23,19 @@ public class BlueBurn extends NoMilkEffect {
     public BlueBurn() {
         super(MobEffectCategory.HARMFUL, 0XFFD700,true);
     }
-
+    @Override
+    public boolean isDurationEffectTick(int duration, int amplifier) {
+        return duration > 0 && duration % 20 == 0;
+    }
     @Override
     public void applyEffectTick(LivingEntity living, int amplifier) {
         if (living.tickCount % 20 == 0) {
+            float weaponAttack = 0f;
+            MobEffectInstance instance = living.getEffect(this);
+            if (instance instanceof BlueBurnInstance bInstance) {
+                weaponAttack = bInstance.getWeaponAttack();
+            }
+            living.invulnerableTime = 0;
             Objects.requireNonNull(living).hurt(DamageSource.IN_FIRE, WeaponAttack * (CTKConfig.COMMON.Blue_Burn_Damage.get().floatValue()));
 
             living.invulnerableTime = 0;

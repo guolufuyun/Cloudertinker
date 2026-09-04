@@ -2,6 +2,10 @@
   "perStat": {
     "tconstruct:head": [
       {
+        "name": "tconstruct:diamond",
+        "level": 1
+      },
+      {
         "name": "tconstruct:netherite",
         "level": 1
       },
@@ -11,6 +15,10 @@
       }
     ],
     "tconstruct:handle": [
+      {
+        "name": "tconstruct:diamond",
+        "level": 1
+      },
       {
         "name": "tconstruct:netherite",
         "level": 1
@@ -22,6 +30,10 @@
     ],
     "tconstruct:binding": [
       {
+        "name": "tconstruct:diamond",
+        "level": 1
+      },
+      {
         "name": "tconstruct:netherite",
         "level": 1
       },
@@ -31,6 +43,10 @@
       }
     ],
     "tconstruct:limb": [
+      {
+        "name": "tconstruct:diamond",
+        "level": 1
+      },
       {
         "name": "tconstruct:netherite",
         "level": 1
@@ -42,6 +58,10 @@
     ],
     "tconstruct:grip": [
       {
+        "name": "tconstruct:diamond",
+        "level": 1
+      },
+      {
         "name": "tconstruct:netherite",
         "level": 1
       },
@@ -51,6 +71,10 @@
       }
     ],
     "tconstruct:maille": [
+      {
+        "name": "tconstruct:diamond",
+        "level": 1
+      },
       {
         "name": "tconstruct:netherite",
         "level": 1

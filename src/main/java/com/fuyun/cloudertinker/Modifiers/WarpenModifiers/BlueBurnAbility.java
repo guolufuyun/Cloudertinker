@@ -8,7 +8,7 @@
  */
 package com.fuyun.cloudertinker.Modifiers.WarpenModifiers;
 
-import com.fuyun.cloudertinker.Effects.BlueBurn;
+import com.fuyun.cloudertinker.Effects.BlueBurnInstance;
 import com.fuyun.cloudertinker.extend.superclass.BattleModifier;
 import com.fuyun.cloudertinker.register.CloudertinkerEffects;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -41,17 +41,20 @@ public class BlueBurnAbility extends BattleModifier {
             return v1;
         //........
         unit.setRemainingFireTicks(unit.getRemainingFireTicks()+361);
-        unit.addEffect(new MobEffectInstance(CloudertinkerEffects.BlueBurn.get(),360,0));
-        BlueBurn b = null;
-        MobEffectInstance effect = unit.getEffect(CloudertinkerEffects.BlueBurn.get());
-        if (effect != null && effect.getEffect() instanceof BlueBurn) {
-            b = (BlueBurn) effect.getEffect();
+        // 检查实体上是否已有蓝焰效果实例
+        MobEffectInstance existing = unit.getEffect(CloudertinkerEffects.BlueBurn.get());
+        BlueBurnInstance instance;
+        if (existing instanceof BlueBurnInstance bInstance) {
+            // 已存在专属实例，直接复用
+            instance = bInstance;
+        } else {
+            // 不存在，创建专属的 BlueBurnInstance
+            instance = new BlueBurnInstance(CloudertinkerEffects.BlueBurn.get(), 360, 0);
+            unit.addEffect(instance);
         }
-        //........
-        if (b == null) return v1;
-        if (b.GetVal() < v1)
-            b.WeaponAttack = v1;
-
+        // 写入该实体专属的武器攻击力
+        if (instance.getWeaponAttack() < v1)
+            instance.setWeaponAttack(v1);
         return v1;
     }
 

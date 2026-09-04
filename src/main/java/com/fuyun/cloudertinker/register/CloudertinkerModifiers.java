@@ -3,10 +3,7 @@ package com.fuyun.cloudertinker.register;
 import com.fuyun.cloudertinker.Modifiers.ArmorModifiers.*;
 import com.fuyun.cloudertinker.Modifiers.BaseModifiers.*;
 import com.fuyun.cloudertinker.Modifiers.OnlyBowMOdifiers.*;
-import com.fuyun.cloudertinker.Modifiers.ToolModifiers.Darkness;
-import com.fuyun.cloudertinker.Modifiers.ToolModifiers.Magent;
-import com.fuyun.cloudertinker.Modifiers.ToolModifiers.Precipitate;
-import com.fuyun.cloudertinker.Modifiers.ToolModifiers.TianTuiStar;
+import com.fuyun.cloudertinker.Modifiers.ToolModifiers.*;
 import com.fuyun.cloudertinker.Modifiers.WarpenModifiers.*;
 import com.fuyun.cloudertinker.Modifiers.anvil.*;
 import com.fuyun.cloudertinker.Modifiers.anvil.Slots.*;
@@ -115,6 +112,7 @@ public class CloudertinkerModifiers {
     public static final StaticModifier<Frostspikeburst> frostspikeburst=MODIFIERS.register("frostspikeburst", Frostspikeburst::new);
     public static final StaticModifier<BlueBurnAbility> blueBurn = MODIFIERS.register("blueburn", BlueBurnAbility::new);
     public static final StaticModifier<MeltDown> meltdown = MODIFIERS.register("meltdown", MeltDown::new);
+    public static final StaticModifier<Eatgrass> eatgrass = MODIFIERS.register("eatgrass", Eatgrass::new);
     public static final StaticModifier<SilhouetteDance> silhouettedance=MODIFIERS.register("silhouettedance", SilhouetteDance::new);
 
 

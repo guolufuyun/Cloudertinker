@@ -39,8 +39,8 @@ public class Bloodlust extends NoMilkEffect {
                     if (livingEntity instanceof Player)entitydata.putInt(bloodlust,entitydata.getInt(bloodlust)+9);
                     else entitydata.putInt(bloodlust,entitydata.getInt(bloodlust)+60);
                 }
-            }else if(entity1 instanceof Projectile projectile&&projectile.getOwner()!=null){
-                LivingEntity livingEntity= (LivingEntity) projectile.getOwner();
+            }else if(entity1 instanceof Projectile projectile&&projectile.getOwner()!=null&&projectile.getOwner() instanceof LivingEntity livingEntity){
+           
                 ModDataNBT entitydata = ModDataNBT.readFromNBT(livingEntity.getPersistentData());
                 MobEffectInstance instance =livingEntity.getEffect(CloudertinkerEffects.Bloodlust.get());
                 if (instance!=null){

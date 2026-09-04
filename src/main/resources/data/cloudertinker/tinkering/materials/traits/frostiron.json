@@ -121,7 +121,10 @@
       }
     ],
     "tconstruct:plating_boots": [
-
+      {
+        "name": "cloudertinker:twilightarmor",
+        "level": 1
+      },
       {
         "name": "cloudertinker:chillaura",
         "level": 3
