@@ -1,5 +1,6 @@
 package com.fuyun.cloudertinker;
 
+import com.fuyun.cloudertinker.item.EmberFeatherFan;
 import com.fuyun.cloudertinker.rander.HeaverockRenderer;
 import com.fuyun.cloudertinker.register.*;
 import net.minecraft.network.chat.Component;
@@ -71,7 +72,7 @@ public class Cloudertinker {
         return Component.translatable(makeTranslationKey(base, name));
     }
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(EmberFeatherFan::registerEmberBurnRecipes);
     }
     @SubscribeEvent
     public static void registerEntityRenderer(EntityRenderersEvent.RegisterRenderers event) {

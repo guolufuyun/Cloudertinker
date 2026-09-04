@@ -27,6 +27,20 @@
         "name": "tconstruct:enhanced",
         "level": 1
       }
+    ],
+    "tconstruct:laces": [
+      {
+        "name": "cloudertinker:twilight",
+        "level": 1
+      },
+      {
+        "name": "tconstruct:stringy",
+        "level": 1
+      },
+      {
+        "name": "tconstruct:enhanced",
+        "level": 1
+      }
     ]
   }
 }

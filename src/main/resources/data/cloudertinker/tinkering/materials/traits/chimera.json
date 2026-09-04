@@ -109,6 +109,16 @@
         "name": "cloudertinker:unrestrainedsystem",
         "level": 1
       }
+    ],
+    "tconstruct:ribcage": [
+      {
+        "name": "cloudertinker:variabloodarmor",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:unrestrainedsystem",
+        "level": 1
+      }
     ]
   }
 }

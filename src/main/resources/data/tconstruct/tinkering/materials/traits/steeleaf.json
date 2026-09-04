@@ -116,6 +116,16 @@
         "level": 1,
         "name": "cloudertinker:hyperplasia"
       }
+    ],
+    "tconstruct:shell": [
+      {
+        "name": "cloudertinker:twilightarmor",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:synergy",
+        "level": 1
+      }
     ]
   }
 }

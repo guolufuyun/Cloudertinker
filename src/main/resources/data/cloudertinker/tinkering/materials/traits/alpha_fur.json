@@ -60,6 +60,20 @@
       "name": "cloudertinker:supercold",
       "level": 1
     }
+  ],
+  "tconstruct:laces": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:chillaura",
+      "level": 3
+    },
+    {
+      "name": "tconstruct:tanned",
+      "level": 1
+    }
   ]
 }
 }

@@ -14,6 +14,9 @@
     },
     "tconstruct:shield_core": {},
     "tconstruct:maille": {},
-    "tconstruct:fletching": {}
+    "tconstruct:fletching": {},
+    "tconstruct:shell": {
+      "repair_amount": 600
+    }
   }
 }

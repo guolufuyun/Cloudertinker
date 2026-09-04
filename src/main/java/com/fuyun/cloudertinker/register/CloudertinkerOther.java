@@ -57,6 +57,7 @@ public class CloudertinkerOther extends CloudertinkerTab{
         output.accept(CloudertinkerItem.phantom_card.get());
         output.accept(CloudertinkerItem.fiery_melter.get());
         output.accept(CloudertinkerItem.fiery_alloyer.get());
+        output.accept(CloudertinkerItem.ember_feather_fan.get());
         output.accept(CloudertinkerItem.savage_tigermark_round.get());
         output.accept(CloudertinkerItem.tigermark_round.get());
         output.accept(CloudertinkerItem.fiery_tigermark_round.get());

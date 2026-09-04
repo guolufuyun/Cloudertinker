@@ -71,6 +71,8 @@
 
   "item.cloudertinker.giantsword": "巨人剑",
   "item.cloudertinker.giantsword.description": "挥动的时候可得悠着点！\n巨人剑挥起来很费劲，但是它的范围与威力都是无与伦比的。",
+  "item.cloudertinker.block_and_chain": "链锤",
+  "item.cloudertinker.block_and_chain.description": "抡起来慢，砸下去狠。\n链锤蓄力后可掷出，锁链会拖着它飞出去，再把它拽回手中。",
   "item.cloudertinker.hard_shield": "骑士坚盾",
   "item.cloudertinker.hard_shield.description": "骑士坚盾是一种攻守兼备的重型盾牌，\n拥有不俗的防御能力和优秀的伤害能力。",
   "item.cloudertinker.tiantuistar_blade": "天退星刀",
@@ -135,12 +137,16 @@
   "item.cloudertinker.tigermark_round": "虎标弹",
   "cloudertinker.item.tooltip.round.value1": "伤害倍率：%s%%",
   "cloudertinker.item.tooltip.round.value2": "提供推力：%s",
+  "cloudertinker.item.tooltip.round.value5": "攻击消耗推力：%s",
+  "cloudertinker.item.tooltip.round.value6": "爆炸消耗推力：%s",
   "cloudertinker.item.tooltip.round.value3": "冲刺力度：%s",
   "cloudertinker.item.tooltip.round.value4": "爆炸伤害倍率：%s%%",
   "item.cloudertinker.fiery_tigermark_round": "炽虎爆弹",
   "cloudertinker.item.tooltip.fround.value": "对着火的敌人伤害提升50%",
   "item.cloudertinker.void_power_round": "虚空动力弹",
   "cloudertinker.item.tooltip.vpround.value": "结束冲刺时会传送至较近距离内第一个被击中目标，如目标无效向下顺延",
+  "item.cloudertinker.ember_feather_fan": "余烬羽扇",
+
 
   "item.cloudertinker.molten_fiery_bucket": "熔融炽铁桶",
   "item.cloudertinker.molten_knightmetal_bucket": "熔融骑士金属桶",
@@ -177,6 +183,10 @@
   "itemGroup.cloudertinker.toolandpart": "浮云工坊-工具和部件",
 
   "material.cloudertinker.text": "测试工具",
+
+  "material.cloudertinker.frost_essence": "极寒精华",
+  "material.cloudertinker.frost_essence.flavor": "像是更冷的水晶泥",
+  "material.cloudertinker.frost_essence.encyclopedia": "本身也是一种黏液，只不过经常因为太冷而凝固",
 
   "material.cloudertinker.blue_fiery": "炽蓝铁",
   "material.cloudertinker.blue_fiery.flavor": "焰色反应！",
@@ -784,6 +794,19 @@
   "modifier.cloudertinker.tiantuistar.tooltip1": "拥有推力%s/%s",
   "modifier.cloudertinker.tiantuistar.tooltip2": "已使用弹药%s/%s",
 
+  "modifier.cloudertinker.chainsmash": "肆意毁坏",
+  "modifier.cloudertinker.chainsmash.description": "允许你的链锤破坏方块，等级影响对应的挖掘等级\n延展会提高挖掘范围和可破坏方块数量",
+  "modifier.cloudertinker.chainsmash.flavor": "“大哥，搞定！”",
+
+  "material.tconstruct.wool.skull": "谜题羊",
+  "modifier.cloudertinker.eatgrass": "食草",
+  "modifier.cloudertinker.eatgrass.description": "按下头盔交互吃掉脚下的草，以此恢复饱食度饱和度并获得羊毛",
+  "modifier.cloudertinker.eatgrass.flavor": "模拟山羊MC",
+
+
+
+
+
   "modifier.cloudertinker.bing": "画的饼",
   "黑骷髅头": "黑骷髅头",
   "modifier.cloudertinker.deadlyhatred": "死仇",
@@ -801,4 +824,6 @@
   "modifier.cloudertinker.painsharing": "痛苦平分",
   "modifier.cloudertinker.painsharing.description": "根据已损生命值造成额外伤害，血量低于25%时会消耗怨念获得一定比例的吸血",
   "modifier.cloudertinker.painsharing.flavor": "“以眼还眼，以牙还牙！”"
+
+
 }

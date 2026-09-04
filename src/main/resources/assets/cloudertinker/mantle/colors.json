@@ -41,7 +41,9 @@
     "glavenus": "#FC2818",
     "carminite": "#540414",
     "ironwood":"#72483F",
-    "frostspikeslime":"#B4DFF4"
+    "frostspikeslime":"#B4DFF4",
+    "frost_essence": "#A5D7F2",
+    "blue_fiery": "#98D2D7"
   },
   "modifier.cloudertinker": {
     "ravenfeather": "#313B49",
@@ -133,6 +135,9 @@
     "overfreeze":"#B4DFF4",
     "frostspikearrow":"#B4DFF4",
     "frostspikearound":"#B4DFF4",
-    "frostspikeburst":"#B4DFF4"
+    "frostspikeburst":"#B4DFF4",
+    "eatgrass": "#4D5D6E",
+    "blueburn": "#98D2D7",
+    "meltdown": "#98D2D7"
   }
 }

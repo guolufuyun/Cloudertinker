@@ -39,6 +39,20 @@
     {
       "name": "tconstruct:thorns",
       "level": 3
-    }]
+    }],
+  "tconstruct:laces": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:fortified",
+      "level": 2
+    },
+    {
+      "name": "tconstruct:thorns",
+      "level": 3
+    }
+  ]
 }
 }

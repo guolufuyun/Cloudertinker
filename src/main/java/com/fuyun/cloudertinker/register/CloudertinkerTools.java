@@ -1,6 +1,7 @@
 package com.fuyun.cloudertinker.register;
 
 import com.fuyun.cloudertinker.Cloudertinker;
+import com.fuyun.cloudertinker.tool.BlockAndChain;
 import com.fuyun.cloudertinker.tool.Giantsword;
 import com.fuyun.cloudertinker.tool.toolDefinitions;
 import net.minecraft.network.chat.Component;
@@ -41,6 +42,7 @@ public class CloudertinkerTools extends CloudertinkerOther{
     public static final ItemObject<ModifiableItem> hard_shield = ITEMS.register("hard_shield", () -> new Giantsword(new Item.Properties().stacksTo(1), toolDefinitions.HARD_SHIELD));
     public static final ItemObject<ModifiableItem> tiantuistar_blade = ITEMS.register("tiantuistar_blade", () -> new Giantsword(new Item.Properties().stacksTo(1), toolDefinitions.TIANTUISTAR_BLADE));
     public static final ItemObject<ModifiableItem> giantsword = ITEMS.register("giantsword", () -> new Giantsword(new Item.Properties().stacksTo(1), toolDefinitions.GIANTSWORD));
+    public static final ItemObject<ModifiableItem> block_and_chain = ITEMS.register("block_and_chain", () -> new BlockAndChain(new Item.Properties().stacksTo(1), toolDefinitions.BLOCK_AND_CHAIN));
     public static final ItemObject<ToolPartItem> giant_blade= ITEMS.register("giant_blade", () -> new ToolPartItem(new Item.Properties().stacksTo(64), HeadMaterialStats.ID));
     public static final ItemObject<ToolPartItem> knightmetal_ring_part= ITEMS.register("knightmetal_ring_part", () -> new ToolPartItem(new Item.Properties().stacksTo(64), StatlessMaterialStats.BINDING.getIdentifier()));
     public static final ItemObject<ToolPartItem> hard_plating= ITEMS.register("hard_plating", () -> new ToolPartItem(new Item.Properties().stacksTo(64), PlatingMaterialStats.SHIELD.getId()));
@@ -54,6 +56,7 @@ public class CloudertinkerTools extends CloudertinkerOther{
         acceptPart(output1,knightmetal_ring_part);
         acceptPart(output1,hard_plating);
         acceptTool(output1, giantsword);
+        acceptTool(output1, block_and_chain);
         acceptTool(output1, hard_shield);
         acceptTool(output1, tiantuistar_blade);
     }

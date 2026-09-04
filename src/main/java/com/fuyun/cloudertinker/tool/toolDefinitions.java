@@ -21,4 +21,5 @@ public class toolDefinitions {
     public static final ToolDefinition GIANTSWORD = ToolDefinition.create(CloudertinkerTools.giantsword);
     public static final ToolDefinition HARD_SHIELD = ToolDefinition.create(CloudertinkerTools.hard_shield);
     public static final ToolDefinition TIANTUISTAR_BLADE = ToolDefinition.create(CloudertinkerTools.tiantuistar_blade);
+    public static final ToolDefinition BLOCK_AND_CHAIN = ToolDefinition.create(CloudertinkerTools.block_and_chain);
 }

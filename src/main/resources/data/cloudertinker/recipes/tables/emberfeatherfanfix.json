@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cloudertinker:ember_feather_fan"
+    },
+    {
+      "item": "twilightforest:fiery_ingot"
+    }
+  ],
+  "result": {
+    "item": "cloudertinker:ember_feather_fan",
+    "count": 1
+  }
+}

@@ -22,6 +22,8 @@ public class Fiery_round extends Tigermark_rounds {
         super(pProperties);
         this.damageboost= CTKConfig.COMMON.Fiery_Damage.get().floatValue();
         this.thrust= CTKConfig.COMMON.Fiery_Thrust.get();
+        this.Atk_thrust= CTKConfig.COMMON.Fiery_Atk_Thrust.get();
+        this.Exp_thrust= CTKConfig.COMMON.Fiery_Exp_Thrust.get();
         this.push_power= CTKConfig.COMMON.Fiery_Push_Power.get();
         this.explosion_damage= CTKConfig.COMMON.Fiery_Explosion_damage.get().floatValue();
         this.color= ChatFormatting.DARK_RED;

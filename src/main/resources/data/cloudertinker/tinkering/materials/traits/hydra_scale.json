@@ -63,6 +63,20 @@
       "name": "tconstruct:reclaim",
       "level": 1
     }
+  ],
+  "tconstruct:shell": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:hydralife",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:kinetic",
+      "level": 1
+    }
   ]
 }
 }

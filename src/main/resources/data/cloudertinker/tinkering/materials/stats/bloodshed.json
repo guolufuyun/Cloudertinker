@@ -49,5 +49,8 @@
       "attack_frequency": 10,
       "kill_threshold": 0.3
     },
-    "tconstruct:arrow_head": {}
+    "tconstruct:arrow_head": {},
+    "tconstruct:ribcage": {
+      "repair_amount": 100
+    }
   }}

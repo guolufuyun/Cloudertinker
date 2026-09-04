@@ -55,6 +55,9 @@
       "durability": 670,
       "knockback_resistance": 0.4,
       "toughness": 2
+    },
+    "tconstruct:ribcage": {
+      "repair_amount": 500
     }
   }
 }

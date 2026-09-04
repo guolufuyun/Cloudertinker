@@ -55,14 +55,15 @@ public class CloudertinkerItem {
     public static final RegistryObject<Item> compositesteeleaf_ingot = ITEMS.register("compositesteeleaf_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> frostiron_ingot = ITEMS.register("frostiron_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> magala_ingot = ITEMS.register("magala_ingot", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> glavenus_ingot = ITEMS.register("glavenus_ingot", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> glavenus_ingot = ITEMS.register("glavenus_ingot", () -> new Item(new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> frostspikeslime_ingot = ITEMS.register("frostspikeslime_ingot", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> blue_fiery_ingot = ITEMS.register("blue_fiery_ingot", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> blue_fiery_ingot = ITEMS.register("blue_fiery_ingot", () -> new Item(new Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> questiron_ingot = ITEMS.register("questiron_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<BlockItem> questiron_block = ITEMS.register("questiron_block", () -> new BlockItem(CloudertinkerBlock.questiron_block.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> fiery_melter = ITEMS.register("fiery_melter", () -> new FieryMelter(CloudertinkerBlock.fiery_melter.get(), new Item.Properties()));
     public static final RegistryObject<BlockItem> fiery_alloyer = ITEMS.register("fiery_alloyer", () -> new FieryAlloyer(CloudertinkerBlock.fiery_alloyer.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ember_feather_fan = ITEMS.register("ember_feather_fan", () -> new EmberFeatherFan( new Item.Properties().fireResistant().durability(1024).rarity(Rarity.RARE)));
 
 
 

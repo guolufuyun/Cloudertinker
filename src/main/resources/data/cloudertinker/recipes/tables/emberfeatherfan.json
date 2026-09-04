@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "twilightforest:lamp_of_cinders"
+    },
+    {
+      "item": "twilightforest:peacock_feather_fan"
+    },
+    {
+      "item": "twilightforest:transformation_powder"
+    },
+    {
+      "item": "twilightforest:borer_essence"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "result": {
+    "item": "cloudertinker:ember_feather_fan",
+    "count": 1
+  }
+}

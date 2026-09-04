@@ -26,6 +26,9 @@
       "toughness": 0.5
     },
     "tconstruct:maille": {},
-    "tconstruct:shield_core": {}
+    "tconstruct:shield_core": {},
+    "tconstruct:shell": {
+      "repair_amount": 600
+    }
   }
 }

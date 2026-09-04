@@ -43,6 +43,16 @@
       "name": "cloudertinker:frosttought",
       "level": 3
     }
+  ],
+  "tconstruct:laces": [
+    {
+      "name": "cloudertinker:twilightarmor",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:chillaura",
+      "level": 1
+    }
   ]
 }
 }

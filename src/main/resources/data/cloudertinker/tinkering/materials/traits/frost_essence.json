@@ -1,0 +1,22 @@
+{
+  "perStat": {
+
+    "tconstruct:slime": [
+      {
+        "name": "cloudertinker:twilightarmor",
+        "level": 1
+      }, {
+        "name": "tconstruct:overslime",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:overfreeze",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:chillaura",
+        "level": 3
+      }
+    ]
+  }
+}

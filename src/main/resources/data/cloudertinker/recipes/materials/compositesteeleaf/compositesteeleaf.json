@@ -4,7 +4,7 @@
     "amount": 200,
     "name":"tconstruct:molten_emerald"
   },
-  "input": "cloudertinker:steeleaf",
+  "input": "tconstruct:steeleaf",
   "output": "cloudertinker:compositesteeleaf",
   "temperature": 1000
 }

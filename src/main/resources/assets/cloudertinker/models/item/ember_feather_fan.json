@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "cloudertinker:item/otheritem/ember_feather_fan"
+  }
+}

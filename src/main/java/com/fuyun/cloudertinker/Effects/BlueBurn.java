@@ -28,17 +28,35 @@ public class BlueBurn extends NoMilkEffect {
         super(MobEffectCategory.HARMFUL, 0XFFD700,true);
     }
 
+    /**
+     * 每 20 tick（1 秒）结算一次。
+     *
+     * <p>{@code MobEffect#isDurationEffectTick} 默认返回 false，不覆写它的话原版永远不会调用
+
+     * 这正是蓝焰「挂上了却不掉血」的原因。判定写法与匠魂 {@code BleedingEffect} 保持一致。
+     */
+    @Override
+    public boolean isDurationEffectTick(int duration, int amplifier) {
+        return duration > 0 && duration % 20 == 0;
+    }
+
     @Override
     public void applyEffectTick(LivingEntity living, int amplifier) {
-        if (living.tickCount % 20 == 0) {
-            Objects.requireNonNull(living).hurt(living.damageSources().inFire(), WeaponAttack * (CTKConfig.COMMON.Blue_Burn_Damage.get().floatValue()));
-
-            living.invulnerableTime = 0;
-            living.setRemainingFireTicks(living.getRemainingFireTicks()+21);
-
-
+        // 伤害与火焰只在服务端结算（客户端 hurt 本身会 no-op，这里显式挡掉更干净）
+        if (living.level().isClientSide) {
+            return;
         }
+        float weaponAttack = 0f;
+        MobEffectInstance instance = living.getEffect(this);
+        if (instance instanceof BlueBurnInstance bInstance) {
+            weaponAttack = bInstance.getWeaponAttack();
+        }
+        living.invulnerableTime = 0;
+        living.hurt(living.damageSources().inFire(), weaponAttack * (CTKConfig.COMMON.Blue_Burn_Damage.get().floatValue()));
+        living.invulnerableTime = 0;
+        living.setRemainingFireTicks(living.getRemainingFireTicks() + 21);
     }
+
 
     public float GetVal() {
         return WeaponAttack;

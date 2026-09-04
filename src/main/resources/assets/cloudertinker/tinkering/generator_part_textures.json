@@ -1,6 +1,10 @@
 {
   "parts": [
     {
+      "path": "cloudertinker:tinker_armor/chain_block/material",
+      "stat_type": "tconstruct:head"
+    },
+    {
       "path": "cloudertinker:item/tool/part/giant_blade",
       "stat_type": "tconstruct:head"
     },
@@ -66,6 +70,22 @@
     },
     {
       "path": "cloudertinker:item/tool/tiantuistar/tiantuistar4/tiantuistar4",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "cloudertinker:item/tool/tiantuistarlarge/tiantuistar1/tiantuistar1",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "cloudertinker:item/tool/tiantuistarlarge/tiantuistar2/tiantuistar2",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "cloudertinker:item/tool/tiantuistarlarge/tiantuistar3/tiantuistar3",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "cloudertinker:item/tool/tiantuistarlarge/tiantuistar4/tiantuistar4",
       "stat_type": "tconstruct:handle"
     }
   ],

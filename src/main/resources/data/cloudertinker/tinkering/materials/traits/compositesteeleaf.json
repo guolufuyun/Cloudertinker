@@ -164,6 +164,16 @@
         "name": "tconstruct:bounce",
         "level": 1
       }
+    ],
+    "tconstruct:shell": [
+      {
+        "name": "cloudertinker:twilightarmor",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:synergy",
+        "level": 1
+      }
     ]
   }
 }

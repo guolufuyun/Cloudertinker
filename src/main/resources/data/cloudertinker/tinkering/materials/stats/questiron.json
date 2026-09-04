@@ -53,6 +53,9 @@
     "tconstruct:maille": {},
     "tconstruct:arrow_head": {},
     "tconstruct:arrow_shaft": {},
-    "tconstruct:fletching": {}
+    "tconstruct:fletching": {},
+    "tconstruct:ribcage": {
+      "repair_amount": 100
+    }
   }
 }

@@ -5,6 +5,7 @@ import com.fuyun.cloudertinker.Modifiers.ArmorModifiers.*;
 import com.fuyun.cloudertinker.Modifiers.BaseModifiers.*;
 import com.fuyun.cloudertinker.Modifiers.OnlyBowMOdifiers.*;
 import com.fuyun.cloudertinker.Modifiers.ToolModifiers.*;
+import com.fuyun.cloudertinker.Modifiers.ToolModifiers.ChainSmash;
 import com.fuyun.cloudertinker.Modifiers.WarpenModifiers.*;
 import com.fuyun.cloudertinker.Modifiers.anvil.*;
 import com.fuyun.cloudertinker.Modifiers.anvil.Slots.*;
@@ -116,5 +117,7 @@ public static final StaticModifier<BlueBurnAbility> blueBurn = MODIFIERS.registe
 public static final StaticModifier<SilhouetteDance> silhouettedance=MODIFIERS.register("silhouettedance", SilhouetteDance::new);
 
     public static final StaticModifier<TianTuiStar> tiantuistar = MODIFIERS.register("tiantuistar", TianTuiStar::new);
+    public static final StaticModifier<Eatgrass> eatgrass = MODIFIERS.register("eatgrass", Eatgrass::new);
 
+    public static final StaticModifier<ChainSmash> chainsmash = MODIFIERS.register("chainsmash", ChainSmash::new);
 }

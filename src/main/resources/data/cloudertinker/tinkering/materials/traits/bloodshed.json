@@ -134,5 +134,15 @@
       "name": "tconstruct:lacerating",
       "level": 1
     }
+  ],
+  "tconstruct:ribcage": [
+    {
+      "name": "cloudertinker:lichprotect",
+      "level": 1
+    },
+    {
+      "name": "cloudertinker:drawblood",
+      "level": 1
+    }
   ]
 }}

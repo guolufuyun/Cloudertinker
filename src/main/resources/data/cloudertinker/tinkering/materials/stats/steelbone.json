@@ -28,5 +28,8 @@
     "tconstruct:maille": {},
     "tconstruct:arrow_head": {},
     "tconstruct:arrow_shaft": {}
+  },
+  "tconstruct:ribcage": {
+    "repair_amount": 300
   }
 }

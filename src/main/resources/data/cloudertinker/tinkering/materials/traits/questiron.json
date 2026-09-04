@@ -129,6 +129,16 @@
         "name": "tconstruct:tipped",
         "level": 1
       }
+    ],
+    "tconstruct:ribcage": [
+      {
+        "name": "cloudertinker:forestquest",
+        "level": 1
+      },
+      {
+        "name": "cloudertinker:questprotect",
+        "level": 1
+      }
     ]
   }
 }

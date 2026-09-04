@@ -51,6 +51,9 @@
     },
     "tconstruct:shield_core": {},
     "tconstruct:maille": {},
-    "tconstruct:arrow_head": {}
+    "tconstruct:arrow_head": {},
+    "tconstruct:shell": {
+      "repair_amount": 50
+    }
   }
 }

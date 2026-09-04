@@ -4,6 +4,9 @@
     "tconstruct:bowstring": {},
     "tconstruct:maille": {},
     "tconstruct:shield_core": {},
-    "tconstruct:fletching": {}
+    "tconstruct:fletching": {},
+    "tconstruct:laces": {
+      "repair_amount": 100
+    }
   }
 }

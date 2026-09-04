@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "twilightforest:ice_bomb"
+  },
+  "material": "cloudertinker:frost_essence",
+  "needed": 1,
+  "value": 1
+}

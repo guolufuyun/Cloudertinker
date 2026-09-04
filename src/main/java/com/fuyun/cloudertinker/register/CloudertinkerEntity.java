@@ -1,6 +1,7 @@
 package com.fuyun.cloudertinker.register;
 
 import com.fuyun.cloudertinker.Cloudertinker;
+import com.fuyun.cloudertinker.entities.ChainBlock;
 import com.fuyun.cloudertinker.entities.HeaveRock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
@@ -24,6 +25,7 @@ public class CloudertinkerEntity {
     public static final DeferredRegister<Item> SPAWN_EGGS = DeferredRegister.create(ForgeRegistries.ITEMS,MODID);
 
     public static final RegistryObject<EntityType<HeaveRock>> heave_rock = buildNoEgg(Cloudertinker.prefix("heave_rock"), makeCastedBuilder(HeaveRock.class, HeaveRock::new, 0.5F, 0.5F, 150, 1), false);
+    public static final RegistryObject<EntityType<ChainBlock>> chain_block = buildNoEgg(Cloudertinker.prefix("chain_block"), makeCastedBuilder(ChainBlock.class, ChainBlock::new, 0.6F, 0.6F, 80, 1), true);
 
 
 

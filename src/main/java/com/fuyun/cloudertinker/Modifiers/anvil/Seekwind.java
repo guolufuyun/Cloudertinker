@@ -9,6 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.phys.EntityHitResult;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -21,6 +22,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 
+import slimeknights.tconstruct.shared.TinkerEffects;
 import twilightforest.entity.projectile.SeekerArrow;
 import util.method.ModifierLevel;
 
@@ -33,10 +35,24 @@ public class Seekwind extends BattleModifier {
         // TODO: rethink ordering of ammo modifiers
         return 1; // after trick quiver, before bulk quiver, can't go after bulk due to desire to use inventory
     }
+//    public void LivingHurtEvent(LivingHurtEvent event) {
+//
+//        LivingEntity entity = event.getEntity();
+//        Entity entity1=event.getSource().getEntity();
+//        if (entity1 instanceof SeekerArrow seekerArrow) {
+//            entity.invulnerableTime = 0;
+//        }
+//    }
+@Override
+public void arrowhurt(ModifierNBT modifiers, ModDataNBT persistentData, int level, Projectile projectile, EntityHitResult hit, AbstractArrow arrow, LivingEntity attacker, LivingEntity target) {
+    if (target != null) {
+        target.invulnerableTime = 0;
 
+    }
+}
     @Override
     public void onProjectileLaunch(IToolStackView tool, ModifierEntry modifier, LivingEntity shooter, Projectile projectile, @Nullable AbstractArrow arrow1, ModDataNBT namespacedNBT, boolean primary) {
-        if (projectile instanceof AbstractArrow arrow&&shooter instanceof Player player&&primary) {
+        if (projectile instanceof AbstractArrow arrow&&shooter instanceof Player player) {
         SeekerArrow seekerArrow=new SeekerArrow(projectile.getCommandSenderWorld(),shooter);
             ModifierNBT modifiers = tool.getModifiers();
             CompoundTag originalNBT = arrow.saveWithoutId(new CompoundTag());
@@ -55,11 +71,11 @@ public class Seekwind extends BattleModifier {
             seekerArrow.setDeltaMovement(arrow.getDeltaMovement());
             player.getCommandSenderWorld().addFreshEntity(seekerArrow);
             PersistentDataCapability.getOrWarn(seekerArrow).copyFrom(namespacedNBT.getCopy());
+            if (arrow1 != null) {
+                arrow1.discard();
+            }
+        }
 
-        }
-        if (arrow1 != null) {
-            arrow1.discard();
-        }
     }
 
 

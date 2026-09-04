@@ -130,9 +130,24 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
     }
     @Override
     public float getMeleeDamage(IToolStackView tool, ModifierEntry modifierEntry, ToolAttackContext toolAttackContext, float v, float v1) {
-       if (BuiltInRegistries.ITEM.get(new ResourceLocation(tool.getPersistentData().getString(round_type))) instanceof Tigermark_rounds round){
+        ModDataNBT tooldata = tool.getPersistentData();
+        if (toolAttackContext.getAttacker() instanceof Player player&&BuiltInRegistries.ITEM.get(new ResourceLocation(tool.getPersistentData().getString(round_type))) instanceof Tigermark_rounds round){
            round.onMeleeHit(tool,modifierEntry,toolAttackContext,v,v1);
-           return (float) (round.getMeleedamage(tool,modifierEntry,toolAttackContext,v,v1));
+           if (tooldata.getInt(thrust)>0) {
+               if (!player.onGround() && !player.isSwimming()&& !toolAttackContext.isExtraAttack()) {
+                   if (tooldata.getInt(thrust) > round.getAtk_thrust()) {
+                       tooldata.putInt(thrust, tooldata.getInt(thrust) - round.getAtk_thrust());
+                   } else {
+                       if (!fillround(tool, player)) {
+                           tooldata.putInt(thrust, 0);
+                       }
+                   }
+               }
+               return (float) (round.getMeleedamage(tool, modifierEntry, toolAttackContext, v, v1));
+           }
+            if (!fillround(tool,player)){
+                tooldata.putInt(thrust,0);
+            }
        }
         return v1;
     }
@@ -143,11 +158,19 @@ public class TianTuiStar extends NoLevelsModifier implements GeneralInteractionM
         if (BuiltInRegistries.ITEM.get(new ResourceLocation(tool.getPersistentData().getString(round_type))) instanceof Tigermark_rounds round&&tooldata.getInt(thrust)>0&&context.getLivingTarget()!=null&&context.getLivingTarget().isAlive()&&context.getAttacker() instanceof Player player){
            context.getLivingTarget().invulnerableTime = 0;
             if (context.isCritical()){
+                float dmgnum=1;
+                if (tooldata.getInt(thrust)<round.getExp_thrust()){
+                    dmgnum= (float) tooldata.getInt(thrust) /round.getExp_thrust();
+                }
 //                context.getLivingTarget().addEffect(new MobEffectInstance(CloudertinkerEffects.Armorbroken.get(), round.getThrust(), round(7*((float) tooldata.getInt(thrust) /round.getThrust()))));
-              context.getLivingTarget().hurt(context.getLivingTarget().damageSources().explosion(context.getAttacker(), context.getAttacker()), damageDealt*round.onExplosion(tool,modifier,context,damageDealt));
-              if (!fillround(tool,player)){
-                  tooldata.putInt(thrust,0);
-              }
+              context.getLivingTarget().hurt(context.getLivingTarget().damageSources().explosion(context.getAttacker(), context.getAttacker()), (damageDealt*round.onExplosion(tool,modifier,context,damageDealt)*(dmgnum)));
+                if (tooldata.getInt(thrust)>round.getExp_thrust()) {
+                    tooldata.putInt(thrust,tooldata.getInt(thrust)-round.getExp_thrust());
+                }else{
+                    if (!fillround(tool,player)){
+                        tooldata.putInt(thrust,0);
+                    }
+                }
                 context.getLivingTarget().playSound(SoundEvents.GENERIC_EXPLODE,1,1);
                 context.getLivingTarget().setRemainingFireTicks(context.getLivingTarget().getRemainingFireTicks()+200);
                 context.getLivingTarget().setLastHurtByMob(player);
