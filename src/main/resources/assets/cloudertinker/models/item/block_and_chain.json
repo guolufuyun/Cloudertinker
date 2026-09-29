@@ -1,0 +1,41 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "blade": "cloudertinker:item/otheritem/block_and_chain",
+    "gradle2": "cloudertinker:item/otheritem/block_and_chain",
+    "gradle1": "cloudertinker:item/otheritem/block_and_chain",
+    "handle": "cloudertinker:item/otheritem/block_and_chain"
+  },
+  "modifier_roots": [
+    "cloudertinker:item/tool/trident/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "blade",
+      "index": 0
+    },
+    {
+      "name": "gradle2",
+      "index": 1
+    },
+    {
+      "name": "gradle1",
+      "index": 2
+    },
+
+    {
+      "name": "handle",
+      "index": 3
+    }
+  ],
+
+  "overrides": [
+    {
+      "predicate": {
+        "cloudertinker:thrown": 1.0
+      },
+      "model": "cloudertinker:item/block_and_chain_thrown"
+    }
+  ]
+}
